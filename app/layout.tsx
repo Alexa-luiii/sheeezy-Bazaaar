@@ -3,6 +3,9 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import MobileNav from "@/components/layout/MobileNav";
+import CartDrawer from "@/components/cart/CartDrawer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased selection:bg-accent/30 selection:text-accent`}
+        className={`${inter.variable} ${playfair.variable} antialiased selection:bg-accent/30 selection:text-accent flex flex-col min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
@@ -36,7 +39,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          {children}
+          <main className="flex-grow pt-20">
+            {children}
+          </main>
+          <Footer />
+          <MobileNav />
+          <CartDrawer />
         </ThemeProvider>
       </body>
     </html>
