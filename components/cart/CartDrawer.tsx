@@ -6,7 +6,6 @@ import { X, ShoppingBag, ArrowRight, Tag } from 'lucide-react';
 import Link from 'next/link';
 import { useCartStore } from '@/lib/store/cartStore';
 import CartItem from './CartItem';
-import { cn } from '@/lib/utils';
 
 const CartDrawer = () => {
   const { isOpen, toggleCart, items } = useCartStore();
