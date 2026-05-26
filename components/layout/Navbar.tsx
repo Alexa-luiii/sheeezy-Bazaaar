@@ -25,6 +25,7 @@ const Navbar = () => {
   const [mounted, setMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchExpanded, setSearchExpanded] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const cartItems = useCartStore((state) => state.items);
   const wishlistItems = useWishlistStore((state) => state.items);
@@ -112,15 +113,27 @@ const Navbar = () => {
           <div className="relative flex items-center">
             <AnimatePresence>
               {searchExpanded && (
-                <motion.input
-                  initial={{ width: 0, opacity: 0 }}
-                  animate={{ width: 200, opacity: 1 }}
-                  exit={{ width: 0, opacity: 0 }}
-                  type="text"
-                  placeholder="Search products..."
-                  className="bg-surface/50 border border-white/10 rounded-full py-1 px-4 text-xs focus:outline-none focus:border-accent mr-2 text-foreground"
-                  autoFocus
-                />
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    if (searchQuery.trim()) {
+                      window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
+                    }
+                  }}
+                  className="flex items-center"
+                >
+                  <motion.input
+                    initial={{ width: 0, opacity: 0 }}
+                    animate={{ width: 200, opacity: 1 }}
+                    exit={{ width: 0, opacity: 0 }}
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search products..."
+                    className="bg-surface/50 border border-white/10 rounded-full py-1 px-4 text-xs focus:outline-none focus:border-accent mr-2 text-foreground"
+                    autoFocus
+                  />
+                </form>
               )}
             </AnimatePresence>
             <button
