@@ -21,7 +21,7 @@ const navLinks = [
 
 const Navbar = () => {
   const pathname = usePathname();
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchExpanded, setSearchExpanded] = useState(false);
@@ -70,7 +70,7 @@ const Navbar = () => {
         isScrolled ? 'py-3 border-b border-white/10' : 'py-6'
       )}
       style={{
-        backgroundColor: theme === 'dark' ? darkBackgroundColor : backgroundColor,
+        backgroundColor: resolvedTheme === 'dark' ? darkBackgroundColor : backgroundColor,
         backdropFilter: isScrolled ? 'blur(12px)' : 'none',
       }}
     >
@@ -159,11 +159,11 @@ const Navbar = () => {
           </Link>
 
           <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
             className="p-2 hover:text-accent transition-colors text-foreground"
             aria-label="Toggle Theme"
           >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            {resolvedTheme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
           <button

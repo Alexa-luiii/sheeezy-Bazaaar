@@ -11,6 +11,8 @@ const config: Config = {
     extend: {
       colors: {
         brand: "#0A0A0A",
+        "brand-primary": "#0A0A0A",
+        "brand-accent": "#C9A84C",
         accent: "#C9A84C",
         surface: "#111111",
       },

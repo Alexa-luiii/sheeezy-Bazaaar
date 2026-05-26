@@ -1,96 +1,45 @@
 'use client';
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Send, CheckCircle2 } from 'lucide-react';
+import React from 'react';
+import { Mail, ArrowRight } from 'lucide-react';
 
-export default function NewsletterSection() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setIsSubscribed(true);
-      setEmail('');
-    }
-  };
-
+const NewsletterSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden bg-brand">
-      {/* Animated Gradient Background */}
-      <motion.div
-        animate={{
-          background: [
-            "radial-gradient(circle at 0% 0%, rgba(201,168,76,0.15) 0%, transparent 50%)",
-            "radial-gradient(circle at 100% 100%, rgba(201,168,76,0.15) 0%, transparent 50%)",
-            "radial-gradient(circle at 0% 100%, rgba(201,168,76,0.15) 0%, transparent 50%)",
-            "radial-gradient(circle at 100% 0%, rgba(201,168,76,0.15) 0%, transparent 50%)",
-            "radial-gradient(circle at 0% 0%, rgba(201,168,76,0.15) 0%, transparent 50%)",
-          ],
-        }}
-        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-0"
-      />
+    <section className="py-24 bg-black relative overflow-hidden">
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-accent/10 rounded-full blur-[120px]" />
+      </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white leading-tight">
-              Join the Elite <br /> Inner Circle
-            </h2>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              Subscribe to receive early access to new collections, exclusive event invitations, and curated style insights.
-            </p>
+        <div className="max-w-4xl mx-auto bg-surface/40 backdrop-blur-xl border border-white/10 rounded-[40px] p-12 md:p-20 text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-brand-accent/10 text-brand-accent mb-8">
+            <Mail className="w-8 h-8" />
+          </div>
 
-            <div className="pt-8">
-              {isSubscribed ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="bg-accent/10 border border-accent/20 rounded-2xl p-8 max-w-md mx-auto flex flex-col items-center gap-4"
-                >
-                  <CheckCircle2 className="w-12 h-12 text-accent" />
-                  <div className="space-y-1">
-                    <h3 className="text-xl font-bold text-white">Welcome to the Club</h3>
-                    <p className="text-white/60 text-sm">You&apos;ve successfully subscribed to our newsletter.</p>
-                  </div>
-                </motion.div>
-              ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto"
-                >
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="flex-grow bg-white/5 border border-white/10 rounded-full px-8 py-5 text-white placeholder:text-white/30 focus:outline-none focus:border-accent/50 transition-colors"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-accent text-brand font-bold uppercase tracking-widest px-10 py-5 rounded-full hover:bg-white transition-colors flex items-center justify-center gap-2 group"
-                  >
-                    Subscribe
-                    <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </button>
-                </form>
-              )}
-            </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white font-serif mb-6">Join the Inner Circle</h2>
+          <p className="text-white/60 text-lg mb-12 max-w-xl mx-auto">
+            Subscribe to receive exclusive offers, early access to new collections, and a 15% discount on your first order.
+          </p>
 
-            <p className="text-white/30 text-[10px] uppercase tracking-widest pt-8">
-              By subscribing, you agree to our Terms of Service and Privacy Policy.
-            </p>
-          </motion.div>
+          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              className="flex-grow h-14 bg-black/40 border border-white/10 rounded-2xl px-6 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-accent transition-colors"
+            />
+            <button className="h-14 bg-brand-accent text-brand-primary px-8 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-white transition-colors group">
+              SUBSCRIBE
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </button>
+          </form>
+
+          <p className="text-[10px] text-white/30 mt-8 uppercase tracking-widest">
+            By subscribing, you agree to our Privacy Policy and Terms of Service.
+          </p>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default NewsletterSection;

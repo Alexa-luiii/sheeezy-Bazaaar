@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MobileNav from "@/components/layout/MobileNav";
 import CartDrawer from "@/components/cart/CartDrawer";
+import QuickViewModal from "@/components/product/QuickViewModal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -45,6 +46,7 @@ export default function RootLayout({
           <Footer />
           <MobileNav />
           <CartDrawer />
+          <QuickViewModal />
         </ThemeProvider>
       </body>
     </html>
