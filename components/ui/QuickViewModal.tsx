@@ -194,7 +194,7 @@ const QuickViewModal = () => {
                                 className={cn(
                                 "w-14 h-14 rounded-sm border flex items-center justify-center transition-all group",
                                 inWishlist
-                                    ? "bg-red-500/10 border-red-500/50 text-red-500"
+                                    ? "bg-accent/10 border-accent/50 text-accent"
                                     : "border-border text-muted hover:text-text hover:border-white/30"
                                 )}
                             >

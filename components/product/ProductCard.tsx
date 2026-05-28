@@ -44,7 +44,7 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
 
   return (
     <motion.div
-      className="group relative flex flex-col h-full bg-surface/40 backdrop-blur-sm rounded-2xl border border-border overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-brand/20 hover:border-brand/20"
+      className="group relative flex flex-col h-full bg-surface/40 backdrop-blur-sm rounded-2xl border border-border overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-sageDark/20 hover:border-sageDark/20"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       initial={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
       {/* Badges */}
       <div className="absolute top-4 left-4 z-20 flex flex-col gap-2">
         {product.isDeal && (
-          <div className="bg-red-500 text-text text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-red-500/20">
+          <div className="bg-accent text-text text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-accent/20">
             <Zap className="w-3 h-3 fill-current" />
             DEAL
           </div>
@@ -66,13 +66,13 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
           </div>
         )}
         {product.isLimited && (
-          <div className="bg-amber-500 text-text text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-amber-500/20">
+          <div className="bg-sage text-text text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-sage/20">
             <Clock className="w-3 h-3" />
             LIMITED
           </div>
         )}
         {product.tags.includes('New') && (
-          <div className="bg-blue-500 text-text text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-blue-500/20">
+          <div className="bg-sageDark text-primary text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-sageDark/20">
             <Sparkles className="w-3 h-3 fill-current" />
             NEW
           </div>
@@ -85,8 +85,8 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
         className={cn(
           "absolute top-4 right-4 z-20 p-2.5 rounded-full backdrop-blur-md transition-all duration-300 border",
           inWishlist
-            ? "bg-red-500 border-red-500 text-text scale-110"
-            : "bg-surface/20 border-border text-text hover:bg-red-500 hover:border-red-500"
+            ? "bg-accent border-accent text-text scale-110"
+            : "bg-surface/20 border-border text-text hover:bg-accent hover:border-accent"
         )}
       >
         <Heart className={cn("w-4 h-4 transition-transform duration-300", inWishlist && "fill-current")} />

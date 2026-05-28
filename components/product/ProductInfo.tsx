@@ -187,7 +187,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
             className={cn(
               "flex-1 border h-14 font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all active:scale-[0.98]",
               isInWishlist
-                ? "border-red-500 text-red-500 bg-red-500/5"
+                ? "border-accent text-accent bg-accent/5"
                 : "border-border text-text hover:bg-primary"
             )}
           >

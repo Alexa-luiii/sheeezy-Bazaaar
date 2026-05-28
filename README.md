@@ -4,7 +4,7 @@ A premium, high-end luxury e-commerce platform built with Next.js 15, TypeScript
 
 ## Features
 
-- **Luxury UI/UX**: Designed with a Gold/Black palette and premium typography (Inter & Playfair Display).
+- **Luxury UI/UX**: Designed with a refined Pink/Sage palette and premium typography (Inter & Playfair Display).
 - **Interactive Product Experience**:
   - Dynamic product detail pages with hover-zoom galleries.
   - Multi-variant selection (Size/Color) with state management.

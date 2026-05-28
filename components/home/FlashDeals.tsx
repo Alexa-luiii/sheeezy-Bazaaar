@@ -31,9 +31,9 @@ const FlashDeals = () => {
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-8">
           <div className="flex items-center gap-6">
             <h2 className="text-4xl font-bold text-text font-serif">Flash Deals</h2>
-            <div className="flex items-center gap-3 bg-red-500/10 border border-red-500/20 px-4 py-2 rounded-xl">
-              <Timer className="w-4 h-4 text-red-500 animate-pulse" />
-              <div className="flex gap-1.5 font-mono text-sm font-bold text-red-500">
+            <div className="flex items-center gap-3 bg-accent/20 border border-accent/30 px-4 py-2 rounded-xl">
+              <Timer className="w-4 h-4 text-accent animate-pulse" />
+              <div className="flex gap-1.5 font-mono text-sm font-bold text-accent">
                 <span>{String(timeLeft.hours).padStart(2, '0')}h</span>
                 <span>:</span>
                 <span>{String(timeLeft.minutes).padStart(2, '0')}m</span>
