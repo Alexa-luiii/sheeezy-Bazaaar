@@ -34,7 +34,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 20 }}
-      className="flex gap-4 py-6 border-b border-white/5"
+      className="flex gap-4 py-6 border-b border-border"
     >
       {/* Product Image */}
       <div className="relative w-24 h-32 bg-surface rounded-lg overflow-hidden flex-shrink-0">
@@ -76,7 +76,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
 
         <div className="flex items-center justify-between mt-4">
           {/* Quantity Stepper */}
-          <div className="flex items-center border border-white/10 rounded-full px-2 py-1 gap-3">
+          <div className="flex items-center border border-border rounded-full px-2 py-1 gap-3">
             <button
               onClick={handleDecrement}
               className="p-1 hover:text-accent transition-colors disabled:opacity-30"

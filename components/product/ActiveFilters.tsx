@@ -35,7 +35,7 @@ const ActiveFilters = ({
 
   return (
     <div className="flex flex-wrap items-center gap-2 mb-8">
-      <span className="text-xs font-bold uppercase tracking-widest text-white/40 mr-2">Filters:</span>
+      <span className="text-xs font-bold uppercase tracking-widest text-text/40 mr-2">Filters:</span>
 
       <AnimatePresence>
         {(priceRange[0] !== defaultPriceRange[0] || priceRange[1] !== defaultPriceRange[1]) && (
@@ -44,7 +44,7 @@ const ActiveFilters = ({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             onClick={resetPrice}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs text-white/80 hover:bg-white/10 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-primary border border-border rounded-full text-xs text-text/80 hover:bg-accent transition-colors"
           >
             ${priceRange[0]} - ${priceRange[1]}
             <X className="w-3 h-3" />
@@ -58,7 +58,7 @@ const ActiveFilters = ({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             onClick={() => removeBrand(brand)}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs text-white/80 hover:bg-white/10 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-primary border border-border rounded-full text-xs text-text/80 hover:bg-accent transition-colors"
           >
             {brand}
             <X className="w-3 h-3" />
@@ -71,7 +71,7 @@ const ActiveFilters = ({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             onClick={resetRating}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs text-white/80 hover:bg-white/10 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-primary border border-border rounded-full text-xs text-text/80 hover:bg-accent transition-colors"
           >
             {selectedRating}+ Stars
             <X className="w-3 h-3" />
@@ -81,7 +81,7 @@ const ActiveFilters = ({
 
       <button
         onClick={onClearAll}
-        className="text-xs font-medium text-brand-accent hover:underline ml-2"
+        className="text-xs font-medium text-sageDark hover:underline ml-2"
       >
         Clear All
       </button>

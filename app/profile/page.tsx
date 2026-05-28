@@ -64,11 +64,11 @@ export default function ProfilePage() {
     <div className="container mx-auto px-4 py-12 max-w-6xl">
       <div className="flex flex-col md:flex-row gap-8 items-start">
         {/* Sidebar / User Info */}
-        <Card className="w-full md:w-80 border-white/5 bg-zinc-950/50 backdrop-blur-xl shrink-0">
+        <Card className="w-full md:w-80 border-border bg-surface/50 backdrop-blur-xl shrink-0">
           <CardContent className="p-6">
             <div className="flex flex-col items-center text-center space-y-4">
               <div className="relative group">
-                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-brand-accent/20">
+                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-sageDark/20">
                   <Image
                     src={user.avatar}
                     alt={user.name}
@@ -77,15 +77,15 @@ export default function ProfilePage() {
                     className="object-cover"
                   />
                 </div>
-                <button className="absolute bottom-0 right-0 p-1.5 bg-brand-accent text-brand-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                <button className="absolute bottom-0 right-0 p-1.5 bg-sageDark text-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
                   <Camera size={14} />
                 </button>
               </div>
               <div>
-                <h2 className="text-xl font-serif font-bold text-white">{user.name}</h2>
-                <p className="text-sm text-zinc-500">{user.email}</p>
+                <h2 className="text-xl font-serif font-bold text-text">{user.name}</h2>
+                <p className="text-sm text-muted">{user.email}</p>
               </div>
-              <div className="w-full pt-4 border-t border-white/5">
+              <div className="w-full pt-4 border-t border-border">
                 <Button
                   variant="ghost"
                   className="w-full justify-start text-red-500 hover:text-red-400 hover:bg-red-500/10"
@@ -146,7 +146,7 @@ export default function ProfilePage() {
                   exit={{ opacity: 0, x: -10 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Card className="border-white/5 bg-zinc-950/50">
+                  <Card className="border-border bg-surface/50">
                     <CardHeader>
                       <CardTitle>Personal Information</CardTitle>
                       <CardDescription>Update your profile details and management preferences.</CardDescription>
@@ -156,11 +156,11 @@ export default function ProfilePage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div className="space-y-2">
                             <Label htmlFor="name">Full Name</Label>
-                            <Input id="name" defaultValue={user.name} className="bg-white/5 border-white/10" />
+                            <Input id="name" defaultValue={user.name} className="bg-primary border-border" />
                           </div>
                           <div className="space-y-2">
                             <Label htmlFor="email">Email Address</Label>
-                            <Input id="email" defaultValue={user.email} className="bg-white/5 border-white/10" disabled />
+                            <Input id="email" defaultValue={user.email} className="bg-primary border-border" disabled />
                           </div>
                         </div>
                         <div className="space-y-2">
@@ -168,7 +168,7 @@ export default function ProfilePage() {
                           <textarea
                             id="bio"
                             rows={4}
-                            className="w-full rounded-sm border border-white/10 bg-white/5 px-3 py-2 text-sm text-white placeholder:text-zinc-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-brand-accent transition-all"
+                            className="w-full rounded-sm border border-border bg-primary px-3 py-2 text-sm text-text placeholder:text-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-sageDark transition-all"
                             placeholder="Tell us a bit about your style..."
                           />
                         </div>
@@ -191,21 +191,21 @@ export default function ProfilePage() {
                 >
                   {mockOrders.length > 0 ? (
                     mockOrders.map((order) => (
-                      <Card key={order.id} className="border-white/5 bg-zinc-950/50 hover:border-brand-accent/20 transition-colors">
+                      <Card key={order.id} className="border-border bg-surface/50 hover:border-sageDark/20 transition-colors">
                         <CardContent className="p-6">
                           <div className="flex flex-wrap items-center justify-between gap-4">
                             <div className="flex items-center gap-4">
-                              <div className="p-3 rounded-full bg-brand-accent/10 text-brand-accent">
+                              <div className="p-3 rounded-full bg-sageDark/10 text-sageDark">
                                 <Package size={24} />
                               </div>
                               <div>
-                                <h3 className="font-medium text-white">{order.id}</h3>
-                                <p className="text-sm text-zinc-500">{order.date} • {order.items} items</p>
+                                <h3 className="font-medium text-text">{order.id}</h3>
+                                <p className="text-sm text-muted">{order.date} • {order.items} items</p>
                               </div>
                             </div>
                             <div className="flex items-center gap-6">
                               <div className="text-right">
-                                <p className="font-bold text-white">${order.total.toFixed(2)}</p>
+                                <p className="font-bold text-text">${order.total.toFixed(2)}</p>
                                 <Badge variant={order.status === 'delivered' ? 'success' : 'warning'}>
                                   {order.status}
                                 </Badge>
@@ -219,10 +219,10 @@ export default function ProfilePage() {
                       </Card>
                     ))
                   ) : (
-                    <div className="text-center py-20 bg-zinc-950/30 rounded-sm border border-dashed border-white/10">
-                      <ShoppingBag className="mx-auto h-12 w-12 text-zinc-600 mb-4" />
-                      <h3 className="text-lg font-medium text-white">No orders yet</h3>
-                      <p className="text-zinc-500 mt-1">When you place an order, it will appear here.</p>
+                    <div className="text-center py-20 bg-surface/30 rounded-sm border border-dashed border-border">
+                      <ShoppingBag className="mx-auto h-12 w-12 text-muted mb-4" />
+                      <h3 className="text-lg font-medium text-text">No orders yet</h3>
+                      <p className="text-muted mt-1">When you place an order, it will appear here.</p>
                       <Button variant="outline" className="mt-6" asChild>
                         <Link href="/">Start Shopping</Link>
                       </Button>
@@ -243,7 +243,7 @@ export default function ProfilePage() {
                   {wishlistedProducts.length > 0 ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                       {wishlistedProducts.map((product) => (
-                        <Card key={product.id} className="group overflow-hidden border-white/5 bg-zinc-950/50">
+                        <Card key={product.id} className="group overflow-hidden border-border bg-surface/50">
                           <div className="relative aspect-[3/4] overflow-hidden">
                             <Image
                               src={product.images[0]}
@@ -251,24 +251,24 @@ export default function ProfilePage() {
                               fill
                               className="object-cover transition-transform duration-500 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                            <div className="absolute inset-0 bg-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
                                 <Button variant="primary" size="sm" asChild>
                                     <Link href={`/product/${product.id}`}>View Details</Link>
                                 </Button>
                             </div>
                           </div>
                           <CardContent className="p-4">
-                            <h4 className="font-medium text-white truncate">{product.title}</h4>
-                            <p className="text-brand-accent font-bold mt-1">${product.price}</p>
+                            <h4 className="font-medium text-text truncate">{product.title}</h4>
+                            <p className="text-sageDark font-bold mt-1">${product.price}</p>
                           </CardContent>
                         </Card>
                       ))}
                     </div>
                   ) : (
-                    <div className="text-center py-20 bg-zinc-950/30 rounded-sm border border-dashed border-white/10">
-                      <Heart className="mx-auto h-12 w-12 text-zinc-600 mb-4" />
-                      <h3 className="text-lg font-medium text-white">Your wishlist is empty</h3>
-                      <p className="text-zinc-500 mt-1">Save items you love to find them easily later.</p>
+                    <div className="text-center py-20 bg-surface/30 rounded-sm border border-dashed border-border">
+                      <Heart className="mx-auto h-12 w-12 text-muted mb-4" />
+                      <h3 className="text-lg font-medium text-text">Your wishlist is empty</h3>
+                      <p className="text-muted mt-1">Save items you love to find them easily later.</p>
                       <Button variant="outline" className="mt-6" asChild>
                         <Link href="/">Explore Collection</Link>
                       </Button>
@@ -288,24 +288,24 @@ export default function ProfilePage() {
                   className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 >
                   {user.addresses.map((address, index) => (
-                    <Card key={index} className="border-white/5 bg-zinc-950/50 border-brand-accent/30">
+                    <Card key={index} className="border-border bg-surface/50 border-sageDark/30">
                       <CardContent className="p-6">
                         <div className="flex justify-between items-start mb-4">
-                          <div className="p-2 rounded-full bg-brand-accent/10 text-brand-accent">
+                          <div className="p-2 rounded-full bg-sageDark/10 text-sageDark">
                             <MapPin size={18} />
                           </div>
                           <Badge variant="outline">Default</Badge>
                         </div>
-                        <p className="text-white leading-relaxed">{address}</p>
-                        <div className="flex gap-4 mt-6 pt-6 border-t border-white/5">
-                          <button className="text-sm text-zinc-400 hover:text-white transition-colors">Edit</button>
+                        <p className="text-text leading-relaxed">{address}</p>
+                        <div className="flex gap-4 mt-6 pt-6 border-t border-border">
+                          <button className="text-sm text-muted hover:text-text transition-colors">Edit</button>
                           <button className="text-sm text-red-500/70 hover:text-red-500 transition-colors">Delete</button>
                         </div>
                       </CardContent>
                     </Card>
                   ))}
-                  <button className="flex flex-col items-center justify-center gap-3 p-8 rounded-sm border border-dashed border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-brand-accent/40 transition-all text-zinc-500 hover:text-white group">
-                    <div className="p-3 rounded-full bg-white/5 group-hover:bg-brand-accent/10 group-hover:text-brand-accent transition-colors">
+                  <button className="flex flex-col items-center justify-center gap-3 p-8 rounded-sm border border-dashed border-border bg-surface/[0.02] hover:bg-surface/[0.05] hover:border-sageDark/40 transition-all text-muted hover:text-text group">
+                    <div className="p-3 rounded-full bg-primary group-hover:bg-sageDark/10 group-hover:text-sageDark transition-colors">
                       <Plus size={24} />
                     </div>
                     <span className="font-medium tracking-wide uppercase text-xs">Add New Address</span>

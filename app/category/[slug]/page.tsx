@@ -95,7 +95,7 @@ const CategoryPage = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold font-serif mb-4">{categoryName}</h1>
-            <p className="text-white/40 uppercase tracking-widest text-xs font-bold">
+            <p className="text-text/40 uppercase tracking-widest text-xs font-bold">
               {filteredProducts.length} Exquisite Pieces Found
             </p>
           </div>
@@ -103,7 +103,7 @@ const CategoryPage = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setShowMobileFilters(true)}
-              className="md:hidden flex items-center gap-2 px-6 py-2.5 bg-white/5 border border-white/10 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white/10 transition-colors"
+              className="md:hidden flex items-center gap-2 px-6 py-2.5 bg-primary border border-border rounded-full text-sm font-bold uppercase tracking-widest hover:bg-accent transition-colors"
             >
               <SlidersHorizontal className="w-4 h-4" />
               Filters
@@ -151,13 +151,13 @@ const CategoryPage = () => {
             />
           ) : (
             <div className="py-32 text-center">
-              <h3 className="text-2xl font-serif mb-4 text-white/80">No matches found</h3>
-              <p className="text-white/40 mb-8 max-w-md mx-auto">
+              <h3 className="text-2xl font-serif mb-4 text-text/80">No matches found</h3>
+              <p className="text-text/40 mb-8 max-w-md mx-auto">
                 Adjust your filters or explore our other exquisite collections.
               </p>
               <button
                 onClick={clearAllFilters}
-                className="px-8 py-3 bg-brand-accent text-brand-primary rounded-full font-bold uppercase tracking-widest hover:bg-white transition-colors"
+                className="px-8 py-3 bg-sageDark text-primary rounded-full font-bold uppercase tracking-widest hover:bg-surface transition-colors"
               >
                 Clear All Filters
               </button>
@@ -175,7 +175,7 @@ const CategoryPage = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setShowMobileFilters(false)}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[150] md:hidden"
+              className="fixed inset-0 bg-surface/80 backdrop-blur-sm z-[150] md:hidden"
             />
             <motion.div
               initial={{ x: '100%' }}
@@ -202,10 +202,10 @@ const CategoryPage = () => {
                 maxPrice={5000}
               />
 
-              <div className="mt-12 pt-8 border-t border-white/10">
+              <div className="mt-12 pt-8 border-t border-border">
                 <button
                   onClick={() => setShowMobileFilters(false)}
-                  className="w-full py-4 bg-brand-accent text-brand-primary rounded-2xl font-bold uppercase tracking-widest hover:bg-white transition-colors"
+                  className="w-full py-4 bg-sageDark text-primary rounded-2xl font-bold uppercase tracking-widest hover:bg-surface transition-colors"
                 >
                   Apply Filters
                 </button>

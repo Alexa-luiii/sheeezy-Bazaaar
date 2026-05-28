@@ -24,7 +24,7 @@ const CartDrawer = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => toggleCart(false)}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60]"
+            className="fixed inset-0 bg-surface/60 backdrop-blur-sm z-[60]"
           />
 
           {/* Drawer */}
@@ -36,12 +36,12 @@ const CartDrawer = () => {
             className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-background z-[70] shadow-2xl flex flex-col"
           >
             {/* Header */}
-            <div className="p-6 border-b border-white/10 flex items-center justify-between">
+            <div className="p-6 border-b border-border flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <ShoppingBag size={24} className="text-accent" />
                   {itemCount > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-accent text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                    <span className="absolute -top-1 -right-1 bg-accent text-text text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
                       {itemCount}
                     </span>
                   )}
@@ -86,7 +86,7 @@ const CartDrawer = () => {
                     </p>
                     <button
                       onClick={() => toggleCart(false)}
-                      className="mt-6 bg-accent text-white px-10 py-4 rounded-full font-bold hover:bg-accent/80 transition-all active:scale-95 shadow-lg shadow-accent/20"
+                      className="mt-6 bg-accent text-text px-10 py-4 rounded-full font-bold hover:bg-accent/80 transition-all active:scale-95 shadow-lg shadow-accent/20"
                     >
                       Browse Collection
                     </button>
@@ -97,7 +97,7 @@ const CartDrawer = () => {
 
             {/* Footer */}
             {items.length > 0 && (
-              <div className="p-6 border-t border-white/10 bg-surface/30 space-y-6">
+              <div className="p-6 border-t border-border bg-surface/30 space-y-6">
                 {/* Coupon */}
                 <div className="relative group">
                   <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-accent transition-colors">
@@ -108,7 +108,7 @@ const CartDrawer = () => {
                     value={coupon}
                     onChange={(e) => setCoupon(e.target.value)}
                     placeholder="Apply Coupon"
-                    className="w-full bg-background border border-white/10 rounded-full py-3 pl-12 pr-4 text-sm focus:outline-none focus:border-accent transition-all font-inter"
+                    className="w-full bg-background border border-border rounded-full py-3 pl-12 pr-4 text-sm focus:outline-none focus:border-accent transition-all font-inter"
                   />
                   <button className="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-accent hover:text-accent/80 transition-colors uppercase tracking-wider px-2">
                     Apply
@@ -125,7 +125,7 @@ const CartDrawer = () => {
                     <span>Shipping</span>
                     <span className="text-accent font-medium">Calculated at checkout</span>
                   </div>
-                  <div className="flex justify-between items-center pt-2 border-t border-white/5">
+                  <div className="flex justify-between items-center pt-2 border-t border-border">
                     <span className="text-lg font-playfair font-bold">Estimated Total</span>
                     <span className="text-xl font-bold text-accent">${subtotal.toFixed(2)}</span>
                   </div>
@@ -136,7 +136,7 @@ const CartDrawer = () => {
                   <Link
                     href="/checkout"
                     onClick={() => toggleCart(false)}
-                    className="group flex items-center justify-center gap-2 w-full bg-accent text-white py-4 rounded-full font-bold hover:bg-accent/90 transition-all active:scale-[0.98] shadow-xl shadow-accent/10"
+                    className="group flex items-center justify-center gap-2 w-full bg-accent text-text py-4 rounded-full font-bold hover:bg-accent/90 transition-all active:scale-[0.98] shadow-xl shadow-accent/10"
                   >
                     Proceed to Checkout
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

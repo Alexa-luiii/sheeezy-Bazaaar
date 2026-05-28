@@ -12,21 +12,21 @@ const heroLooks = [
     title: 'Style That Speaks',
     subtext: 'Discover our latest collection of premium silk and wool essentials.',
     image: 'https://images.unsplash.com/photo-1539109132314-3477524c859c?q=80&w=1000&auto=format&fit=crop',
-    accentColor: '#C9A84C',
+    accentColor: '#7A9E7E',
   },
   {
     id: 2,
     title: 'Elegance Redefined',
     subtext: 'Step into luxury with our curated selection of designer shoes.',
     image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop',
-    accentColor: '#B8860B',
+    accentColor: '#E8C4D0',
   },
   {
     id: 3,
     title: 'Timeless Beauty',
     subtext: 'Indulge in premium skincare and makeup that brings out your glow.',
     image: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1000&auto=format&fit=crop',
-    accentColor: '#D4AF37',
+    accentColor: '#B2C8B0',
   },
 ];
 
@@ -118,7 +118,7 @@ const HeroSection = () => {
               >
                 <Link
                   href="/shop"
-                  className="bg-accent text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-accent/80 transition-all active:scale-95 shadow-xl shadow-accent/20"
+                  className="bg-accent text-text px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-accent/80 transition-all active:scale-95 shadow-xl shadow-accent/20"
                 >
                   Shop Now
                   <ArrowRight size={20} />
@@ -163,7 +163,7 @@ const HeroSection = () => {
                   y: [0, -10, 0],
                 }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-6 -right-6 bg-background/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/10 hidden md:flex items-center gap-3"
+                className="absolute -top-6 -right-6 bg-background/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-border hidden md:flex items-center gap-3"
               >
                 <div className="bg-accent/20 p-2 rounded-full text-accent">
                   <Flame size={20} />
@@ -179,7 +179,7 @@ const HeroSection = () => {
                   y: [0, 10, 0],
                 }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute bottom-12 -left-12 bg-background/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/10 hidden md:flex items-center gap-3"
+                className="absolute bottom-12 -left-12 bg-background/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-border hidden md:flex items-center gap-3"
               >
                 <div className="bg-yellow-500/20 p-2 rounded-full text-yellow-500">
                   <Star size={20} fill="currentColor" />

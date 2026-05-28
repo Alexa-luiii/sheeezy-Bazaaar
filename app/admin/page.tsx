@@ -49,8 +49,8 @@ export default function AdminDashboard() {
     <div className="space-y-8 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-serif font-bold text-white tracking-tight">Dashboard</h1>
-          <p className="text-zinc-500 mt-1 uppercase tracking-[0.2em] text-xs font-medium">Platform Performance at a glance</p>
+          <h1 className="text-3xl font-serif font-bold text-text tracking-tight">Dashboard</h1>
+          <p className="text-muted mt-1 uppercase tracking-[0.2em] text-xs font-medium">Platform Performance at a glance</p>
         </div>
         <div className="flex items-center gap-3">
             <Button variant="outline" size="sm">Export Report</Button>
@@ -67,11 +67,11 @@ export default function AdminDashboard() {
             animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
             transition={{ delay: i * 0.1 }}
           >
-            <Card className="border-white/5 bg-zinc-950/50 hover:border-brand-accent/30 transition-all group">
+            <Card className="border-border bg-surface/50 hover:border-sageDark/30 transition-all group">
               <CardContent className="p-6">
                 <div className="flex justify-between items-start">
-                  <div className="p-2 rounded-sm bg-white/5 group-hover:bg-brand-accent/10 transition-colors">
-                    <stat.icon className="text-zinc-400 group-hover:text-brand-accent transition-colors" size={20} />
+                  <div className="p-2 rounded-sm bg-primary group-hover:bg-sageDark/10 transition-colors">
+                    <stat.icon className="text-muted group-hover:text-sageDark transition-colors" size={20} />
                   </div>
                   <div className={cn(
                     "flex items-center gap-1 text-xs font-bold",
@@ -82,8 +82,8 @@ export default function AdminDashboard() {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest">{stat.name}</p>
-                  <h3 className="text-2xl font-bold text-white mt-1">{stat.value}</h3>
+                  <p className="text-sm font-medium text-muted uppercase tracking-widest">{stat.name}</p>
+                  <h3 className="text-2xl font-bold text-text mt-1">{stat.value}</h3>
                 </div>
               </CardContent>
             </Card>
@@ -93,13 +93,13 @@ export default function AdminDashboard() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Sales Chart Mockup */}
-        <Card className="lg:col-span-2 border-white/5 bg-zinc-950/50">
+        <Card className="lg:col-span-2 border-border bg-surface/50">
           <CardHeader className="flex flex-row items-center justify-between pb-8">
             <div>
               <CardTitle className="text-lg">Sales Revenue</CardTitle>
               <CardDescription>Visual summary of recent daily earnings.</CardDescription>
             </div>
-            <select className="bg-white/5 border border-white/10 rounded-sm text-xs px-2 py-1 outline-none">
+            <select className="bg-primary border border-border rounded-sm text-xs px-2 py-1 outline-none">
                 <option>Last 7 Days</option>
                 <option>Last 30 Days</option>
             </select>
@@ -113,13 +113,13 @@ export default function AdminDashboard() {
                       initial={{ height: 0 }}
                       animate={{ height: isLoaded ? `${val}%` : 0 }}
                       transition={{ duration: 1, delay: i * 0.1, ease: "easeOut" }}
-                      className="w-full bg-brand-accent/20 border-t-2 border-brand-accent group-hover:bg-brand-accent/40 transition-all rounded-t-sm"
+                      className="w-full bg-sageDark/20 border-t-2 border-sageDark group-hover:bg-sageDark/40 transition-all rounded-t-sm"
                     />
-                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-zinc-800 text-[10px] px-1.5 py-0.5 rounded text-white font-bold">
+                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-accent text-[10px] px-1.5 py-0.5 rounded text-text font-bold">
                         ${(val * 120).toLocaleString()}
                     </div>
                   </div>
-                  <span className="text-[10px] text-zinc-600 font-bold uppercase tracking-widest">{['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][i]}</span>
+                  <span className="text-[10px] text-muted font-bold uppercase tracking-widest">{['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][i]}</span>
                 </div>
               ))}
             </div>
@@ -127,7 +127,7 @@ export default function AdminDashboard() {
         </Card>
 
         {/* Low Stock Alerts */}
-        <Card className="border-white/5 bg-zinc-950/50">
+        <Card className="border-border bg-surface/50">
           <CardHeader>
             <div className="flex items-center gap-2">
                 <AlertTriangle className="text-amber-500" size={18} />
@@ -138,25 +138,25 @@ export default function AdminDashboard() {
           <CardContent className="p-0">
             <div className="divide-y divide-white/5">
                 {lowStockProducts.map((product) => (
-                    <div key={product.id} className="flex items-center gap-4 p-4 hover:bg-white/[0.02] transition-colors group">
-                        <div className="w-12 h-12 relative rounded-sm overflow-hidden bg-zinc-900 border border-white/5 flex-shrink-0">
+                    <div key={product.id} className="flex items-center gap-4 p-4 hover:bg-primary/20[0.02] transition-colors group">
+                        <div className="w-12 h-12 relative rounded-sm overflow-hidden bg-primary border border-border flex-shrink-0">
                             <Image src={product.images[0]} alt={product.title} fill className="object-cover" />
                         </div>
                         <div className="flex-1 min-w-0">
-                            <h4 className="text-sm font-medium text-white truncate">{product.title}</h4>
+                            <h4 className="text-sm font-medium text-text truncate">{product.title}</h4>
                             <div className="flex items-center gap-2 mt-1">
                                 <Badge variant="danger" className="text-[9px] py-0 px-1.5">{product.stock} left</Badge>
-                                <span className="text-[10px] text-zinc-500 uppercase tracking-widest">{product.category}</span>
+                                <span className="text-[10px] text-muted uppercase tracking-widest">{product.category}</span>
                             </div>
                         </div>
-                        <button className="p-2 text-zinc-500 hover:text-brand-accent opacity-0 group-hover:opacity-100 transition-all">
+                        <button className="p-2 text-muted hover:text-sageDark opacity-0 group-hover:opacity-100 transition-all">
                             <MoreVertical size={16} />
                         </button>
                     </div>
                 ))}
             </div>
-            <div className="p-4 border-t border-white/5">
-                <Button variant="ghost" className="w-full text-xs uppercase tracking-widest text-zinc-400 hover:text-white" asChild>
+            <div className="p-4 border-t border-border">
+                <Button variant="ghost" className="w-full text-xs uppercase tracking-widest text-muted hover:text-text" asChild>
                     <Link href="/admin/products">
                         View All Inventory
                         <ChevronRight size={14} className="ml-1" />
@@ -168,7 +168,7 @@ export default function AdminDashboard() {
       </div>
 
       {/* Recent Orders Table */}
-      <Card className="border-white/5 bg-zinc-950/50 overflow-hidden">
+      <Card className="border-border bg-surface/50 overflow-hidden">
         <CardHeader className="flex flex-row items-center justify-between">
             <div>
                 <CardTitle className="text-lg">Recent Orders</CardTitle>
@@ -181,7 +181,7 @@ export default function AdminDashboard() {
         <CardContent className="p-0">
             <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm">
-                    <thead className="bg-white/5 text-[10px] uppercase tracking-[0.2em] text-zinc-400">
+                    <thead className="bg-primary text-[10px] uppercase tracking-[0.2em] text-muted">
                         <tr>
                             <th className="px-6 py-4 font-bold">Order ID</th>
                             <th className="px-6 py-4 font-bold">Customer</th>
@@ -192,10 +192,10 @@ export default function AdminDashboard() {
                     </thead>
                     <tbody className="divide-y divide-white/5">
                         {recentOrders.map((order) => (
-                            <tr key={order.id} className="hover:bg-white/[0.02] transition-colors group cursor-pointer">
-                                <td className="px-6 py-4 font-mono text-zinc-300">{order.id}</td>
-                                <td className="px-6 py-4 font-medium text-white">{order.customer}</td>
-                                <td className="px-6 py-4 text-brand-accent font-bold">{order.total}</td>
+                            <tr key={order.id} className="hover:bg-primary/20[0.02] transition-colors group cursor-pointer">
+                                <td className="px-6 py-4 font-mono text-text">{order.id}</td>
+                                <td className="px-6 py-4 font-medium text-text">{order.customer}</td>
+                                <td className="px-6 py-4 text-sageDark font-bold">{order.total}</td>
                                 <td className="px-6 py-4">
                                     <Badge variant={
                                         order.status === 'Delivered' ? 'success' :
@@ -204,7 +204,7 @@ export default function AdminDashboard() {
                                         {order.status}
                                     </Badge>
                                 </td>
-                                <td className="px-6 py-4 text-zinc-500 text-right text-xs">{order.date}</td>
+                                <td className="px-6 py-4 text-muted text-right text-xs">{order.date}</td>
                             </tr>
                         ))}
                     </tbody>

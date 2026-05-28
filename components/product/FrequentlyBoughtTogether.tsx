@@ -27,22 +27,22 @@ export default function FrequentlyBoughtTogether({ currentProduct }: FrequentlyB
   };
 
   return (
-    <div className="bg-surface p-8 border border-white/5">
-      <h3 className="text-xl font-serif text-white mb-8">Frequently Bought Together</h3>
+    <div className="bg-surface p-8 border border-border">
+      <h3 className="text-xl font-serif text-text mb-8">Frequently Bought Together</h3>
 
       <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="flex items-center gap-4 flex-1">
           {/* Main Product */}
-          <div className="relative w-24 aspect-[3/4] border border-white/10">
+          <div className="relative w-24 aspect-[3/4] border border-border">
             <Image src={currentProduct.images[0]} alt={currentProduct.title} fill className="object-cover" />
           </div>
 
-          <Plus className="text-white/20" />
+          <Plus className="text-text/20" />
 
           {/* Upsell Products */}
           <div className="flex gap-4">
             {upsellProducts.map(product => (
-              <div key={product.id} className="relative w-24 aspect-[3/4] border border-white/10">
+              <div key={product.id} className="relative w-24 aspect-[3/4] border border-border">
                 <Image src={product.images[0]} alt={product.title} fill className="object-cover" />
               </div>
             ))}
@@ -51,12 +51,12 @@ export default function FrequentlyBoughtTogether({ currentProduct }: FrequentlyB
 
         <div className="flex flex-col items-center md:items-end gap-4 min-w-[200px]">
           <div className="text-center md:text-right">
-            <p className="text-white/40 text-xs uppercase tracking-widest font-bold mb-1">Bundle Price</p>
-            <p className="text-3xl text-white font-light">${totalPrice}</p>
+            <p className="text-text/40 text-xs uppercase tracking-widest font-bold mb-1">Bundle Price</p>
+            <p className="text-3xl text-text font-light">${totalPrice}</p>
           </div>
           <button
             onClick={addBundleToCart}
-            className="w-full bg-white text-black h-12 font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2 hover:bg-accent transition-colors"
+            className="w-full bg-surface text-text h-12 font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2 hover:bg-accent transition-colors"
           >
             <Plus size={16} />
             Add Bundle to Cart
@@ -67,12 +67,12 @@ export default function FrequentlyBoughtTogether({ currentProduct }: FrequentlyB
       <div className="mt-8 space-y-3">
         <div className="flex items-center gap-3">
           <input type="checkbox" checked readOnly className="accent-accent" />
-          <span className="text-sm text-white font-medium italic">This item: {currentProduct.title}</span>
+          <span className="text-sm text-text font-medium italic">This item: {currentProduct.title}</span>
         </div>
         {upsellProducts.map(p => (
           <div key={p.id} className="flex items-center gap-3">
             <input type="checkbox" checked readOnly className="accent-accent" />
-            <Link href={`/product/${p.id}`} className="text-sm text-white/60 hover:text-accent transition-colors">
+            <Link href={`/product/${p.id}`} className="text-sm text-text/60 hover:text-accent transition-colors">
               {p.title}
             </Link>
             <span className="text-sm text-accent font-bold ml-auto">${p.price}</span>

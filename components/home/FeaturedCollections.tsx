@@ -17,13 +17,13 @@ const collections = [
     title: "Urban Minimalist",
     subtitle: "New Arrivals",
     image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000&auto=format&fit=crop",
-    color: "bg-brand-primary"
+    color: "bg-primary"
   }
 ];
 
 const FeaturedCollections = () => {
   return (
-    <section className="py-24 bg-black">
+    <section className="py-24 bg-surface">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {collections.map((col, idx) => (
@@ -44,18 +44,18 @@ const FeaturedCollections = () => {
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-60"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-text via-text/20/20 to-transparent" />
 
               <div className="absolute bottom-12 left-12 right-12 space-y-4">
-                <span className="text-brand-accent tracking-[0.3em] font-medium uppercase text-xs">
+                <span className="text-sageDark tracking-[0.3em] font-medium uppercase text-xs">
                   {col.subtitle}
                 </span>
-                <h3 className="text-4xl md:text-5xl font-bold text-white font-serif leading-tight">
+                <h3 className="text-4xl md:text-5xl font-bold text-text font-serif leading-tight">
                   {col.title}
                 </h3>
-                <button className="flex items-center gap-3 text-white font-bold text-sm tracking-widest uppercase group/btn">
+                <button className="flex items-center gap-3 text-text font-bold text-sm tracking-widest uppercase group/btn">
                   Shop Collection
-                  <div className="w-10 h-[1px] bg-white transition-all group-hover/btn:w-16" />
+                  <div className="w-10 h-[1px] bg-surface transition-all group-hover/btn:w-16" />
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

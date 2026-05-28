@@ -35,22 +35,22 @@ const AIRecommendations = () => {
   return (
     <section className="py-24 bg-surface/50 relative overflow-hidden">
       {/* Decorative background element */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl" />
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-sageDark/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-brand-accent">
+            <div className="flex items-center gap-2 text-sageDark">
               <Sparkles className="w-4 h-4 fill-current" />
               <span className="text-[10px] font-bold uppercase tracking-[0.3em]">Personalized for you</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white font-serif">AI Curated For You</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-text font-serif">AI Curated For You</h2>
           </div>
 
           <button
             onClick={refreshRecommendations}
             disabled={isRefreshing}
-            className="flex items-center gap-2 text-xs font-bold text-white/40 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-xs font-bold text-text/40 hover:text-text transition-colors"
           >
             <RefreshCw className={cn("w-3 h-3", isRefreshing && "animate-spin")} />
             REFRESH CURATION

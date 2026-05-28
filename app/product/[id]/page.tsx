@@ -35,7 +35,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-24 pb-20">
+    <div className="min-h-screen bg-surface pt-24 pb-20">
       <div className="container-custom">
         {/* Breadcrumbs */}
         <div className="py-8">
@@ -69,7 +69,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         </div>
 
         {/* Recommendations */}
-        <div className="border-t border-white/10 pt-20">
+        <div className="border-t border-border pt-20">
           <ProductRecommendations currentProductId={product.id} category={product.category} />
         </div>
       </div>

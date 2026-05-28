@@ -40,49 +40,49 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center px-4 py-12">
+    <div className="min-h-[80vh] flex items-center justify-center px-4 py-20 bg-primary">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.6 }}
         className="w-full max-w-md"
       >
-        <Card className="border-white/5 bg-zinc-950/50 backdrop-blur-xl">
-          <CardHeader className="space-y-1 text-center">
-            <CardTitle className="text-3xl tracking-tight">Welcome Back</CardTitle>
-            <CardDescription>
-              Enter your credentials to access your account
+        <Card className="border-border bg-surface shadow-2xl">
+          <CardHeader className="space-y-2 text-center pb-8">
+            <CardTitle className="text-4xl italic">Welcome Back</CardTitle>
+            <CardDescription className="text-muted font-medium uppercase tracking-widest text-[10px]">
+              Access your private collection account
             </CardDescription>
           </CardHeader>
-          <CardContent className="grid gap-6">
+          <CardContent className="grid gap-8">
             <div className="grid grid-cols-2 gap-4">
-              <Button variant="outline" className="w-full bg-white/5 border-white/10 hover:bg-white/10">
-                <Globe className="mr-2 h-4 w-4" />
-                Google
+              <Button variant="outline" className="w-full border-border bg-primary/30 hover:bg-primary text-muted font-bold text-[10px]">
+                <Globe className="mr-2 h-3.5 w-3.5" />
+                GOOGLE
               </Button>
-              <Button variant="outline" className="w-full bg-white/5 border-white/10 hover:bg-white/10">
-                <Apple className="mr-2 h-4 w-4" />
-                Apple
+              <Button variant="outline" className="w-full border-border bg-primary/30 hover:bg-primary text-muted font-bold text-[10px]">
+                <Apple className="mr-2 h-3.5 w-3.5" />
+                APPLE
               </Button>
             </div>
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t border-white/10" />
+                <span className="w-full border-t border-border" />
               </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-zinc-950 px-2 text-zinc-500">Or continue with</span>
+              <div className="relative flex justify-center text-[10px] font-bold uppercase tracking-[0.3em]">
+                <span className="bg-surface px-4 text-muted">Or</span>
               </div>
             </div>
-            <form onSubmit={handleLogin} className="space-y-4">
+            <form onSubmit={handleLogin} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-3 h-4 w-4 text-zinc-500" />
+                  <Mail className="absolute left-3 top-3 h-4 w-4 text-muted" />
                   <Input
                     id="email"
                     type="email"
-                    placeholder="name@example.com"
-                    className="pl-10 bg-white/5 border-white/10"
+                    placeholder="NAME@DOMAIN.COM"
+                    className="pl-10 bg-primary/20 border-border uppercase font-bold text-[11px] tracking-widest"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -94,17 +94,17 @@ export default function LoginPage() {
                   <Label htmlFor="password">Password</Label>
                   <Link
                     href="/auth/forgot-password"
-                    className="text-xs text-brand-accent hover:underline"
+                    className="text-[10px] text-sageDark font-bold uppercase tracking-widest hover:underline"
                   >
-                    Forgot password?
+                    Forgot?
                   </Link>
                 </div>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-3 h-4 w-4 text-zinc-500" />
+                  <Lock className="absolute left-3 top-3 h-4 w-4 text-muted" />
                   <Input
                     id="password"
                     type="password"
-                    className="pl-10 bg-white/5 border-white/10"
+                    className="pl-10 bg-primary/20 border-border"
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -113,19 +113,19 @@ export default function LoginPage() {
               </div>
               <div className="flex items-center space-x-2">
                 <Checkbox id="remember" />
-                <Label htmlFor="remember" className="text-xs font-normal">
-                  Remember me for 30 days
+                <Label htmlFor="remember" className="text-[10px] font-bold text-muted uppercase tracking-widest leading-none">
+                  Stay signed in
                 </Label>
               </div>
-              <Button type="submit" className="w-full mt-4" isLoading={isLoading}>
-                Sign In
+              <Button type="submit" className="w-full mt-4 h-12 shadow-lg shadow-sageDark/20" isLoading={isLoading}>
+                SIGN IN
               </Button>
             </form>
           </CardContent>
-          <CardFooter className="flex flex-wrap items-center justify-center gap-1 text-sm text-zinc-500">
-            Don't have an account?{" "}
-            <Link href="/auth/signup" className="text-brand-accent hover:underline font-medium">
-              Create an account
+          <CardFooter className="flex flex-wrap items-center justify-center gap-1 text-[10px] font-bold text-muted uppercase tracking-widest pt-4">
+            New here?{" "}
+            <Link href="/auth/signup" className="text-sageDark hover:underline">
+              Join the Bazaar
             </Link>
           </CardFooter>
         </Card>

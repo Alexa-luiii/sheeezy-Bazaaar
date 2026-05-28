@@ -20,8 +20,8 @@ export default function ClientLayout({
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="dark"
-      enableSystem
+      defaultTheme="light"
+      enableSystem={false}
       disableTransitionOnChange
     >
       {!isAdmin && <Navbar />}

@@ -7,10 +7,10 @@ interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement> {
 export function Skeleton({ className, ...props }: SkeletonProps) {
   return (
     <div
-      className={cn("animate-pulse rounded-sm bg-white/5", className)}
+      className={cn("animate-pulse rounded-sm bg-accent/20", className)}
       {...props}
     >
-        <div className="w-full h-full absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/[0.03] to-transparent" />
+        <div className="w-full h-full absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/40 to-transparent" />
     </div>
   )
 }

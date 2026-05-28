@@ -92,19 +92,19 @@ export default function AdminOrdersPage() {
   return (
     <div className="space-y-8 max-w-7xl mx-auto pb-20">
       <div>
-        <h1 className="text-3xl font-serif font-bold text-white tracking-tight">Orders</h1>
-        <p className="text-zinc-500 mt-1 uppercase tracking-[0.2em] text-xs font-medium">Fulfill and track customer purchases</p>
+        <h1 className="text-3xl font-serif font-bold text-text tracking-tight">Orders</h1>
+        <p className="text-muted mt-1 uppercase tracking-[0.2em] text-xs font-medium">Fulfill and track customer purchases</p>
       </div>
 
       <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-        <div className="flex bg-zinc-950 border border-white/5 p-1 rounded-sm overflow-x-auto no-scrollbar">
+        <div className="flex bg-surface border border-border p-1 rounded-sm overflow-x-auto no-scrollbar">
             {tabs.map(tab => (
                 <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
                     className={cn(
                         "px-6 py-2 rounded-sm text-xs font-bold uppercase tracking-widest transition-all whitespace-nowrap",
-                        activeTab === tab ? "bg-brand-accent text-brand-primary" : "text-zinc-500 hover:text-white"
+                        activeTab === tab ? "bg-sageDark text-primary" : "text-muted hover:text-text"
                     )}
                 >
                     {tab}
@@ -112,20 +112,20 @@ export default function AdminOrdersPage() {
             ))}
         </div>
         <div className="relative w-full md:w-80">
-            <Search className="absolute left-3 top-2.5 text-zinc-500" size={18} />
+            <Search className="absolute left-3 top-2.5 text-muted" size={18} />
             <Input
                 placeholder="Search orders..."
-                className="pl-10 bg-zinc-950 border-white/10"
+                className="pl-10 bg-surface border-border"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
         </div>
       </div>
 
-      <Card className="border-white/5 bg-zinc-950/50 overflow-hidden">
+      <Card className="border-border bg-surface/50 overflow-hidden">
         <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
-                <thead className="bg-white/5 text-[10px] uppercase tracking-[0.2em] text-zinc-400">
+                <thead className="bg-primary text-[10px] uppercase tracking-[0.2em] text-muted">
                     <tr>
                         <th className="px-6 py-4 font-bold w-12"></th>
                         <th className="px-6 py-4 font-bold">Order ID</th>
@@ -141,22 +141,22 @@ export default function AdminOrdersPage() {
                         <React.Fragment key={order.id}>
                             <tr
                                 className={cn(
-                                    "hover:bg-white/[0.02] transition-colors group cursor-pointer",
-                                    expandedOrder === order.id && "bg-white/[0.03]"
+                                    "hover:bg-surface/[0.02] transition-colors group cursor-pointer",
+                                    expandedOrder === order.id && "bg-surface/[0.03]"
                                 )}
                                 onClick={() => toggleOrder(order.id)}
                             >
                                 <td className="px-6 py-4">
-                                    {expandedOrder === order.id ? <ChevronUp size={16} className="text-brand-accent" /> : <ChevronDown size={16} className="text-zinc-500" />}
+                                    {expandedOrder === order.id ? <ChevronUp size={16} className="text-sageDark" /> : <ChevronDown size={16} className="text-muted" />}
                                 </td>
-                                <td className="px-6 py-4 font-mono font-bold text-zinc-300">{order.id}</td>
+                                <td className="px-6 py-4 font-mono font-bold text-text">{order.id}</td>
                                 <td className="px-6 py-4">
                                     <div className="flex flex-col">
-                                        <span className="text-white font-medium">{order.customer}</span>
-                                        <span className="text-[10px] text-zinc-500">{order.email}</span>
+                                        <span className="text-text font-medium">{order.customer}</span>
+                                        <span className="text-[10px] text-muted">{order.email}</span>
                                     </div>
                                 </td>
-                                <td className="px-6 py-4 font-bold text-white">${order.total.toFixed(2)}</td>
+                                <td className="px-6 py-4 font-bold text-text">${order.total.toFixed(2)}</td>
                                 <td className="px-6 py-4">
                                     <Badge variant={
                                         order.status === 'Delivered' ? 'success' :
@@ -166,34 +166,34 @@ export default function AdminOrdersPage() {
                                         {order.status}
                                     </Badge>
                                 </td>
-                                <td className="px-6 py-4 text-zinc-400">{order.date}</td>
+                                <td className="px-6 py-4 text-muted">{order.date}</td>
                                 <td className="px-6 py-4 text-right">
-                                    <button className="text-zinc-500 hover:text-brand-accent">
+                                    <button className="text-muted hover:text-sageDark">
                                         <ExternalLink size={16} />
                                     </button>
                                 </td>
                             </tr>
                             {expandedOrder === order.id && (
-                                <tr className="bg-white/[0.03]">
-                                    <td colSpan={7} className="px-12 py-8 border-t border-white/5">
+                                <tr className="bg-surface/[0.03]">
+                                    <td colSpan={7} className="px-12 py-8 border-t border-border">
                                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                                             {/* Order Items */}
                                             <div className="lg:col-span-2 space-y-4">
-                                                <h4 className="text-xs font-bold uppercase tracking-widest text-brand-accent mb-4">Order Items</h4>
+                                                <h4 className="text-xs font-bold uppercase tracking-widest text-sageDark mb-4">Order Items</h4>
                                                 {order.items.map((item) => (
-                                                    <div key={item.id} className="flex gap-4 items-center bg-black/20 p-3 rounded-sm border border-white/5">
-                                                        <div className="w-16 h-20 relative rounded-sm overflow-hidden bg-zinc-900 shrink-0">
+                                                    <div key={item.id} className="flex gap-4 items-center bg-surface/20 p-3 rounded-sm border border-border">
+                                                        <div className="w-16 h-20 relative rounded-sm overflow-hidden bg-primary shrink-0">
                                                             <Image src={item.image} alt={item.title} fill className="object-cover" />
                                                         </div>
                                                         <div className="flex-1">
-                                                            <p className="text-white font-medium">{item.title}</p>
-                                                            <p className="text-xs text-zinc-500 mt-1">Qty: {item.quantity} × ${item.price}</p>
+                                                            <p className="text-text font-medium">{item.title}</p>
+                                                            <p className="text-xs text-muted mt-1">Qty: {item.quantity} × ${item.price}</p>
                                                         </div>
-                                                        <p className="font-bold text-white">${item.price * item.quantity}</p>
+                                                        <p className="font-bold text-text">${item.price * item.quantity}</p>
                                                     </div>
                                                 ))}
-                                                <div className="flex justify-between items-center pt-4 border-t border-white/5">
-                                                    <p className="text-zinc-500 text-sm">Status Update:</p>
+                                                <div className="flex justify-between items-center pt-4 border-t border-border">
+                                                    <p className="text-muted text-sm">Status Update:</p>
                                                     <div className="flex gap-2">
                                                         <Button variant="outline" size="sm" className="h-8 text-[10px] uppercase tracking-widest">Mark as Shipped</Button>
                                                         <Button variant="primary" size="sm" className="h-8 text-[10px] uppercase tracking-widest">Mark as Delivered</Button>
@@ -204,29 +204,29 @@ export default function AdminOrdersPage() {
                                             {/* Customer & Delivery */}
                                             <div className="space-y-6">
                                                 <div className="space-y-3">
-                                                    <h4 className="text-xs font-bold uppercase tracking-widest text-brand-accent">Customer Details</h4>
+                                                    <h4 className="text-xs font-bold uppercase tracking-widest text-sageDark">Customer Details</h4>
                                                     <div className="space-y-2">
-                                                        <div className="flex items-center gap-3 text-sm text-zinc-300">
-                                                            <Mail size={14} className="text-zinc-500" />
+                                                        <div className="flex items-center gap-3 text-sm text-text">
+                                                            <Mail size={14} className="text-muted" />
                                                             {order.email}
                                                         </div>
-                                                        <div className="flex items-center gap-3 text-sm text-zinc-300">
-                                                            <Phone size={14} className="text-zinc-500" />
+                                                        <div className="flex items-center gap-3 text-sm text-text">
+                                                            <Phone size={14} className="text-muted" />
                                                             {order.phone}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="space-y-3">
-                                                    <h4 className="text-xs font-bold uppercase tracking-widest text-brand-accent">Shipping Address</h4>
-                                                    <div className="flex items-start gap-3 text-sm text-zinc-300 leading-relaxed">
-                                                        <MapPin size={14} className="text-zinc-500 shrink-0 mt-1" />
+                                                    <h4 className="text-xs font-bold uppercase tracking-widest text-sageDark">Shipping Address</h4>
+                                                    <div className="flex items-start gap-3 text-sm text-text leading-relaxed">
+                                                        <MapPin size={14} className="text-muted shrink-0 mt-1" />
                                                         {order.address}
                                                     </div>
                                                 </div>
                                                 <div className="space-y-3">
-                                                    <h4 className="text-xs font-bold uppercase tracking-widest text-brand-accent">Payment Information</h4>
-                                                    <div className="flex items-center gap-3 text-sm text-zinc-300">
-                                                        <CreditCard size={14} className="text-zinc-500" />
+                                                    <h4 className="text-xs font-bold uppercase tracking-widest text-sageDark">Payment Information</h4>
+                                                    <div className="flex items-center gap-3 text-sm text-text">
+                                                        <CreditCard size={14} className="text-muted" />
                                                         {order.payment}
                                                     </div>
                                                 </div>

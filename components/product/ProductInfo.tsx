@@ -42,7 +42,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
         <div className="flex justify-between items-start">
           <div className="space-y-1">
             <p className="text-accent font-bold uppercase tracking-[0.2em] text-sm">{product.brand}</p>
-            <p className="text-white/40 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <p className="text-text/40 text-[10px] font-bold uppercase tracking-[0.2em]">
               {product.soldCount}+ Sold in last 24h
             </p>
           </div>
@@ -51,13 +51,13 @@ export default function ProductInfo({ product }: ProductInfoProps) {
             <span className="text-xs font-bold">{product.rating}</span>
           </div>
         </div>
-        <h1 className="text-4xl lg:text-5xl font-serif text-white leading-tight">{product.title}</h1>
+        <h1 className="text-4xl lg:text-5xl font-serif text-text leading-tight">{product.title}</h1>
 
         <div className="flex items-center gap-4 pt-2">
-          <p className="text-3xl font-light text-white">${product.price}</p>
+          <p className="text-3xl font-light text-text">${product.price}</p>
           {product.discount > 0 && (
             <>
-              <p className="text-xl text-white/40 line-through">${product.originalPrice}</p>
+              <p className="text-xl text-text/40 line-through">${product.originalPrice}</p>
               <span className="bg-accent/20 text-accent text-xs font-bold px-2 py-1 uppercase tracking-wider rounded">
                 Save {product.discount}%
               </span>
@@ -67,25 +67,25 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       </div>
 
       {/* Delivery Info */}
-      <div className="flex items-center gap-3 text-white/60 text-sm bg-white/5 p-4 rounded-lg border border-white/5">
+      <div className="flex items-center gap-3 text-text/60 text-sm bg-primary p-4 rounded-lg border border-border">
         <Truck size={18} className="text-accent" />
-        <p>Estimated delivery: <span className="text-white font-bold">{product.estimatedDelivery}</span></p>
+        <p>Estimated delivery: <span className="text-text font-bold">{product.estimatedDelivery}</span></p>
       </div>
 
-      <div className="h-px w-full bg-white/10" />
+      <div className="h-px w-full bg-accent" />
 
       {/* Description Preview */}
-      <p className="text-white/70 leading-relaxed text-lg">
+      <p className="text-text/70 leading-relaxed text-lg">
         {product.description}
       </p>
 
       {/* Stock Progress */}
       <div className="space-y-2">
         <div className="flex justify-between text-[10px] font-bold uppercase tracking-[0.2em]">
-          <span className="text-white/60">Limited Availability</span>
+          <span className="text-text/60">Limited Availability</span>
           <span className="text-accent">{product.stock} pieces remaining</span>
         </div>
-        <div className="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+        <div className="h-1 w-full bg-accent rounded-full overflow-hidden">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${Math.min(100, (product.stock / 50) * 100)}%` }}
@@ -101,8 +101,8 @@ export default function ProductInfo({ product }: ProductInfoProps) {
         {product.colors && product.colors.length > 0 && (
           <div className="space-y-3">
             <div className="flex justify-between">
-              <label className="text-sm font-bold uppercase tracking-widest text-white/60">Color</label>
-              <span className="text-sm text-white font-medium">{selectedColor}</span>
+              <label className="text-sm font-bold uppercase tracking-widest text-text/60">Color</label>
+              <span className="text-sm text-text font-medium">{selectedColor}</span>
             </div>
             <div className="flex flex-wrap gap-3">
               {product.colors.map((color) => (
@@ -113,7 +113,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
                     "px-4 py-2 text-sm border transition-all duration-300",
                     selectedColor === color
                       ? "border-accent text-accent bg-accent/5"
-                      : "border-white/10 text-white hover:border-white/30"
+                      : "border-border text-text hover:border-white/30"
                   )}
                 >
                   {color}
@@ -127,7 +127,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
         {product.sizes && product.sizes.length > 0 && (
           <div className="space-y-3">
             <div className="flex justify-between">
-              <label className="text-sm font-bold uppercase tracking-widest text-white/60">Size</label>
+              <label className="text-sm font-bold uppercase tracking-widest text-text/60">Size</label>
               <button className="text-xs text-accent underline uppercase tracking-wider font-bold">Size Guide</button>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -139,7 +139,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
                     "w-12 h-12 flex items-center justify-center text-sm border transition-all duration-300",
                     selectedSize === size
                       ? "border-accent text-accent bg-accent/5"
-                      : "border-white/10 text-white hover:border-white/30"
+                      : "border-border text-text hover:border-white/30"
                   )}
                 >
                   {size}
@@ -151,20 +151,20 @@ export default function ProductInfo({ product }: ProductInfoProps) {
 
         {/* Quantity */}
         <div className="space-y-3">
-          <label className="text-sm font-bold uppercase tracking-widest text-white/60">Quantity</label>
-          <div className="flex items-center w-32 border border-white/10 h-12">
+          <label className="text-sm font-bold uppercase tracking-widest text-text/60">Quantity</label>
+          <div className="flex items-center w-32 border border-border h-12">
             <button
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
-              className="flex-1 flex items-center justify-center text-white hover:bg-white/5 h-full transition-colors"
+              className="flex-1 flex items-center justify-center text-text hover:bg-primary h-full transition-colors"
             >
               <Minus size={16} />
             </button>
-            <span className="flex-1 flex items-center justify-center text-white font-medium border-x border-white/10 h-full">
+            <span className="flex-1 flex items-center justify-center text-text font-medium border-x border-border h-full">
               {quantity}
             </span>
             <button
               onClick={() => setQuantity(quantity + 1)}
-              className="flex-1 flex items-center justify-center text-white hover:bg-white/5 h-full transition-colors"
+              className="flex-1 flex items-center justify-center text-text hover:bg-primary h-full transition-colors"
             >
               <Plus size={16} />
             </button>
@@ -177,7 +177,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
         <div className="flex flex-col sm:flex-row gap-4">
           <button
             onClick={handleAddToCart}
-            className="flex-[2] bg-accent hover:bg-accent-light text-black h-14 font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all active:scale-[0.98]"
+            className="flex-[2] bg-accent hover:bg-accent-light text-text h-14 font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all active:scale-[0.98]"
           >
             <ShoppingBag size={20} />
             Add to Cart
@@ -188,7 +188,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
               "flex-1 border h-14 font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all active:scale-[0.98]",
               isInWishlist
                 ? "border-red-500 text-red-500 bg-red-500/5"
-                : "border-white/10 text-white hover:bg-white/5"
+                : "border-border text-text hover:bg-primary"
             )}
           >
             <Heart size={20} fill={isInWishlist ? "currentColor" : "none"} />
@@ -196,13 +196,13 @@ export default function ProductInfo({ product }: ProductInfoProps) {
           </button>
         </div>
 
-        <button className="w-full bg-white hover:bg-white/90 text-black h-14 font-bold uppercase tracking-[0.2em] transition-all active:scale-[0.98]">
+        <button className="w-full bg-surface hover:bg-surface/90 text-text h-14 font-bold uppercase tracking-[0.2em] transition-all active:scale-[0.98]">
           Buy It Now
         </button>
       </div>
 
       {/* Shipping Info Accordion */}
-      <div className="pt-8 border-t border-white/10 space-y-4">
+      <div className="pt-8 border-t border-border space-y-4">
         {[
           {
             id: 'shipping',
@@ -217,14 +217,14 @@ export default function ProductInfo({ product }: ProductInfoProps) {
             icon: ShieldCheck
           }
         ].map((item) => (
-          <div key={item.id} className="border-b border-white/5 pb-4 last:border-0">
+          <div key={item.id} className="border-b border-border pb-4 last:border-0">
             <button
               onClick={() => setActiveAccordion(activeAccordion === item.id ? null : item.id)}
               className="flex items-center justify-between w-full group"
             >
               <div className="flex items-center gap-3">
                 <item.icon size={18} className="text-accent" />
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/80 group-hover:text-white transition-colors">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-text/80 group-hover:text-text transition-colors">
                   {item.title}
                 </span>
               </div>
@@ -245,7 +245,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="overflow-hidden"
             >
-              <p className="pt-4 text-sm text-white/50 leading-relaxed pl-[30px]">
+              <p className="pt-4 text-sm text-text/50 leading-relaxed pl-[30px]">
                 {item.content}
               </p>
             </motion.div>

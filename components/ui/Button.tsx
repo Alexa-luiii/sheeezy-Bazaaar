@@ -14,11 +14,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', isLoading, asChild, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     const variants = {
-      primary: 'bg-brand-accent text-brand-primary hover:bg-brand-accent/90',
-      secondary: 'bg-surface text-white hover:bg-surface/80',
-      outline: 'border border-brand-accent text-brand-accent hover:bg-brand-accent/10',
-      ghost: 'hover:bg-brand-accent/10 text-white',
-      link: 'text-brand-accent underline-offset-4 hover:underline',
+      primary: 'bg-sageDark text-surface hover:bg-sageDark/90',
+      secondary: 'bg-accent text-text hover:bg-accent/80',
+      outline: 'border border-sageDark text-sageDark hover:bg-sageDark/10',
+      ghost: 'hover:bg-sage/20 text-text',
+      link: 'text-sageDark underline-offset-4 hover:underline',
     }
 
     const sizes = {
@@ -31,7 +31,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(
-          'inline-flex items-center justify-center rounded-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-brand-accent disabled:pointer-events-none disabled:opacity-50 uppercase tracking-widest',
+          'inline-flex items-center justify-center rounded-sm font-bold transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-sageDark disabled:pointer-events-none disabled:opacity-50 uppercase tracking-widest active:scale-95',
           variants[variant],
           sizes[size],
           className
@@ -43,7 +43,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {asChild ? children : (
           <>
             {isLoading && (
-              <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-brand-primary border-t-transparent" />
+              <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-surface border-t-transparent" />
             )}
             {children}
           </>

@@ -86,7 +86,7 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
               e.stopPropagation();
               setActiveImage((prev) => (prev > 0 ? prev - 1 : images.length - 1));
             }}
-            className="p-2 rounded-full bg-black/50 text-white backdrop-blur-md pointer-events-auto hover:bg-accent hover:text-black transition-colors"
+            className="p-2 rounded-full bg-surface/50 text-text backdrop-blur-md pointer-events-auto hover:bg-accent hover:text-text transition-colors"
           >
             <ChevronLeft size={24} />
           </button>
@@ -95,13 +95,13 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
               e.stopPropagation();
               setActiveImage((prev) => (prev < images.length - 1 ? prev + 1 : 0));
             }}
-            className="p-2 rounded-full bg-black/50 text-white backdrop-blur-md pointer-events-auto hover:bg-accent hover:text-black transition-colors"
+            className="p-2 rounded-full bg-surface/50 text-text backdrop-blur-md pointer-events-auto hover:bg-accent hover:text-text transition-colors"
           >
             <ChevronRight size={24} />
           </button>
         </div>
 
-        <div className="absolute top-4 right-4 p-2 rounded-full bg-black/50 text-white backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="absolute top-4 right-4 p-2 rounded-full bg-surface/50 text-text backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity">
           <Maximize2 size={20} />
         </div>
       </div>

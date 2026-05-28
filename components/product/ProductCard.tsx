@@ -44,7 +44,7 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
 
   return (
     <motion.div
-      className="group relative flex flex-col h-full bg-surface/40 backdrop-blur-sm rounded-2xl border border-white/5 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-brand/20 hover:border-brand/20"
+      className="group relative flex flex-col h-full bg-surface/40 backdrop-blur-sm rounded-2xl border border-border overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-brand/20 hover:border-brand/20"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       initial={{ opacity: 0, y: 20 }}
@@ -54,25 +54,25 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
       {/* Badges */}
       <div className="absolute top-4 left-4 z-20 flex flex-col gap-2">
         {product.isDeal && (
-          <div className="bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-red-500/20">
+          <div className="bg-red-500 text-text text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-red-500/20">
             <Zap className="w-3 h-3 fill-current" />
             DEAL
           </div>
         )}
         {product.isTrending && (
-          <div className="bg-brand-accent text-brand-primary text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-brand-accent/20">
+          <div className="bg-sageDark text-primary text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-sageDark/20">
             <TrendingUp className="w-3 h-3" />
             TRENDING
           </div>
         )}
         {product.isLimited && (
-          <div className="bg-amber-500 text-white text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-amber-500/20">
+          <div className="bg-amber-500 text-text text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-amber-500/20">
             <Clock className="w-3 h-3" />
             LIMITED
           </div>
         )}
         {product.tags.includes('New') && (
-          <div className="bg-blue-500 text-white text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-blue-500/20">
+          <div className="bg-blue-500 text-text text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-lg shadow-blue-500/20">
             <Sparkles className="w-3 h-3 fill-current" />
             NEW
           </div>
@@ -85,8 +85,8 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
         className={cn(
           "absolute top-4 right-4 z-20 p-2.5 rounded-full backdrop-blur-md transition-all duration-300 border",
           inWishlist
-            ? "bg-red-500 border-red-500 text-white scale-110"
-            : "bg-black/20 border-white/10 text-white hover:bg-red-500 hover:border-red-500"
+            ? "bg-red-500 border-red-500 text-text scale-110"
+            : "bg-surface/20 border-border text-text hover:bg-red-500 hover:border-red-500"
         )}
       >
         <Heart className={cn("w-4 h-4 transition-transform duration-300", inWishlist && "fill-current")} />
@@ -134,14 +134,14 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none"
+              className="absolute inset-0 bg-surface/40 flex items-center justify-center pointer-events-none"
             >
               <motion.button
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 onClick={handleQuickView}
-                className="bg-white text-black px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 pointer-events-auto hover:bg-brand-accent transition-colors"
+                className="bg-surface text-text px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 pointer-events-auto hover:bg-sageDark transition-colors"
               >
                 <Eye className="w-4 h-4" />
                 QUICK VIEW
@@ -167,7 +167,7 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
                   "w-full py-3 rounded-xl flex items-center justify-center gap-2 font-bold text-sm transition-all duration-300",
                   product.stock === 0
                     ? "bg-gray-600 cursor-not-allowed opacity-50"
-                    : "bg-brand-accent text-brand-primary hover:bg-white"
+                    : "bg-sageDark text-primary hover:bg-surface"
                 )}
               >
                 <ShoppingBag className="w-4 h-4" />
@@ -181,10 +181,10 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
       {/* Product Details */}
       <div className="flex flex-col flex-grow p-4 space-y-2">
         <div className="flex flex-col space-y-1">
-          <span className="text-[10px] text-brand-accent tracking-[0.2em] font-medium uppercase truncate">
+          <span className="text-[10px] text-sageDark tracking-[0.2em] font-medium uppercase truncate">
             {product.brand}
           </span>
-          <h3 className="text-sm font-semibold text-white group-hover:text-brand-accent transition-colors truncate">
+          <h3 className="text-sm font-semibold text-text group-hover:text-sageDark transition-colors truncate">
             {product.title}
           </h3>
         </div>
@@ -199,15 +199,15 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
                   className={cn(
                     "w-3 h-3",
                     i < Math.floor(product.rating)
-                      ? "fill-brand-accent text-brand-accent"
-                      : "text-white/20"
+                      ? "fill-sageDark text-sageDark"
+                      : "text-text/20"
                   )}
                 />
               ))}
             </div>
-            <span className="text-[10px] text-white/60">({product.reviewCount})</span>
+            <span className="text-[10px] text-text/60">({product.reviewCount})</span>
           </div>
-          <span className="text-[10px] text-white/40 font-medium">
+          <span className="text-[10px] text-text/40 font-medium">
             {product.soldCount > 1000
               ? `${(product.soldCount / 1000).toFixed(1)}k sold`
               : `${product.soldCount} sold`}
@@ -217,11 +217,11 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
         <div className="mt-auto pt-2 flex flex-col gap-2">
           {/* Price */}
           <div className="flex items-end gap-2">
-            <span className="text-lg font-bold text-brand-accent">
+            <span className="text-lg font-bold text-sageDark">
               ${product.price.toLocaleString()}
             </span>
             {product.originalPrice > product.price && (
-              <span className="text-sm text-white/40 line-through mb-0.5">
+              <span className="text-sm text-text/40 line-through mb-0.5">
                 ${product.originalPrice.toLocaleString()}
               </span>
             )}

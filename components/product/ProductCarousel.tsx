@@ -58,7 +58,7 @@ export default function ProductCarousel({ title, subtitle, products, className }
           {subtitle && (
             <p className="text-accent font-bold uppercase tracking-[0.2em] text-xs mb-2">{subtitle}</p>
           )}
-          <h2 className="text-3xl font-serif text-white">{title}</h2>
+          <h2 className="text-3xl font-serif text-text">{title}</h2>
           <div className="h-1 w-12 bg-accent mt-3" />
         </div>
 
@@ -69,8 +69,8 @@ export default function ProductCarousel({ title, subtitle, products, className }
             className={cn(
               "w-12 h-12 flex items-center justify-center border transition-all",
               showLeftArrow
-                ? "border-white/20 text-white hover:border-accent hover:text-accent"
-                : "border-white/5 text-white/20 cursor-not-allowed"
+                ? "border-border text-text hover:border-accent hover:text-accent"
+                : "border-border text-text/20 cursor-not-allowed"
             )}
             aria-label="Previous products"
           >
@@ -82,8 +82,8 @@ export default function ProductCarousel({ title, subtitle, products, className }
             className={cn(
               "w-12 h-12 flex items-center justify-center border transition-all",
               showRightArrow
-                ? "border-white/20 text-white hover:border-accent hover:text-accent"
-                : "border-white/5 text-white/20 cursor-not-allowed"
+                ? "border-border text-text hover:border-accent hover:text-accent"
+                : "border-border text-text/20 cursor-not-allowed"
             )}
             aria-label="Next products"
           >
@@ -107,11 +107,11 @@ export default function ProductCarousel({ title, subtitle, products, className }
 
         {/* Subtle fade effects on edges */}
         <div className={cn(
-          "absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-black to-transparent pointer-events-none transition-opacity duration-300",
+          "absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-text to-transparent pointer-events-none transition-opacity duration-300",
           showLeftArrow ? "opacity-100" : "opacity-0"
         )} />
         <div className={cn(
-          "absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-black to-transparent pointer-events-none transition-opacity duration-300",
+          "absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-text to-transparent pointer-events-none transition-opacity duration-300",
           showRightArrow ? "opacity-100" : "opacity-0"
         )} />
       </div>

@@ -45,13 +45,13 @@ export default function ReviewList({ productId }: { productId: string }) {
       {/* Review Summary */}
       <div className="flex flex-col md:flex-row gap-12 items-center md:items-start">
         <div className="text-center">
-          <div className="text-6xl font-serif text-white mb-2">4.8</div>
+          <div className="text-6xl font-serif text-text mb-2">4.8</div>
           <div className="flex items-center gap-1 text-accent mb-4">
             {[...Array(5)].map((_, i) => (
               <Star key={i} size={18} fill={i < 4 ? "currentColor" : "none"} />
             ))}
           </div>
-          <p className="text-white/40 text-sm uppercase tracking-widest font-bold">Based on 124 reviews</p>
+          <p className="text-text/40 text-sm uppercase tracking-widest font-bold">Based on 124 reviews</p>
         </div>
 
         <div className="flex-1 w-full max-w-md space-y-3">
@@ -60,22 +60,22 @@ export default function ReviewList({ productId }: { productId: string }) {
             const percentage = (count / 110) * 100;
             return (
               <div key={rating} className="flex items-center gap-4">
-                <span className="text-white/40 text-xs font-bold w-3">{rating}</span>
-                <div className="flex-1 h-1 bg-white/5 rounded-full overflow-hidden">
+                <span className="text-text/40 text-xs font-bold w-3">{rating}</span>
+                <div className="flex-1 h-1 bg-primary rounded-full overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${percentage}%` }}
                     className="h-full bg-accent"
                   />
                 </div>
-                <span className="text-white/40 text-xs font-bold w-8 text-right">{count}</span>
+                <span className="text-text/40 text-xs font-bold w-8 text-right">{count}</span>
               </div>
             );
           })}
         </div>
       </div>
 
-      <div className="h-px bg-white/5 w-full" />
+      <div className="h-px bg-primary w-full" />
 
       {/* Individual Reviews */}
       <div className="space-y-10">
@@ -84,7 +84,7 @@ export default function ReviewList({ productId }: { productId: string }) {
             <div className="flex justify-between items-start">
               <div>
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-white font-bold">{review.user}</span>
+                  <span className="text-text font-bold">{review.user}</span>
                   {review.verified && (
                     <span className="text-[10px] bg-accent/20 text-accent px-1.5 py-0.5 rounded uppercase font-bold tracking-tighter">
                       Verified Buyer
@@ -97,14 +97,14 @@ export default function ReviewList({ productId }: { productId: string }) {
                   ))}
                 </div>
               </div>
-              <span className="text-white/40 text-xs">{review.date}</span>
+              <span className="text-text/40 text-xs">{review.date}</span>
             </div>
-            <p className="text-white/70 leading-relaxed italic">"{review.comment}"</p>
+            <p className="text-text/70 leading-relaxed italic">"{review.comment}"</p>
           </div>
         ))}
       </div>
 
-      <button className="w-full py-4 border border-white/10 text-white font-bold uppercase tracking-widest text-sm hover:bg-white/5 transition-colors">
+      <button className="w-full py-4 border border-border text-text font-bold uppercase tracking-widest text-sm hover:bg-primary transition-colors">
         Read All Reviews
       </button>
     </div>

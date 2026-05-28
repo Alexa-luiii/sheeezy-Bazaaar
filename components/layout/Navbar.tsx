@@ -4,8 +4,7 @@ import React, { useState, useEffect, useLayoutEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { ShoppingBag, Heart, User, Search, Menu, X, Sun, Moon } from 'lucide-react';
-import { useTheme } from 'next-themes';
+import { ShoppingBag, Heart, User, Search, Menu, X } from 'lucide-react';
 import { useCartStore } from '@/lib/store/cartStore';
 import { useWishlistStore } from '@/lib/store/wishlistStore';
 import { useUIStore } from '@/lib/store/uiStore';
@@ -21,7 +20,6 @@ const navLinks = [
 
 const Navbar = () => {
   const pathname = usePathname();
-  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchExpanded, setSearchExpanded] = useState(false);
@@ -39,19 +37,11 @@ const Navbar = () => {
   const backgroundColor = useTransform(
     scrollY,
     [0, 50],
-    ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0.8)']
-  );
-  const darkBackgroundColor = useTransform(
-    scrollY,
-    [0, 50],
-    ['rgba(10, 10, 10, 0)', 'rgba(10, 10, 10, 0.8)']
+    ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 1)']
   );
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setMounted(true);
-    }, 0);
-    return () => clearTimeout(timer);
+    setMounted(true);
   }, []);
 
   useLayoutEffect(() => {
@@ -65,164 +55,163 @@ const Navbar = () => {
   if (!mounted) return <div className="h-20" aria-hidden="true" />;
 
   return (
-    <motion.nav
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'py-3 border-b border-white/10' : 'py-6'
-      )}
-      style={{
-        backgroundColor: resolvedTheme === 'dark' ? darkBackgroundColor : backgroundColor,
-        backdropFilter: isScrolled ? 'blur(12px)' : 'none',
-      }}
-    >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/" className="z-50">
-          <span className="text-xl md:text-2xl font-playfair font-bold tracking-tight text-foreground">
-            SHEEEZY BAZAAR
-          </span>
-        </Link>
-
-        <div className="hidden lg:flex items-center space-x-8">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="relative text-sm font-medium transition-colors hover:text-accent group text-foreground"
-              >
-                {link.name}
-                {isActive && (
-                  <motion.div
-                    layoutId="activeUnderline"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
-                {!isActive && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
-                )}
-              </Link>
-            );
-          })}
-        </div>
-
-        <div className="flex items-center space-x-2 md:space-x-5">
-          <div className="relative flex items-center">
-            <AnimatePresence>
-              {searchExpanded && (
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    if (searchQuery.trim()) {
-                      window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
-                    }
-                  }}
-                  className="flex items-center"
-                >
-                  <motion.input
-                    initial={{ width: 0, opacity: 0 }}
-                    animate={{ width: 200, opacity: 1 }}
-                    exit={{ width: 0, opacity: 0 }}
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search products..."
-                    className="bg-surface/50 border border-white/10 rounded-full py-1 px-4 text-xs focus:outline-none focus:border-accent mr-2 text-foreground"
-                    autoFocus
-                  />
-                </form>
-              )}
-            </AnimatePresence>
-            <button
-              onClick={() => setSearchExpanded(!searchExpanded)}
-              className="p-2 hover:text-accent transition-colors text-foreground"
-              aria-label="Search"
-            >
-              <Search size={20} />
-            </button>
-          </div>
-
-          <Link href="/wishlist" className="relative p-2 hover:text-accent transition-colors hidden md:block text-foreground" aria-label="Wishlist">
-            <Heart size={20} />
-            {wishlistCount > 0 && (
-              <span className="absolute top-0 right-0 bg-accent text-[10px] text-white font-bold rounded-full w-4 h-4 flex items-center justify-center">
-                {wishlistCount}
-              </span>
-            )}
-          </Link>
-
-          <button
-            onClick={() => toggleCart(true)}
-            className="relative p-2 hover:text-accent transition-colors text-foreground"
-            aria-label="Shopping Cart"
-          >
-            <ShoppingBag size={20} />
-            {cartCount > 0 && (
-              <span className="absolute top-0 right-0 bg-accent text-[10px] text-white font-bold rounded-full w-4 h-4 flex items-center justify-center">
-                {cartCount}
-              </span>
-            )}
-          </button>
-
-          <Link href="/account" className="p-2 hover:text-accent transition-colors hidden md:block text-foreground" aria-label="Account">
-            <User size={20} />
-          </Link>
-
-          <button
-            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-            className="p-2 hover:text-accent transition-colors text-foreground"
-            aria-label="Toggle Theme"
-          >
-            {resolvedTheme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-
-          <button
-            onClick={() => toggleMobileNav()}
-            className="lg:hidden p-2 hover:text-accent transition-colors z-50 text-foreground"
-            aria-label="Toggle Mobile Menu"
-          >
-            {mobileNavOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+    <>
+      {/* Announcement Bar */}
+      <div className="fixed top-0 left-0 right-0 z-[60] bg-sage text-surface py-2 text-center text-[10px] font-bold uppercase tracking-[0.2em]">
+        Complimentary worldwide shipping on orders over $500
       </div>
 
-      <AnimatePresence>
-        {mobileNavOpen && (
-          <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 bg-background z-40 flex flex-col items-center justify-center space-y-8 text-2xl"
-          >
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => toggleMobileNav(false)}
-                className={cn(
-                  "font-playfair font-medium transition-colors hover:text-accent",
-                  pathname === link.href ? "text-accent" : "text-foreground"
-                )}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <div className="flex space-x-6 pt-8">
-              <Link href="/wishlist" onClick={() => toggleMobileNav(false)} className="text-foreground">
-                <Heart size={28} />
-              </Link>
-              <Link href="/account" onClick={() => toggleMobileNav(false)} className="text-foreground">
-                <User size={28} />
-              </Link>
-            </div>
-          </motion.div>
+      <motion.nav
+        className={cn(
+          'fixed top-8 left-0 right-0 z-50 transition-all duration-300',
+          isScrolled ? 'py-3 border-b border-border' : 'py-6'
         )}
-      </AnimatePresence>
-    </motion.nav>
+        style={{
+          backgroundColor,
+          backdropFilter: isScrolled ? 'blur(12px)' : 'none',
+        }}
+      >
+        <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+          <Link href="/" className="z-50">
+            <span className="text-xl md:text-2xl font-playfair font-bold tracking-tight text-text">
+              SHEEEZY BAZAAR
+            </span>
+          </Link>
+
+          <div className="hidden lg:flex items-center space-x-8">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="relative text-xs font-bold uppercase tracking-widest transition-colors hover:text-sageDark group text-text"
+                >
+                  {link.name}
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeUnderline"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-sageDark"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                  {!isActive && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-sageDark scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
+                  )}
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="flex items-center space-x-2 md:space-x-4">
+            <div className="relative flex items-center">
+              <AnimatePresence>
+                {searchExpanded && (
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      if (searchQuery.trim()) {
+                        window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
+                      }
+                    }}
+                    className="flex items-center"
+                  >
+                    <motion.input
+                      initial={{ width: 0, opacity: 0 }}
+                      animate={{ width: 180, opacity: 1 }}
+                      exit={{ width: 0, opacity: 0 }}
+                      type="text"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="Find elegance..."
+                      className="bg-primary/50 border border-border rounded-sm py-1.5 px-4 text-[10px] uppercase font-bold focus:outline-none focus:border-sageDark mr-2 text-text"
+                      autoFocus
+                    />
+                  </form>
+                )}
+              </AnimatePresence>
+              <button
+                onClick={() => setSearchExpanded(!searchExpanded)}
+                className="p-2 hover:text-sageDark transition-colors text-text"
+                aria-label="Search"
+              >
+                <Search size={18} />
+              </button>
+            </div>
+
+            <Link href="/profile" className="relative p-2 hover:text-sageDark transition-colors hidden md:block text-text" aria-label="Wishlist">
+              <Heart size={18} />
+              {wishlistCount > 0 && (
+                <span className="absolute top-0 right-0 bg-accent text-[8px] text-text font-bold rounded-full w-3.5 h-3.5 flex items-center justify-center">
+                  {wishlistCount}
+                </span>
+              )}
+            </Link>
+
+            <button
+              onClick={() => toggleCart(true)}
+              className="relative p-2 hover:text-sageDark transition-colors text-text"
+              aria-label="Shopping Cart"
+            >
+              <ShoppingBag size={18} />
+              {cartCount > 0 && (
+                <span className="absolute top-0 right-0 bg-sageDark text-[8px] text-surface font-bold rounded-full w-3.5 h-3.5 flex items-center justify-center border border-surface">
+                  {cartCount}
+                </span>
+              )}
+            </button>
+
+            <Link href="/profile" className="p-2 hover:text-sageDark transition-colors hidden md:block text-text" aria-label="Account">
+              <User size={18} />
+            </Link>
+
+            <button
+              onClick={() => toggleMobileNav()}
+              className="lg:hidden p-2 hover:text-sageDark transition-colors z-50 text-text"
+              aria-label="Toggle Mobile Menu"
+            >
+              {mobileNavOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
+        </div>
+
+        <AnimatePresence>
+          {mobileNavOpen && (
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'tween', duration: 0.3 }}
+              className="fixed inset-0 bg-surface z-40 flex flex-col items-center justify-center space-y-8 text-2xl"
+            >
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => toggleMobileNav(false)}
+                  className={cn(
+                    "font-playfair font-bold transition-colors hover:text-sageDark uppercase tracking-widest",
+                    pathname === link.href ? "text-sageDark" : "text-text"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <div className="flex space-x-10 pt-8">
+                <Link href="/profile" onClick={() => toggleMobileNav(false)} className="text-text hover:text-sageDark transition-colors">
+                  <Heart size={24} />
+                </Link>
+                <Link href="/profile" onClick={() => toggleMobileNav(false)} className="text-text hover:text-sageDark transition-colors">
+                  <User size={24} />
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.nav>
+    </>
   );
 };
 

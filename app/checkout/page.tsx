@@ -115,10 +115,10 @@ export default function CheckoutPage() {
                     className={cn(
                       "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 border-2",
                       step === s.id
-                        ? "bg-brand-accent border-brand-accent text-brand-primary shadow-[0_0_15px_rgba(201,168,76,0.5)]"
+                        ? "bg-sageDark border-sageDark text-primary shadow-[0_0_15px_rgba(201,168,76,0.5)]"
                         : stepItems.findIndex(x => x.id === step) > i
-                        ? "bg-brand-accent border-brand-accent text-brand-primary"
-                        : "bg-zinc-900 border-white/10 text-zinc-500"
+                        ? "bg-sageDark border-sageDark text-primary"
+                        : "bg-primary border-border text-muted"
                     )}
                   >
                     <s.icon size={18} />
@@ -126,7 +126,7 @@ export default function CheckoutPage() {
                   <span
                     className={cn(
                       "absolute top-12 text-xs font-medium uppercase tracking-widest whitespace-nowrap",
-                      step === s.id ? "text-brand-accent" : "text-zinc-500"
+                      step === s.id ? "text-sageDark" : "text-muted"
                     )}
                   >
                     {s.label}
@@ -136,7 +136,7 @@ export default function CheckoutPage() {
                   <div
                     className={cn(
                       "flex-1 h-0.5 mx-4 transition-all duration-500",
-                      stepItems.findIndex(x => x.id === step) > i ? "bg-brand-accent" : "bg-white/10"
+                      stepItems.findIndex(x => x.id === step) > i ? "bg-sageDark" : "bg-accent"
                     )}
                   />
                 )}
@@ -158,17 +158,17 @@ export default function CheckoutPage() {
               className="grid grid-cols-1 lg:grid-cols-3 gap-8"
             >
               <div className="lg:col-span-2 space-y-6">
-                <Card className="border-white/5 bg-zinc-950/50 backdrop-blur-xl">
+                <Card className="border-border bg-surface/50 backdrop-blur-xl">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <ShoppingBag className="text-brand-accent" size={20} />
+                      <ShoppingBag className="text-sageDark" size={20} />
                       Your Selection ({items.length})
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     {items.map((item, idx) => (
-                      <div key={`${item.product.id}-${idx}`} className="flex gap-4 items-start py-4 border-b border-white/5 last:border-0">
-                        <div className="relative w-24 h-32 rounded-sm overflow-hidden flex-shrink-0 bg-zinc-900">
+                      <div key={`${item.product.id}-${idx}`} className="flex gap-4 items-start py-4 border-b border-border last:border-0">
+                        <div className="relative w-24 h-32 rounded-sm overflow-hidden flex-shrink-0 bg-primary">
                           <Image
                             src={item.product.images[0]}
                             alt={item.product.title}
@@ -178,36 +178,36 @@ export default function CheckoutPage() {
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex justify-between items-start">
-                            <h3 className="text-white font-medium truncate pr-4">{item.product.title}</h3>
-                            <p className="text-white font-bold">${(item.product.price * item.quantity).toFixed(2)}</p>
+                            <h3 className="text-text font-medium truncate pr-4">{item.product.title}</h3>
+                            <p className="text-text font-bold">${(item.product.price * item.quantity).toFixed(2)}</p>
                           </div>
-                          <p className="text-zinc-500 text-sm mt-1">{item.product.brand}</p>
+                          <p className="text-muted text-sm mt-1">{item.product.brand}</p>
                           {(item.selectedSize || item.selectedColor) && (
                             <div className="flex gap-4 mt-2">
-                              {item.selectedSize && <p className="text-xs text-zinc-400 uppercase tracking-widest">Size: {item.selectedSize}</p>}
-                              {item.selectedColor && <p className="text-xs text-zinc-400 uppercase tracking-widest">Color: {item.selectedColor}</p>}
+                              {item.selectedSize && <p className="text-xs text-muted uppercase tracking-widest">Size: {item.selectedSize}</p>}
+                              {item.selectedColor && <p className="text-xs text-muted uppercase tracking-widest">Color: {item.selectedColor}</p>}
                             </div>
                           )}
                           <div className="flex items-center justify-between mt-4">
-                            <div className="flex items-center border border-white/10 rounded-sm overflow-hidden">
+                            <div className="flex items-center border border-border rounded-sm overflow-hidden">
                               <button
-                                className="px-3 py-1 hover:bg-white/5 text-zinc-400 transition-colors"
+                                className="px-3 py-1 hover:bg-primary text-muted transition-colors"
                                 onClick={() => updateQuantity(item.product.id, item.quantity - 1, item.selectedSize, item.selectedColor)}
                               >
                                 -
                               </button>
-                              <span className="px-3 py-1 text-sm text-white border-x border-white/10 min-w-[40px] text-center">
+                              <span className="px-3 py-1 text-sm text-text border-x border-border min-w-[40px] text-center">
                                 {item.quantity}
                               </span>
                               <button
-                                className="px-3 py-1 hover:bg-white/5 text-zinc-400 transition-colors"
+                                className="px-3 py-1 hover:bg-primary text-muted transition-colors"
                                 onClick={() => updateQuantity(item.product.id, item.quantity + 1, item.selectedSize, item.selectedColor)}
                               >
                                 +
                               </button>
                             </div>
                             <button
-                              className="text-zinc-500 hover:text-red-500 transition-colors flex items-center gap-1 text-xs uppercase tracking-widest"
+                              className="text-muted hover:text-red-500 transition-colors flex items-center gap-1 text-xs uppercase tracking-widest"
                               onClick={() => removeItem(item.product.id, item.selectedSize, item.selectedColor)}
                             >
                               <Trash2 size={14} />
@@ -221,7 +221,7 @@ export default function CheckoutPage() {
                 </Card>
 
                 <div className="flex justify-between items-center px-2">
-                    <Button variant="ghost" asChild className="text-zinc-400">
+                    <Button variant="ghost" asChild className="text-muted">
                         <Link href="/">
                             <div className="flex items-center">
                                 <ChevronLeft className="mr-2" size={16} />
@@ -233,18 +233,18 @@ export default function CheckoutPage() {
               </div>
 
               <div className="space-y-6">
-                <Card className="border-white/5 bg-zinc-950/50 backdrop-blur-xl sticky top-24">
+                <Card className="border-border bg-surface/50 backdrop-blur-xl sticky top-24">
                   <CardHeader>
                     <CardTitle className="text-lg">Order Summary</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="coupon" className="text-xs uppercase tracking-widest text-zinc-500">Coupon Code</Label>
+                      <Label htmlFor="coupon" className="text-xs uppercase tracking-widest text-muted">Coupon Code</Label>
                       <div className="flex gap-2">
                         <Input
                           id="coupon"
                           placeholder="e.g. SAVE10"
-                          className="bg-white/5 border-white/10 uppercase"
+                          className="bg-primary border-border uppercase"
                           value={couponCode}
                           onChange={(e) => setCouponCode(e.target.value)}
                         />
@@ -252,9 +252,9 @@ export default function CheckoutPage() {
                       </div>
                       {couponError && <p className="text-xs text-red-500 mt-1">{couponError}</p>}
                       {appliedCoupon && (
-                        <div className="flex items-center justify-between bg-brand-accent/10 border border-brand-accent/20 rounded-sm p-2 mt-2">
-                          <span className="text-xs text-brand-accent font-medium uppercase">{appliedCoupon.code} Applied</span>
-                          <button onClick={() => setAppliedCoupon(null)} className="text-brand-accent hover:text-white transition-colors">
+                        <div className="flex items-center justify-between bg-sageDark/10 border border-sageDark/20 rounded-sm p-2 mt-2">
+                          <span className="text-xs text-sageDark font-medium uppercase">{appliedCoupon.code} Applied</span>
+                          <button onClick={() => setAppliedCoupon(null)} className="text-sageDark hover:text-text transition-colors">
                             <Trash2 size={14} />
                           </button>
                         </div>
@@ -263,8 +263,8 @@ export default function CheckoutPage() {
 
                     <div className="pt-4 space-y-3">
                       <div className="flex justify-between text-sm">
-                        <span className="text-zinc-400">Subtotal</span>
-                        <span className="text-white">${totals.subtotal.toFixed(2)}</span>
+                        <span className="text-muted">Subtotal</span>
+                        <span className="text-text">${totals.subtotal.toFixed(2)}</span>
                       </div>
                       {totals.discount > 0 && (
                         <div className="flex justify-between text-sm">
@@ -273,12 +273,12 @@ export default function CheckoutPage() {
                         </div>
                       )}
                       <div className="flex justify-between text-sm">
-                        <span className="text-zinc-400">Shipping</span>
-                        <span className="text-white">{totals.shipping === 0 ? "Free" : `$${totals.shipping.toFixed(2)}`}</span>
+                        <span className="text-muted">Shipping</span>
+                        <span className="text-text">{totals.shipping === 0 ? "Free" : `$${totals.shipping.toFixed(2)}`}</span>
                       </div>
-                      <div className="pt-3 border-t border-white/10 flex justify-between items-center">
-                        <span className="text-lg font-serif font-bold text-white uppercase tracking-tighter">Total</span>
-                        <span className="text-2xl font-bold text-brand-accent">${totals.total.toFixed(2)}</span>
+                      <div className="pt-3 border-t border-border flex justify-between items-center">
+                        <span className="text-lg font-serif font-bold text-text uppercase tracking-tighter">Total</span>
+                        <span className="text-2xl font-bold text-sageDark">${totals.total.toFixed(2)}</span>
                       </div>
                     </div>
                   </CardContent>
@@ -303,10 +303,10 @@ export default function CheckoutPage() {
               className="grid grid-cols-1 lg:grid-cols-3 gap-8"
             >
               <div className="lg:col-span-2 space-y-6">
-                <Card className="border-white/5 bg-zinc-950/50 backdrop-blur-xl">
+                <Card className="border-border bg-surface/50 backdrop-blur-xl">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <Truck className="text-brand-accent" size={20} />
+                      <Truck className="text-sageDark" size={20} />
                       Shipping Details
                     </CardTitle>
                     <CardDescription>Enter the address where you would like to receive your items.</CardDescription>
@@ -317,44 +317,44 @@ export default function CheckoutPage() {
                         <div className="space-y-2">
                           <Label htmlFor="fullname">Full Name</Label>
                           <div className="relative">
-                            <User className="absolute left-3 top-3 h-4 w-4 text-zinc-500" />
-                            <Input id="fullname" placeholder="John Doe" className="pl-10 bg-white/5 border-white/10" required />
+                            <User className="absolute left-3 top-3 h-4 w-4 text-muted" />
+                            <Input id="fullname" placeholder="John Doe" className="pl-10 bg-primary border-border" required />
                           </div>
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="email">Email Address</Label>
                           <div className="relative">
-                            <Mail className="absolute left-3 top-3 h-4 w-4 text-zinc-500" />
-                            <Input id="email" type="email" placeholder="john@example.com" className="pl-10 bg-white/5 border-white/10" required />
+                            <Mail className="absolute left-3 top-3 h-4 w-4 text-muted" />
+                            <Input id="email" type="email" placeholder="john@example.com" className="pl-10 bg-primary border-border" required />
                           </div>
                         </div>
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="phone">Phone Number</Label>
                         <div className="relative">
-                          <Phone className="absolute left-3 top-3 h-4 w-4 text-zinc-500" />
-                          <Input id="phone" placeholder="+1 (555) 000-0000" className="pl-10 bg-white/5 border-white/10" required />
+                          <Phone className="absolute left-3 top-3 h-4 w-4 text-muted" />
+                          <Input id="phone" placeholder="+1 (555) 000-0000" className="pl-10 bg-primary border-border" required />
                         </div>
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="address">Street Address</Label>
                         <div className="relative">
-                          <MapPin className="absolute left-3 top-3 h-4 w-4 text-zinc-500" />
-                          <Input id="address" placeholder="123 Luxury Ave" className="pl-10 bg-white/5 border-white/10" required />
+                          <MapPin className="absolute left-3 top-3 h-4 w-4 text-muted" />
+                          <Input id="address" placeholder="123 Luxury Ave" className="pl-10 bg-primary border-border" required />
                         </div>
                       </div>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         <div className="space-y-2">
                           <Label htmlFor="city">City</Label>
-                          <Input id="city" placeholder="New York" className="bg-white/5 border-white/10" required />
+                          <Input id="city" placeholder="New York" className="bg-primary border-border" required />
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="zip">ZIP / Postal</Label>
-                          <Input id="zip" placeholder="10001" className="bg-white/5 border-white/10" required />
+                          <Input id="zip" placeholder="10001" className="bg-primary border-border" required />
                         </div>
                         <div className="col-span-2 md:col-span-1 space-y-2">
                           <Label htmlFor="country">Country</Label>
-                          <Input id="country" placeholder="United States" className="bg-white/5 border-white/10" required />
+                          <Input id="country" placeholder="United States" className="bg-primary border-border" required />
                         </div>
                       </div>
                       <div className="flex items-center space-x-2 pt-2">
@@ -365,7 +365,7 @@ export default function CheckoutPage() {
                   </CardContent>
                 </Card>
                 <div className="flex justify-between">
-                  <Button variant="ghost" onClick={prevStep} className="text-zinc-400">
+                  <Button variant="ghost" onClick={prevStep} className="text-muted">
                     <ChevronLeft className="mr-2" size={16} />
                     Back to Selection
                   </Button>
@@ -373,26 +373,26 @@ export default function CheckoutPage() {
               </div>
 
               <div className="space-y-6">
-                <Card className="border-white/5 bg-zinc-950/50 backdrop-blur-xl">
+                <Card className="border-border bg-surface/50 backdrop-blur-xl">
                   <CardHeader>
                     <CardTitle className="text-lg">Delivery Method</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="p-4 border-2 border-brand-accent bg-brand-accent/5 rounded-sm flex justify-between items-center cursor-pointer">
+                    <div className="p-4 border-2 border-sageDark bg-sageDark/5 rounded-sm flex justify-between items-center cursor-pointer">
                       <div>
-                        <p className="font-bold text-white uppercase tracking-widest text-xs">Express Delivery</p>
-                        <p className="text-zinc-500 text-sm mt-1">2-4 Business Days</p>
+                        <p className="font-bold text-text uppercase tracking-widest text-xs">Express Delivery</p>
+                        <p className="text-muted text-sm mt-1">2-4 Business Days</p>
                       </div>
-                      <span className="text-brand-accent font-bold">${totals.shipping.toFixed(2)}</span>
+                      <span className="text-sageDark font-bold">${totals.shipping.toFixed(2)}</span>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="border-white/5 bg-zinc-950/50 backdrop-blur-xl">
+                <Card className="border-border bg-surface/50 backdrop-blur-xl">
                     <CardContent className="p-6">
                         <div className="flex justify-between items-center mb-6">
-                            <span className="text-white font-medium">Order Total</span>
-                            <span className="text-2xl font-bold text-brand-accent">${totals.total.toFixed(2)}</span>
+                            <span className="text-text font-medium">Order Total</span>
+                            <span className="text-2xl font-bold text-sageDark">${totals.total.toFixed(2)}</span>
                         </div>
                         <Button className="w-full" size="lg" onClick={nextStep}>
                             Proceed to Payment
@@ -414,60 +414,60 @@ export default function CheckoutPage() {
               className="grid grid-cols-1 lg:grid-cols-3 gap-8"
             >
               <div className="lg:col-span-2 space-y-6">
-                <Card className="border-white/5 bg-zinc-950/50 backdrop-blur-xl">
+                <Card className="border-border bg-surface/50 backdrop-blur-xl">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <CreditCard className="text-brand-accent" size={20} />
+                      <CreditCard className="text-sageDark" size={20} />
                       Payment Method
                     </CardTitle>
                     <CardDescription>All transactions are secure and encrypted.</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-8">
                     <div className="space-y-4">
-                        <div className="p-4 border-2 border-brand-accent bg-brand-accent/5 rounded-sm flex items-center gap-4 cursor-pointer">
-                            <div className="w-4 h-4 rounded-full border-4 border-brand-accent" />
+                        <div className="p-4 border-2 border-sageDark bg-sageDark/5 rounded-sm flex items-center gap-4 cursor-pointer">
+                            <div className="w-4 h-4 rounded-full border-4 border-sageDark" />
                             <div className="flex-1">
-                                <p className="font-bold text-white uppercase tracking-widest text-xs">Credit / Debit Card</p>
+                                <p className="font-bold text-text uppercase tracking-widest text-xs">Credit / Debit Card</p>
                                 <div className="flex gap-2 mt-2">
-                                    <div className="h-6 w-10 bg-zinc-800 rounded flex items-center justify-center text-[10px] font-bold text-zinc-500">VISA</div>
-                                    <div className="h-6 w-10 bg-zinc-800 rounded flex items-center justify-center text-[10px] font-bold text-zinc-500">MC</div>
-                                    <div className="h-6 w-10 bg-zinc-800 rounded flex items-center justify-center text-[10px] font-bold text-zinc-500">AMEX</div>
+                                    <div className="h-6 w-10 bg-accent rounded flex items-center justify-center text-[10px] font-bold text-muted">VISA</div>
+                                    <div className="h-6 w-10 bg-accent rounded flex items-center justify-center text-[10px] font-bold text-muted">MC</div>
+                                    <div className="h-6 w-10 bg-accent rounded flex items-center justify-center text-[10px] font-bold text-muted">AMEX</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="p-6 space-y-6 bg-white/[0.02] border border-white/5 rounded-sm">
+                        <div className="p-6 space-y-6 bg-surface/[0.02] border border-border rounded-sm">
                             <div className="space-y-2">
                                 <Label htmlFor="cardnumber">Card Number</Label>
                                 <div className="relative">
-                                    <CreditCard className="absolute left-3 top-3 h-4 w-4 text-zinc-500" />
-                                    <Input id="cardnumber" placeholder="0000 0000 0000 0000" className="pl-10 bg-zinc-950/50 border-white/10" />
+                                    <CreditCard className="absolute left-3 top-3 h-4 w-4 text-muted" />
+                                    <Input id="cardnumber" placeholder="0000 0000 0000 0000" className="pl-10 bg-surface/50 border-border" />
                                 </div>
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
                                     <Label htmlFor="expiry">Expiry Date</Label>
-                                    <Input id="expiry" placeholder="MM / YY" className="bg-zinc-950/50 border-white/10" />
+                                    <Input id="expiry" placeholder="MM / YY" className="bg-surface/50 border-border" />
                                 </div>
                                 <div className="space-y-2">
                                     <Label htmlFor="cvv">CVV</Label>
-                                    <Input id="cvv" placeholder="123" className="bg-zinc-950/50 border-white/10" />
+                                    <Input id="cvv" placeholder="123" className="bg-surface/50 border-border" />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="p-4 border border-white/10 hover:border-white/20 rounded-sm flex items-center gap-4 cursor-pointer transition-colors">
-                            <div className="w-4 h-4 rounded-full border border-white/20" />
+                        <div className="p-4 border border-border hover:border-border rounded-sm flex items-center gap-4 cursor-pointer transition-colors">
+                            <div className="w-4 h-4 rounded-full border border-border" />
                             <div className="flex-1">
-                                <p className="font-bold text-zinc-300 uppercase tracking-widest text-xs">Cash on Delivery</p>
-                                <p className="text-zinc-500 text-xs mt-1">Pay with cash upon arrival</p>
+                                <p className="font-bold text-text uppercase tracking-widest text-xs">Cash on Delivery</p>
+                                <p className="text-muted text-xs mt-1">Pay with cash upon arrival</p>
                             </div>
                         </div>
                     </div>
                   </CardContent>
                 </Card>
                 <div className="flex justify-between">
-                  <Button variant="ghost" onClick={prevStep} className="text-zinc-400">
+                  <Button variant="ghost" onClick={prevStep} className="text-muted">
                     <ChevronLeft className="mr-2" size={16} />
                     Back to Shipping
                   </Button>
@@ -475,19 +475,19 @@ export default function CheckoutPage() {
               </div>
 
               <div className="space-y-6">
-                <Card className="border-white/5 bg-zinc-950/50 backdrop-blur-xl">
+                <Card className="border-border bg-surface/50 backdrop-blur-xl">
                   <CardHeader>
                     <CardTitle className="text-lg">Final Summary</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-3">
                         <div className="flex justify-between text-sm">
-                            <span className="text-zinc-400">Subtotal</span>
-                            <span className="text-white">${totals.subtotal.toFixed(2)}</span>
+                            <span className="text-muted">Subtotal</span>
+                            <span className="text-text">${totals.subtotal.toFixed(2)}</span>
                         </div>
                         <div className="flex justify-between text-sm">
-                            <span className="text-zinc-400">Shipping</span>
-                            <span className="text-white">${totals.shipping.toFixed(2)}</span>
+                            <span className="text-muted">Shipping</span>
+                            <span className="text-text">${totals.shipping.toFixed(2)}</span>
                         </div>
                         {totals.discount > 0 && (
                             <div className="flex justify-between text-sm">
@@ -495,14 +495,14 @@ export default function CheckoutPage() {
                                 <span className="text-emerald-500">-${totals.discount.toFixed(2)}</span>
                             </div>
                         )}
-                        <div className="pt-3 border-t border-white/10 flex justify-between items-center">
-                            <span className="text-white font-bold">Payable Amount</span>
-                            <span className="text-2xl font-bold text-brand-accent">${totals.total.toFixed(2)}</span>
+                        <div className="pt-3 border-t border-border flex justify-between items-center">
+                            <span className="text-text font-bold">Payable Amount</span>
+                            <span className="text-2xl font-bold text-sageDark">${totals.total.toFixed(2)}</span>
                         </div>
                     </div>
                     <div className="pt-6 space-y-4">
-                        <div className="flex gap-2 text-[10px] text-zinc-500 uppercase tracking-widest text-center justify-center">
-                            <ShieldCheck size={12} className="text-brand-accent" />
+                        <div className="flex gap-2 text-[10px] text-muted uppercase tracking-widest text-center justify-center">
+                            <ShieldCheck size={12} className="text-sageDark" />
                             100% Secure Transaction
                         </div>
                         <Button className="w-full" size="lg" onClick={handlePlaceOrder} isLoading={isLoading}>
@@ -528,36 +528,36 @@ export default function CheckoutPage() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                    className="w-24 h-24 rounded-full bg-brand-accent/20 flex items-center justify-center border-2 border-brand-accent"
+                    className="w-24 h-24 rounded-full bg-sageDark/20 flex items-center justify-center border-2 border-sageDark"
                 >
-                    <CheckCircle2 className="text-brand-accent" size={48} />
+                    <CheckCircle2 className="text-sageDark" size={48} />
                 </motion.div>
               </div>
 
-              <h1 className="text-4xl font-serif font-bold text-white mb-2">Order Confirmed</h1>
-              <p className="text-zinc-500 mb-8 uppercase tracking-[0.2em] text-sm">Thank you for your purchase</p>
+              <h1 className="text-4xl font-serif font-bold text-text mb-2">Order Confirmed</h1>
+              <p className="text-muted mb-8 uppercase tracking-[0.2em] text-sm">Thank you for your purchase</p>
 
-              <Card className="border-white/5 bg-zinc-950/50 mb-8 overflow-hidden">
-                <div className="bg-brand-accent/10 border-b border-brand-accent/10 py-3 px-6 flex justify-between items-center">
-                    <span className="text-xs uppercase tracking-widest text-brand-accent font-bold">Order ID</span>
-                    <span className="text-white font-mono">{orderId}</span>
+              <Card className="border-border bg-surface/50 mb-8 overflow-hidden">
+                <div className="bg-sageDark/10 border-b border-sageDark/10 py-3 px-6 flex justify-between items-center">
+                    <span className="text-xs uppercase tracking-widest text-sageDark font-bold">Order ID</span>
+                    <span className="text-text font-mono">{orderId}</span>
                 </div>
                 <CardContent className="p-8">
-                    <p className="text-zinc-400 text-sm mb-6">
+                    <p className="text-muted text-sm mb-6">
                         An email confirmation has been sent to your inbox. We'll notify you once your package is on its way.
                     </p>
-                    <div className="space-y-4 text-left border-t border-white/5 pt-6">
+                    <div className="space-y-4 text-left border-t border-border pt-6">
                         <div className="flex justify-between">
-                            <span className="text-zinc-500 text-sm">Status</span>
+                            <span className="text-muted text-sm">Status</span>
                             <Badge variant="warning">Processing</Badge>
                         </div>
                         <div className="flex justify-between">
-                            <span className="text-zinc-500 text-sm">Estimated Delivery</span>
-                            <span className="text-white text-sm font-medium">May 28 - May 30, 2026</span>
+                            <span className="text-muted text-sm">Estimated Delivery</span>
+                            <span className="text-text text-sm font-medium">May 28 - May 30, 2026</span>
                         </div>
                         <div className="flex justify-between">
-                            <span className="text-zinc-500 text-sm">Total Amount</span>
-                            <span className="text-brand-accent text-lg font-bold">${totals.total.toFixed(2)}</span>
+                            <span className="text-muted text-sm">Total Amount</span>
+                            <span className="text-sageDark text-lg font-bold">${totals.total.toFixed(2)}</span>
                         </div>
                     </div>
                 </CardContent>

@@ -3,112 +3,81 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Send, CreditCard } from 'lucide-react';
+import { Send, CreditCard, Globe } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <motion.footer
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="bg-brand text-white pt-20 pb-10"
-    >
+    <footer className="bg-surface text-text pt-24 pb-12 border-t border-border">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-20">
           {/* Brand Tagline */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-8">
             <Link href="/" className="inline-block">
-              <span className="text-2xl font-playfair font-bold tracking-tight">
+              <span className="text-2xl font-playfair font-bold tracking-tight text-text">
                 SHEEEZY BAZAAR
               </span>
             </Link>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Experience the finest curation of global fashion, beauty, and luxury lifestyle essentials. Curated for the modern connoisseur.
+            <p className="text-muted text-sm leading-relaxed max-w-xs">
+              Curating the world&apos;s most evocative fashion and lifestyle essentials. Join our journey into the heart of elegance.
             </p>
-            <div className="flex space-x-4">
-              <Link href="#" className="hover:text-accent transition-colors text-xs font-medium">INSTAGRAM</Link>
-              <Link href="#" className="hover:text-accent transition-colors text-xs font-medium">TWITTER</Link>
-              <Link href="#" className="hover:text-accent transition-colors text-xs font-medium">FACEBOOK</Link>
+            <div className="flex space-x-6">
+              <Link href="#" className="text-muted hover:text-sageDark transition-colors"><Globe size={20} /></Link>
+              <Link href="#" className="text-muted hover:text-sageDark transition-colors"><Globe size={20} /></Link>
+              <Link href="#" className="text-muted hover:text-sageDark transition-colors"><Globe size={20} /></Link>
             </div>
           </div>
 
           {/* Shop Column */}
           <div>
-            <h4 className="font-playfair font-bold text-lg mb-6">Shop</h4>
-            <ul className="space-y-4 text-gray-400 text-sm">
-              <li><Link href="/category/women" className="hover:text-accent transition-colors">Women&apos;s Clothing</Link></li>
-              <li><Link href="/category/shoes" className="hover:text-accent transition-colors">Women&apos;s Shoes</Link></li>
-              <li><Link href="/category/beauty" className="hover:text-accent transition-colors">Beauty Products</Link></li>
-              <li><Link href="/category/bags" className="hover:text-accent transition-colors">Luxury Bags</Link></li>
-              <li><Link href="/new-arrivals" className="hover:text-accent transition-colors">New Arrivals</Link></li>
+            <h4 className="font-bold text-xs uppercase tracking-[0.2em] mb-8 text-text">Shop</h4>
+            <ul className="space-y-4 text-muted text-xs font-bold uppercase tracking-widest">
+              <li><Link href="/category/women" className="hover:text-sageDark transition-colors">Women</Link></li>
+              <li><Link href="/category/shoes" className="hover:text-sageDark transition-colors">Shoes</Link></li>
+              <li><Link href="/category/beauty" className="hover:text-sageDark transition-colors">Beauty</Link></li>
+              <li><Link href="/category/bags" className="hover:text-sageDark transition-colors">Bags</Link></li>
             </ul>
           </div>
 
           {/* Company Column */}
           <div>
-            <h4 className="font-playfair font-bold text-lg mb-6">Company</h4>
-            <ul className="space-y-4 text-gray-400 text-sm">
-              <li><Link href="/about" className="hover:text-accent transition-colors">About Us</Link></li>
-              <li><Link href="/careers" className="hover:text-accent transition-colors">Careers</Link></li>
-              <li><Link href="/sustainability" className="hover:text-accent transition-colors">Sustainability</Link></li>
-              <li><Link href="/press" className="hover:text-accent transition-colors">Press</Link></li>
-              <li><Link href="/affiliates" className="hover:text-accent transition-colors">Affiliates</Link></li>
+            <h4 className="font-bold text-xs uppercase tracking-[0.2em] mb-8 text-text">Company</h4>
+            <ul className="space-y-4 text-muted text-xs font-bold uppercase tracking-widest">
+              <li><Link href="/about" className="hover:text-sageDark transition-colors">Our Story</Link></li>
+              <li><Link href="/sustainability" className="hover:text-sageDark transition-colors">Ethos</Link></li>
+              <li><Link href="/press" className="hover:text-sageDark transition-colors">Journal</Link></li>
+              <li><Link href="/careers" className="hover:text-sageDark transition-colors">Careers</Link></li>
             </ul>
           </div>
 
           {/* Help Column */}
           <div>
-            <h4 className="font-playfair font-bold text-lg mb-6">Help</h4>
-            <ul className="space-y-4 text-gray-400 text-sm">
-              <li><Link href="/shipping" className="hover:text-accent transition-colors">Shipping Info</Link></li>
-              <li><Link href="/returns" className="hover:text-accent transition-colors">Returns & Exchanges</Link></li>
-              <li><Link href="/contact" className="hover:text-accent transition-colors">Contact Us</Link></li>
-              <li><Link href="/faq" className="hover:text-accent transition-colors">FAQs</Link></li>
-              <li><Link href="/size-guide" className="hover:text-accent transition-colors">Size Guide</Link></li>
+            <h4 className="font-bold text-xs uppercase tracking-[0.2em] mb-8 text-text">Concierge</h4>
+            <ul className="space-y-4 text-muted text-xs font-bold uppercase tracking-widest">
+              <li><Link href="/shipping" className="hover:text-sageDark transition-colors">Shipping</Link></li>
+              <li><Link href="/returns" className="hover:text-sageDark transition-colors">Returns</Link></li>
+              <li><Link href="/faq" className="hover:text-sageDark transition-colors">FAQ</Link></li>
+              <li><Link href="/contact" className="hover:text-sageDark transition-colors">Contact</Link></li>
             </ul>
           </div>
         </div>
 
-        {/* Newsletter & Social (Re-arranged) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 pt-12 border-t border-white/5">
-          <div>
-            <h4 className="font-playfair font-bold text-lg mb-6 text-accent">Newsletter</h4>
-            <p className="text-gray-400 text-sm mb-6 max-w-sm">Subscribe to receive updates, access to exclusive deals, and more.</p>
-            <form className="relative max-w-md" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-6 text-sm focus:outline-none focus:border-accent transition-colors"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="absolute right-1 top-1 bottom-1 bg-accent text-white px-4 rounded-full flex items-center justify-center transition-colors hover:bg-accent/80"
-              >
-                <Send size={16} />
-              </motion.button>
-            </form>
-          </div>
-        </div>
-
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-gray-500 text-xs">
-            © {new Date().getFullYear()} SHEEEZY BAZAAR. All Rights Reserved.
+        <div className="pt-12 border-t border-border flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+          <p className="text-muted text-[10px] font-bold uppercase tracking-widest">
+            © {new Date().getFullYear()} SHEEEZY BAZAAR. Crafted with love.
           </p>
-          <div className="flex items-center space-x-6 text-gray-500">
-            <span className="flex items-center space-x-1"><CreditCard size={14} /> <span className="text-[10px]">VISA</span></span>
-            <span className="flex items-center space-x-1"><CreditCard size={14} /> <span className="text-[10px]">MASTERCARD</span></span>
-            <span className="flex items-center space-x-1"><CreditCard size={14} /> <span className="text-[10px]">PAYPAL</span></span>
+          <div className="flex items-center space-x-8 text-muted">
+            <span className="flex items-center space-x-2"><CreditCard size={14} /> <span className="text-[10px] font-bold tracking-widest">VISA</span></span>
+            <span className="flex items-center space-x-2"><CreditCard size={14} /> <span className="text-[10px] font-bold tracking-widest">AMEX</span></span>
+            <span className="flex items-center space-x-2"><CreditCard size={14} /> <span className="text-[10px] font-bold tracking-widest">PAYPAL</span></span>
           </div>
-          <div className="flex space-x-6 text-xs text-gray-500">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          <div className="flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-muted">
+            <Link href="/privacy" className="hover:text-text transition-colors">Privacy</Link>
+            <Link href="/terms" className="hover:text-text transition-colors">Terms</Link>
           </div>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 

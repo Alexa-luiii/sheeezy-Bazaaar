@@ -24,15 +24,15 @@ const SortDropdown = ({ value, onChange }: SortDropdownProps) => {
       <select
         value={value}
         onChange={(e) => onChange(e.target.value as SortOption)}
-        className="appearance-none bg-white/5 border border-white/10 text-sm font-medium text-white/80 py-2 pl-4 pr-10 rounded-full hover:bg-white/10 transition-colors focus:outline-none focus:border-brand-accent cursor-pointer"
+        className="appearance-none bg-primary border border-border text-sm font-medium text-text/80 py-2 pl-4 pr-10 rounded-full hover:bg-accent transition-colors focus:outline-none focus:border-sageDark cursor-pointer"
       >
         {sortOptions.map((option) => (
-          <option key={option.value} value={option.value} className="bg-surface text-white">
+          <option key={option.value} value={option.value} className="bg-surface text-text">
             {option.label}
           </option>
         ))}
       </select>
-      <ChevronDown className="w-4 h-4 text-white/40 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none group-hover:text-white transition-colors" />
+      <ChevronDown className="w-4 h-4 text-text/40 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none group-hover:text-text transition-colors" />
     </div>
   );
 };

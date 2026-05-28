@@ -8,10 +8,15 @@
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-brand-primary: #0a0a0a;
-  --color-brand-accent: #c9a84c;
-  --color-accent: #c9a84c;
-  --color-surface: #111111;
+
+  --color-primary: #F9F0F3;
+  --color-accent: #E8C4D0;
+  --color-sage: #B2C8B0;
+  --color-sageDark: #7A9E7E;
+  --color-surface: #FFFFFF;
+  --color-text: #2D2D2D;
+  --color-muted: #8A8A8A;
+  --color-border: #E8DDE0;
 
   --animate-fade-in: fadeIn 0.5s ease-out forwards;
   --animate-slide-up: slideUp 0.5s ease-out forwards;
@@ -31,17 +36,27 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-}
-
-.dark {
-  --background: #0a0a0a;
-  --foreground: #ffffff;
+  --background: #F9F0F3;
+  --foreground: #2D2D2D;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
+}
+
+/* Custom scrollbar for better aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F9F0F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8C4D0;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7A9E7E;
 }

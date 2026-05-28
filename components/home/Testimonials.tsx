@@ -30,8 +30,8 @@ const Testimonials = () => {
     <section className="py-24 bg-surface/20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-white font-serif">What Our Clients Say</h2>
-          <div className="w-12 h-1 bg-brand-accent mx-auto" />
+          <h2 className="text-3xl md:text-5xl font-bold text-text font-serif">What Our Clients Say</h2>
+          <div className="w-12 h-1 bg-sageDark mx-auto" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -42,20 +42,20 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-black/40 border border-white/5 p-8 rounded-3xl relative"
+              className="bg-surface/40 border border-border p-8 rounded-3xl relative"
             >
-              <Quote className="absolute top-8 right-8 w-12 h-12 text-white/5" />
+              <Quote className="absolute top-8 right-8 w-12 h-12 text-text/5" />
               <div className="flex gap-1 mb-6">
                 {[...Array(t.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-brand-accent text-brand-accent" />
+                  <Star key={i} className="w-4 h-4 fill-sageDark text-sageDark" />
                 ))}
               </div>
-              <p className="text-white/80 leading-relaxed italic mb-8">
+              <p className="text-text/80 leading-relaxed italic mb-8">
                 &ldquo;{t.content}&rdquo;
               </p>
               <div>
-                <h4 className="font-bold text-white">{t.name}</h4>
-                <p className="text-brand-accent text-xs uppercase tracking-widest">{t.role}</p>
+                <h4 className="font-bold text-text">{t.name}</h4>
+                <p className="text-sageDark text-xs uppercase tracking-widest">{t.role}</p>
               </div>
             </motion.div>
           ))}

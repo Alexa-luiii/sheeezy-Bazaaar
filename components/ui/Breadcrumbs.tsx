@@ -17,19 +17,19 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     <nav className="flex items-center space-x-2 text-xs uppercase tracking-widest font-bold">
       {items.map((item, idx) => (
         <div key={idx} className="flex items-center space-x-2">
-          {idx > 0 && <ChevronRight size={12} className="text-white/20" />}
+          {idx > 0 && <ChevronRight size={12} className="text-text/20" />}
 
           {item.href && !item.active ? (
             <Link
               href={item.href}
-              className="text-white/40 hover:text-accent transition-colors"
+              className="text-text/40 hover:text-accent transition-colors"
             >
               {item.label}
             </Link>
           ) : (
             <span className={cn(
               "select-none",
-              item.active ? "text-accent" : "text-white/40"
+              item.active ? "text-accent" : "text-text/40"
             )}>
               {item.label}
             </span>
