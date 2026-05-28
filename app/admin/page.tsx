@@ -18,6 +18,8 @@ import { Button } from "@/components/ui/Button"
 import { Badge } from "@/components/ui/Badge"
 import { products } from "@/data/products"
 import Link from "next/link"
+import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 export default function AdminDashboard() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -137,8 +139,8 @@ export default function AdminDashboard() {
             <div className="divide-y divide-white/5">
                 {lowStockProducts.map((product) => (
                     <div key={product.id} className="flex items-center gap-4 p-4 hover:bg-white/[0.02] transition-colors group">
-                        <div className="w-12 h-12 relative rounded-sm overflow-hidden bg-zinc-900 border border-white/5">
-                            <img src={product.images[0]} alt={product.title} className="object-cover w-full h-full" />
+                        <div className="w-12 h-12 relative rounded-sm overflow-hidden bg-zinc-900 border border-white/5 flex-shrink-0">
+                            <Image src={product.images[0]} alt={product.title} fill className="object-cover" />
                         </div>
                         <div className="flex-1 min-w-0">
                             <h4 className="text-sm font-medium text-white truncate">{product.title}</h4>
@@ -212,8 +214,4 @@ export default function AdminDashboard() {
       </Card>
     </div>
   )
-}
-
-function cn(...classes: any[]) {
-    return classes.filter(Boolean).join(' ');
 }

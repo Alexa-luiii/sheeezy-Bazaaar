@@ -183,7 +183,7 @@ export default function AdminOrdersPage() {
                                                 {order.items.map((item) => (
                                                     <div key={item.id} className="flex gap-4 items-center bg-black/20 p-3 rounded-sm border border-white/5">
                                                         <div className="w-16 h-20 relative rounded-sm overflow-hidden bg-zinc-900 shrink-0">
-                                                            <img src={item.image} alt={item.title} className="object-cover w-full h-full" />
+                                                            <Image src={item.image} alt={item.title} fill className="object-cover" />
                                                         </div>
                                                         <div className="flex-1">
                                                             <p className="text-white font-medium">{item.title}</p>
