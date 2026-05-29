@@ -14,6 +14,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'insignia.com.pk',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.jwpei.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.charleskeith.com',
+      },
     ],
   },
 };

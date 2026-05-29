@@ -438,7 +438,7 @@ export const products: Product[] = [
     sizes: ["36","37","38","39","40","41"],
     rating: 4.8, reviewCount: 134, soldCount: 310, stock: 9,
     tags: ["slip-on","mule","party"], isBestSeller: true, isTrending: false, isDeal: false, isLimited: false,
-    description: "Chic mule-style kitchen heel slip-on with sharp sparkling modern strap structure. Effortless glam.",
+    description: "Chic mule-style kitten heel slip-on with sharp sparkling modern strap structure. Effortless glam.",
     shipping: { type: "Standard", cost: 0 }, estimatedDelivery: "2-4 business days"
   },
   {
@@ -725,7 +725,7 @@ export const products: Product[] = [
     isLimited: false
   },
 
-  // BAGS (3 Items - JW PEI)
+  // BAGS (6 Items - JW PEI & Charles & Keith)
   {
     id: "bg-001",
     title: "Linda Tote Bag – Dark Brown",
@@ -791,5 +791,71 @@ export const products: Product[] = [
     description: "Linda Tote in deep burgundy — a bold seasonal color that elevates any outfit. Premium vegan leather with gold hardware.",
     shipping: { type: "Free over Rs.5000", cost: 0 },
     estimatedDelivery: "5-7 business days"
+  },
+  {
+    id: "bg-004",
+    title: "Larsen Buckle-Strap Shoulder Bag – Plum",
+    brand: "Charles & Keith",
+    category: "Bags",
+    categorySlug: "bags",
+    price: 18500,
+    originalPrice: 24000,
+    discount: 23,
+    images: [
+      "https://www.charleskeith.com/dw/image/v2/BC7_PRD/on/demandware.static/-/Sites-ck-products/default/dw106d3bb6/images/hi-res/2026-C/CK2-20271679_PLUM_S.jpg",
+      "https://www.charleskeith.com/dw/image/v2/BC7_PRD/on/demandware.static/-/Sites-ck-products/default/dw106d3bb6/images/hi-res/2026-C/CK2-20271679_BLACK_S.jpg",
+      "https://www.charleskeith.com/dw/image/v2/BC7_PRD/on/demandware.static/-/Sites-ck-products/default/dw106d3bb6/images/hi-res/2026-C/CK2-20271679_CREAM_S.jpg"
+    ],
+    colors: ["Plum", "Black", "Cream"],
+    rating: 4.8, reviewCount: 267, soldCount: 780, stock: 9,
+    tags: ["shoulder bag","buckle","trending","limited"],
+    isTrending: true, isLimited: true, isDeal: false,
+    description: "Slouchy crescent-shaped hobo bag with distinctive silver buckle strap. The bag every Pakistani fashionista wants right now.",
+    shipping: { type: "Free over Rs.5000", cost: 0 },
+    estimatedDelivery: "4-6 business days"
+  },
+  {
+    id: "bg-005",
+    title: "Rey Denim Elongated Shoulder Bag",
+    brand: "Charles & Keith",
+    category: "Bags",
+    categorySlug: "bags",
+    price: 16800,
+    originalPrice: 21000,
+    discount: 20,
+    images: [
+      "https://www.charleskeith.com/dw/image/v2/BC7_PRD/on/demandware.static/-/Sites-ck-products/default/dw106d3bb6/images/hi-res/2026-C/CK2-20782400_DENIM_M.jpg",
+      "https://www.charleskeith.com/dw/image/v2/BC7_PRD/on/demandware.static/-/Sites-ck-products/default/dw106d3bb6/images/hi-res/2026-C/CK2-20782400_BLACK_M.jpg",
+      "https://www.charleskeith.com/dw/image/v2/BC7_PRD/on/demandware.static/-/Sites-ck-products/default/dw106d3bb6/images/hi-res/2026-C/CK2-20782400_CREAM_M.jpg"
+    ],
+    colors: ["Denim Blue", "Noir", "Cream"],
+    rating: 4.7, reviewCount: 189, soldCount: 540, stock: 18,
+    tags: ["shoulder bag","denim","y2k","new"],
+    isNew: true, isTrending: false, isDeal: false, isLimited: false,
+    description: "Sleek elongated East-West baguette silhouette. Perfect for Y2K street style and everyday Pakistani casual outings.",
+    shipping: { type: "Free over Rs.5000", cost: 0 },
+    estimatedDelivery: "4-6 business days"
+  },
+  {
+    id: "bg-006",
+    title: "Delfina Chain Side-Belt Bag – Tan",
+    brand: "Charles & Keith",
+    category: "Bags",
+    categorySlug: "bags",
+    price: 15500,
+    originalPrice: 19500,
+    discount: 21,
+    images: [
+      "https://www.charleskeith.com/dw/image/v2/BC7_PRD/on/demandware.static/-/Sites-ck-products/default/dw106d3bb6/images/hi-res/2026-C/CK2-20782351_TAN_M.jpg",
+      "https://www.charleskeith.com/dw/image/v2/BC7_PRD/on/demandware.static/-/Sites-ck-products/default/dw106d3bb6/images/hi-res/2026-C/CK2-20782351_BLACK_M.jpg",
+      "https://www.charleskeith.com/dw/image/v2/BC7_PRD/on/demandware.static/-/Sites-ck-products/default/dw106d3bb6/images/hi-res/2026-C/CK2-20782351_MULTI_M.jpg"
+    ],
+    colors: ["Distressed Tan", "Noir", "Multi-Canvas"],
+    rating: 4.6, reviewCount: 145, soldCount: 390, stock: 22,
+    tags: ["shoulder bag","chain","belt","deal"],
+    isDeal: true, isTrending: false, isLimited: false,
+    description: "Edgy side-belt strap with delicate metallic chain link. Bridges casual and party wear for the modern Pakistani woman.",
+    shipping: { type: "Free over Rs.5000", cost: 0 },
+    estimatedDelivery: "4-6 business days"
   }
 ];
