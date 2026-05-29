@@ -18,6 +18,7 @@ interface ProductCardProps {
 const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const addToCart = useCartStore((state) => state.addItem);
+  const toggleCart = useCartStore((state) => state.toggleCart);
   const { addToWishlist, removeFromWishlist, isWishlisted } = useWishlistStore();
   const openQuickView = useUIStore((state) => state.openQuickView);
 
@@ -40,6 +41,7 @@ const ProductCard = ({ product, showQuickView = true }: ProductCardProps) => {
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
     addToCart(product);
+    toggleCart(true);
   };
 
   return (

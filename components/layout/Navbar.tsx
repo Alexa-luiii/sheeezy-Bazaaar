@@ -12,9 +12,9 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Women', href: '/category/women' },
-  { name: 'Shoes', href: '/category/shoes' },
-  { name: 'Beauty', href: '/category/beauty' },
+  { name: 'Women', href: '/category/womens-clothing' },
+  { name: 'Shoes', href: '/category/womens-shoes' },
+  { name: 'Beauty', href: '/category/beauty-products' },
   { name: 'Bags', href: '/category/bags' },
 ];
 

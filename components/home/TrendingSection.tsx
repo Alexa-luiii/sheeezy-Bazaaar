@@ -7,7 +7,16 @@ import ProductCard from '@/components/product/ProductCard';
 import { ArrowRight } from 'lucide-react';
 
 const TrendingSection = () => {
-  const trendingProducts = products.filter(p => p.isTrending).slice(0, 4);
+  let trendingProducts = products.filter(p => p.isTrending);
+
+  if (trendingProducts.length < 4) {
+    const fallbackProducts = products
+      .filter(p => p.categorySlug === 'womens-clothing' && !trendingProducts.find(tp => tp.id === p.id))
+      .slice(0, 4 - trendingProducts.length);
+    trendingProducts = [...trendingProducts, ...fallbackProducts];
+  } else {
+    trendingProducts = trendingProducts.slice(0, 4);
+  }
 
   return (
     <section className="py-24 bg-surface">

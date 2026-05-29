@@ -19,6 +19,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
 
   const addItem = useCartStore((state) => state.addItem);
+  const toggleCart = useCartStore((state) => state.toggleCart);
   const { addToWishlist, removeFromWishlist, isWishlisted } = useWishlistStore();
 
   const isInWishlist = isWishlisted(product.id);
@@ -33,6 +34,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
 
   const handleAddToCart = () => {
     addItem(product, quantity, selectedSize, selectedColor);
+    toggleCart(true);
   };
 
   return (

@@ -2,7 +2,8 @@ import { test, expect } from '@playwright/test';
 
 test('homepage sections are visible', async ({ page }) => {
   await page.goto('http://localhost:3000/');
-  await expect(page.getByText('Elegance Redefined')).toBeVisible(); // Hero
+  // Title is split into spans, so check for a word or use a different selector
+  await expect(page.getByText('Style', { exact: true }).first()).toBeVisible(); // Part of Hero
   await expect(page.getByText('Trending Now')).toBeVisible(); // Trending
   await expect(page.getByText('Flash Deals')).toBeVisible(); // Flash
   await page.screenshot({ path: 'verification/homepage-sections.png' });
@@ -20,7 +21,8 @@ test('internal navigation - navbar and product', async ({ page }) => {
   const firstProduct = page.locator('h3').first();
   const productName = await firstProduct.innerText();
   await firstProduct.click();
-  await expect(page.getByText(productName)).toBeVisible();
+  // Using heading role and first() to avoid strict mode violation
+  await expect(page.getByRole('heading', { name: productName }).first()).toBeVisible();
 });
 
 test('quick view modal works', async ({ page }) => {

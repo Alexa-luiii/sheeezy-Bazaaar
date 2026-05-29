@@ -30,12 +30,18 @@ const CategoryPage = () => {
     .join(' ');
 
   const brands = useMemo(() => {
-    const categoryProducts = products.filter(p => p.category.toLowerCase().replace(/\s+/g, '-') === slug);
+    const categoryProducts = products.filter(p =>
+      (p.categorySlug === slug) ||
+      (p.category.toLowerCase().replace(/[^a-z0-9]+/g, '-') === slug)
+    );
     return Array.from(new Set(categoryProducts.map(p => p.brand)));
   }, [slug]);
 
   const filteredProducts = useMemo(() => {
-    let result = products.filter(p => p.category.toLowerCase().replace(/\s+/g, '-') === slug);
+    let result = products.filter(p =>
+      (p.categorySlug === slug) ||
+      (p.category.toLowerCase().replace(/[^a-z0-9]+/g, '-') === slug)
+    );
 
     // Apply filters
     result = result.filter(p => p.price >= priceRange[0] && p.price <= priceRange[1]);

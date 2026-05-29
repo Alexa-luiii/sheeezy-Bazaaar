@@ -6,7 +6,17 @@ import ProductCard from '@/components/product/ProductCard';
 import { Timer } from 'lucide-react';
 
 const FlashDeals = () => {
-  const dealProducts = products.filter(p => p.isDeal).slice(0, 4);
+  let dealProducts = products.filter(p => p.isDeal);
+
+  if (dealProducts.length < 4) {
+    const fallbackProducts = products
+      .filter(p => p.categorySlug === 'womens-clothing' && !dealProducts.find(dp => dp.id === p.id))
+      .slice(0, 4 - dealProducts.length);
+    dealProducts = [...dealProducts, ...fallbackProducts];
+  } else {
+    dealProducts = dealProducts.slice(0, 4);
+  }
+
   const [timeLeft, setTimeLeft] = useState({
     hours: 24,
     minutes: 0,

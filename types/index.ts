@@ -23,6 +23,9 @@ export interface Product {
   isTrending: boolean;
   isDeal: boolean;
   isLimited: boolean;
+  isBestSeller?: boolean;
+  isNew?: boolean;
+  categorySlug?: string;
 }
 
 export interface CartItem {

@@ -10,11 +10,11 @@ test('admin dashboard loads and shows stats', async ({ page }) => {
 
 test('admin products page search works', async ({ page }) => {
   await page.goto('http://localhost:3000/admin/products');
-  await expect(page.getByText('Silk Wrap Midi Dress')).toBeVisible();
+  await expect(page.getByText('Zara-Cut Lawn Suit – Embroidered')).toBeVisible();
 
-  await page.getByPlaceholder('Search by name, brand...').fill('Wool');
-  await expect(page.getByText('Oversized Wool Blazer')).toBeVisible();
-  await expect(page.getByText('Silk Wrap Midi Dress')).not.toBeVisible();
+  await page.getByPlaceholder('Search by name, brand...').fill('Safinaz');
+  await expect(page.getByText('Khaddar Winter Kameez – Block Print')).toBeVisible();
+  await expect(page.getByText('Zara-Cut Lawn Suit – Embroidered')).not.toBeVisible();
 
   await page.screenshot({ path: 'verification/admin-products.png' });
 });

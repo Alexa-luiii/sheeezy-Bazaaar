@@ -3,264 +3,346 @@ import { Product } from '../types';
 export const products: Product[] = [
   // WOMEN'S CLOTHING
   {
-    id: 'wc-1',
-    title: 'Silk Wrap Midi Dress',
-    description: 'Elegant silk wrap dress with a flattering silhouette, perfect for evening events or sophisticated daytime wear.',
-    price: 245,
-    originalPrice: 320,
+    id: "wc-001",
+    title: "Zara-Cut Lawn Suit – Embroidered",
+    brand: "Gul Ahmed",
+    category: "Women's Clothing",
+    categorySlug: "womens-clothing",
+    price: 3200,
+    originalPrice: 4500,
+    discount: 29,
+    images: [
+      "https://images.unsplash.com/photo-1733470381571-c3d082e68457?w=800&q=80",
+      "https://images.unsplash.com/photo-1705920824583-0e783235394d?w=800&q=80",
+      "https://images.unsplash.com/photo-1733731402869-57e0cce24aea?w=800&q=80"
+    ],
+    colors: ["Crimson Red", "Purple", "Navy"],
+    sizes: ["XS","S","M","L","XL"],
+    rating: 4.8,
+    reviewCount: 312,
+    soldCount: 890,
+    stock: 18,
+    tags: ["lawn","embroidered","trending"],
+    isTrending: true,
+    isDeal: true,
+    isLimited: false,
+    description: "Premium Gul Ahmed lawn suit with delicate floral embroidery. Perfect for summer gatherings and casual wear.",
+    shipping: { type: "Free", cost: 0 },
+    estimatedDelivery: "3-5 business days"
+  },
+  {
+    id: "wc-002",
+    title: "Khaddar Winter Kameez – Block Print",
+    brand: "Sana Safinaz",
+    category: "Women's Clothing",
+    categorySlug: "womens-clothing",
+    price: 4800,
+    originalPrice: 6200,
     discount: 23,
     images: [
-      'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1539109132314-3477524c859c?q=80&w=1000&auto=format&fit=crop'
+      "https://images.unsplash.com/photo-1707576618343-26a1b377ca7a?w=800&q=80",
+      "https://images.unsplash.com/photo-1733470324488-d0e10d014d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1733209590486-4ed0bfcbc52a?w=800&q=80"
     ],
-    category: "Women's Clothing",
-    brand: 'Silk & Soul',
-    rating: 4.8,
-    reviewCount: 124,
-    soldCount: 450,
-    stock: 15,
-    tags: ['dress', 'silk', 'midi', 'elegant'],
-    sizes: ['XS', 'S', 'M', 'L'],
-    colors: ['Emerald', 'Midnight Blue', 'Champagne'],
-    shipping: { type: 'Express', cost: 0 },
-    estimatedDelivery: '3-5 business days',
-    isTrending: true,
-    isDeal: false,
-    isLimited: true
-  },
-  {
-    id: 'wc-2',
-    title: 'Oversized Wool Blazer',
-    description: 'Classic oversized blazer crafted from premium Italian wool. A versatile piece for layered professional looks.',
-    price: 189,
-    originalPrice: 189,
-    discount: 0,
-    images: [
-      'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1548624149-f7b31662df45?q=80&w=1000&auto=format&fit=crop'
-    ],
-    category: "Women's Clothing",
-    brand: 'Tailor Made',
+    colors: ["Red", "Floral Pink", "Cream"],
+    sizes: ["S","M","L","XL","XXL"],
     rating: 4.6,
-    reviewCount: 89,
-    soldCount: 320,
-    stock: 25,
-    tags: ['blazer', 'wool', 'outerwear', 'office'],
-    sizes: ['S', 'M', 'L', 'XL'],
-    colors: ['Charcoal', 'Beige', 'Black'],
-    shipping: { type: 'Standard', cost: 0 },
-    estimatedDelivery: '5-7 business days',
+    reviewCount: 198,
+    soldCount: 540,
+    stock: 9,
+    tags: ["khaddar","winter","bestseller"],
+    isBestSeller: true,
     isTrending: false,
     isDeal: false,
-    isLimited: false
+    isLimited: false,
+    description: "Warm khaddar fabric with traditional block print. Ideal for winter days with elegant styling.",
+    shipping: { type: "Free", cost: 0 },
+    estimatedDelivery: "3-5 business days"
   },
   {
-    id: 'wc-3',
-    title: 'Cashmere V-Neck Sweater',
-    description: 'Ultra-soft 100% cashmere sweater. Lightweight yet warm, an essential staple for any wardrobe.',
-    price: 150,
-    originalPrice: 210,
-    discount: 28,
-    images: [
-      'https://images.unsplash.com/photo-1574167132757-1447ae946ee3?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1000&auto=format&fit=crop'
-    ],
+    id: "wc-003",
+    title: "Chiffon Party Wear Suit – Sequin Work",
+    brand: "Maria B",
     category: "Women's Clothing",
-    brand: 'Nordic Knit',
+    categorySlug: "womens-clothing",
+    price: 8500,
+    originalPrice: 11000,
+    discount: 23,
+    images: [
+      "https://images.unsplash.com/photo-1733470381436-bb5a2a441708?w=800&q=80",
+      "https://images.unsplash.com/photo-1733209484732-6b094322a89f?w=800&q=80",
+      "https://images.unsplash.com/photo-1733209589578-97136bee7d7a?w=800&q=80"
+    ],
+    colors: ["Pink Floral", "Ivory", "Sage Green"],
+    sizes: ["XS","S","M","L"],
     rating: 4.9,
-    reviewCount: 210,
-    soldCount: 800,
-    stock: 40,
-    tags: ['cashmere', 'sweater', 'winter', 'luxury'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    colors: ['Cream', 'Grey', 'Navy'],
-    shipping: { type: 'Standard', cost: 0 },
-    estimatedDelivery: '5-7 business days',
-    isTrending: true,
-    isDeal: true,
-    isLimited: false
-  },
-  {
-    id: 'wc-4',
-    title: 'High-Waisted Tailored Trousers',
-    description: 'Expertly cut high-waisted trousers with a wide leg. Combines comfort with high-fashion aesthetics.',
-    price: 120,
-    originalPrice: 150,
-    discount: 20,
-    images: [
-      'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1509551388413-e18d0ac5d495?q=80&w=1000&auto=format&fit=crop'
-    ],
-    category: "Women's Clothing",
-    brand: 'Modern Muse',
-    rating: 4.5,
-    reviewCount: 75,
-    soldCount: 210,
-    stock: 18,
-    tags: ['trousers', 'high-waisted', 'tailored', 'workwear'],
-    sizes: ['2', '4', '6', '8', '10'],
-    colors: ['Black', 'Tan'],
-    shipping: { type: 'Standard', cost: 5 },
-    estimatedDelivery: '4-6 business days',
-    isTrending: false,
-    isDeal: false,
-    isLimited: false
-  },
-  {
-    id: 'wc-5',
-    title: 'Floral Maxi Skirt',
-    description: 'Flowy maxi skirt with a vintage floral print. Made from breathable viscose for all-day comfort.',
-    price: 85,
-    originalPrice: 85,
-    discount: 0,
-    images: [
-      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1000&auto=format&fit=crop'
-    ],
-    category: "Women's Clothing",
-    brand: 'Boho Chic',
-    rating: 4.7,
-    reviewCount: 142,
-    soldCount: 560,
-    stock: 30,
-    tags: ['skirt', 'maxi', 'floral', 'summer'],
-    sizes: ['S', 'M', 'L'],
-    colors: ['Vintage Rose', 'Sunflower'],
-    shipping: { type: 'Standard', cost: 0 },
-    estimatedDelivery: '5-7 business days',
-    isTrending: false,
-    isDeal: false,
-    isLimited: false
-  },
-  {
-    id: 'wc-6',
-    title: 'Classic Trench Coat',
-    description: 'Double-breasted trench coat with a belted waist. Water-resistant and perfect for transitional seasons.',
-    price: 299,
-    originalPrice: 350,
-    discount: 15,
-    images: [
-      'https://images.unsplash.com/photo-1551028150-64b9f398f678?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1520975661595-6453be3f7070?q=80&w=1000&auto=format&fit=crop'
-    ],
-    category: "Women's Clothing",
-    brand: 'London Heritage',
-    rating: 4.9,
-    reviewCount: 320,
+    reviewCount: 421,
     soldCount: 1200,
-    stock: 12,
-    tags: ['coat', 'trench', 'outerwear', 'classic'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    colors: ['Honey', 'Stone', 'Navy'],
-    shipping: { type: 'Express', cost: 0 },
-    estimatedDelivery: '2-4 business days',
+    stock: 4,
+    tags: ["party","chiffon","limited"],
+    isLimited: true,
     isTrending: true,
     isDeal: false,
-    isLimited: false
+    description: "Elegant chiffon party wear with hand-applied sequin work. Turn heads at every gathering.",
+    shipping: { type: "Free", cost: 0 },
+    estimatedDelivery: "2-4 business days"
   },
   {
-    id: 'wc-7',
-    title: 'Linen Button-Down Shirt',
-    description: 'Relaxed fit shirt made from 100% organic linen. Breathable and effortlessly stylish.',
-    price: 65,
-    originalPrice: 80,
-    discount: 19,
-    images: [
-      'https://images.unsplash.com/photo-1551163943-3f6a855d1153?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1000&auto=format&fit=crop'
-    ],
+    id: "wc-004",
+    title: "Cotton Casual Kurti – Printed",
+    brand: "Khaadi",
     category: "Women's Clothing",
-    brand: 'Pure Linen',
-    rating: 4.4,
-    reviewCount: 95,
-    soldCount: 430,
-    stock: 50,
-    tags: ['shirt', 'linen', 'casual', 'organic'],
-    sizes: ['S', 'M', 'L'],
-    colors: ['White', 'Light Blue', 'Olive'],
-    shipping: { type: 'Standard', cost: 5 },
-    estimatedDelivery: '4-6 business days',
+    categorySlug: "womens-clothing",
+    price: 1850,
+    originalPrice: 2400,
+    discount: 23,
+    images: [
+      "https://images.unsplash.com/photo-1704119142483-1269733bcedb?w=800&q=80",
+      "https://images.unsplash.com/photo-1733209587923-77ff33202f7c?w=800&q=80",
+      "https://images.unsplash.com/photo-1701252072712-e939599623f2?w=800&q=80"
+    ],
+    colors: ["Black", "White", "Yellow"],
+    sizes: ["S","M","L","XL"],
+    rating: 4.5,
+    reviewCount: 567,
+    soldCount: 2100,
+    stock: 45,
+    tags: ["casual","cotton","new"],
+    isNew: true,
+    isBestSeller: true,
     isTrending: false,
     isDeal: false,
-    isLimited: false
+    isLimited: false,
+    description: "Breezy cotton kurti with vibrant print. Everyday comfort meets Pakistani style.",
+    shipping: { type: "Standard", cost: 150 },
+    estimatedDelivery: "4-6 business days"
   },
   {
-    id: 'wc-8',
-    title: 'Velvet Party Dress',
-    description: 'Luxurious velvet dress with a sweetheart neckline. Perfect for the holiday season.',
-    price: 140,
-    originalPrice: 175,
+    id: "wc-005",
+    title: "Silk Dupatta 3-Piece Suit",
+    brand: "Asim Jofa",
+    category: "Women's Clothing",
+    categorySlug: "womens-clothing",
+    price: 12500,
+    originalPrice: 15000,
+    discount: 17,
+    images: [
+      "https://images.unsplash.com/photo-1733470381591-c5dfb9df3c3d?w=800&q=80",
+      "https://images.unsplash.com/photo-1733209589780-ece842d0dcf8?w=800&q=80",
+      "https://images.unsplash.com/photo-1747847471517-952a3eb93a89?w=800&q=80"
+    ],
+    colors: ["Black & White", "Pool Blue", "Bridal Red"],
+    sizes: ["XS","S","M","L","XL"],
+    rating: 4.9,
+    reviewCount: 203,
+    soldCount: 430,
+    stock: 6,
+    tags: ["silk","premium","limited"],
+    isLimited: true,
+    isTrending: false,
+    isDeal: false,
+    description: "Luxurious 3-piece suit in pure silk with matching dupatta. Designed for weddings and formal occasions.",
+    shipping: { type: "Free", cost: 0 },
+    estimatedDelivery: "2-3 business days"
+  },
+  {
+    id: "wc-006",
+    title: "Linen Co-ord Set – Wide Leg",
+    brand: "Sapphire",
+    category: "Women's Clothing",
+    categorySlug: "womens-clothing",
+    price: 5200,
+    originalPrice: 6500,
     discount: 20,
     images: [
-      'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop'
+      "https://images.unsplash.com/photo-1733209484732-6b094322a89f?w=800&q=80",
+      "https://images.unsplash.com/photo-1733470381571-c3d082e68457?w=800&q=80",
+      "https://images.unsplash.com/photo-1705920824583-0e783235394d?w=800&q=80"
     ],
-    category: "Women's Clothing",
-    brand: 'Nightfall',
-    rating: 4.8,
-    reviewCount: 62,
-    soldCount: 150,
-    stock: 8,
-    tags: ['dress', 'velvet', 'party', 'holiday'],
-    sizes: ['0', '2', '4', '6', '8'],
-    colors: ['Burgundy', 'Emerald'],
-    shipping: { type: 'Standard', cost: 0 },
-    estimatedDelivery: '5-7 business days',
+    colors: ["Dusty Rose", "Sage", "Cream"],
+    sizes: ["S","M","L","XL"],
+    rating: 4.7,
+    reviewCount: 145,
+    soldCount: 320,
+    stock: 22,
+    tags: ["linen","co-ord","trending"],
     isTrending: true,
-    isDeal: true,
-    isLimited: true
+    isDeal: false,
+    isLimited: false,
+    description: "Modern linen co-ord set with relaxed wide-leg trousers. Minimalist Pakistani fashion.",
+    shipping: { type: "Free", cost: 0 },
+    estimatedDelivery: "3-5 business days"
   },
   {
-    id: 'wc-9',
-    title: 'Distressed Denim Jacket',
-    description: 'Vintage-inspired denim jacket with light distressing. A timeless layer for any casual outfit.',
-    price: 95,
-    originalPrice: 120,
+    id: "wc-007",
+    title: "Eid Collection Pishwas – Embellished",
+    brand: "HSY",
+    category: "Women's Clothing",
+    categorySlug: "womens-clothing",
+    price: 18000,
+    originalPrice: 22000,
+    discount: 18,
+    images: [
+      "https://images.unsplash.com/photo-1733470324488-d0e10d014d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1733731402869-57e0cce24aea?w=800&q=80",
+      "https://images.unsplash.com/photo-1733470381571-c3d082e68457?w=800&q=80"
+    ],
+    colors: ["Gold Ivory", "Blush Pink", "Mint"],
+    sizes: ["XS","S","M","L"],
+    rating: 5.0,
+    reviewCount: 89,
+    soldCount: 210,
+    stock: 3,
+    tags: ["eid","embellished","limited"],
+    isLimited: true,
+    isDeal: true,
+    isTrending: false,
+    description: "Stunning Eid pishwas with full embellishment and trail. Make your Eid unforgettable.",
+    shipping: { type: "Free", cost: 0 },
+    estimatedDelivery: "2-3 business days"
+  },
+  {
+    id: "wc-008",
+    title: "Karandi Shawl Suit – Winter",
+    brand: "Bonanza Satrangi",
+    category: "Women's Clothing",
+    categorySlug: "womens-clothing",
+    price: 3800,
+    originalPrice: 4800,
     discount: 21,
     images: [
-      'https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop'
+      "https://images.unsplash.com/photo-1707576618343-26a1b377ca7a?w=800&q=80",
+      "https://images.unsplash.com/photo-1704119142483-1269733bcedb?w=800&q=80",
+      "https://images.unsplash.com/photo-1733209590486-4ed0bfcbc52a?w=800&q=80"
     ],
-    category: "Women's Clothing",
-    brand: 'Denim Co.',
-    rating: 4.6,
-    reviewCount: 185,
-    soldCount: 720,
-    stock: 22,
-    tags: ['jacket', 'denim', 'casual', 'vintage'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    colors: ['Light Wash', 'Indigo'],
-    shipping: { type: 'Standard', cost: 0 },
-    estimatedDelivery: '5-7 business days',
+    colors: ["Maroon", "Black", "Forest Green"],
+    sizes: ["S","M","L","XL","XXL"],
+    rating: 4.4,
+    reviewCount: 278,
+    soldCount: 760,
+    stock: 30,
+    tags: ["karandi","winter","warm"],
     isTrending: false,
     isDeal: false,
-    isLimited: false
+    isLimited: false,
+    description: "Cozy karandi suit with shawl included. Stay warm and stylish through Pakistani winters.",
+    shipping: { type: "Free", cost: 0 },
+    estimatedDelivery: "4-6 business days"
   },
   {
-    id: 'wc-10',
-    title: 'Leather Mini Skirt',
-    description: 'Butter-soft genuine leather mini skirt. Edgy yet sophisticated design with a back zip closure.',
-    price: 165,
-    originalPrice: 165,
-    discount: 0,
-    images: [
-      'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1582142306909-195724d33ffc?q=80&w=1000&auto=format&fit=crop'
-    ],
+    id: "wc-009",
+    title: "Organza Formal Top – Floral",
+    brand: "Zara Shahjahan",
     category: "Women's Clothing",
-    brand: 'Urban Edge',
-    rating: 4.7,
-    reviewCount: 42,
-    soldCount: 110,
-    stock: 10,
-    tags: ['skirt', 'leather', 'mini', 'edgy'],
-    sizes: ['2', '4', '6', '8'],
-    colors: ['Black', 'Dark Brown'],
-    shipping: { type: 'Standard', cost: 0 },
-    estimatedDelivery: '5-7 business days',
+    categorySlug: "womens-clothing",
+    price: 6800,
+    originalPrice: 8500,
+    discount: 20,
+    images: [
+      "https://images.unsplash.com/photo-1733470381436-bb5a2a441708?w=800&q=80",
+      "https://images.unsplash.com/photo-1733209589578-97136bee7d7a?w=800&q=80",
+      "https://images.unsplash.com/photo-1747847471517-952a3eb93a89?w=800&q=80"
+    ],
+    colors: ["Floral Ivory", "Pink Garden", "Blue Bloom"],
+    sizes: ["XS","S","M","L"],
+    rating: 4.8,
+    reviewCount: 134,
+    soldCount: 290,
+    stock: 11,
+    tags: ["organza","formal","new"],
+    isNew: true,
     isTrending: false,
     isDeal: false,
-    isLimited: true
+    isLimited: false,
+    description: "Delicate organza top with 3D floral detail. Pair with palazzo for a complete formal look.",
+    shipping: { type: "Free", cost: 0 },
+    estimatedDelivery: "3-5 business days"
+  },
+  {
+    id: "wc-010",
+    title: "Digital Print Lawn – Summer Vol.2",
+    brand: "Al Karam",
+    category: "Women's Clothing",
+    categorySlug: "womens-clothing",
+    price: 2600,
+    originalPrice: 3200,
+    discount: 19,
+    images: [
+      "https://images.unsplash.com/photo-1733209587923-77ff33202f7c?w=800&q=80",
+      "https://images.unsplash.com/photo-1701252072712-e939599623f2?w=800&q=80",
+      "https://images.unsplash.com/photo-1733209589780-ece842d0dcf8?w=800&q=80"
+    ],
+    colors: ["Peach", "Yellow White", "Sky Blue"],
+    sizes: ["S","M","L","XL"],
+    rating: 4.6,
+    reviewCount: 445,
+    soldCount: 1560,
+    stock: 38,
+    tags: ["lawn","summer","digital print","bestseller"],
+    isBestSeller: true,
+    isDeal: true,
+    isTrending: false,
+    isLimited: false,
+    description: "Vibrant digital print lawn for Pakistani summers. Lightweight, breathable, and beautifully styled.",
+    shipping: { type: "Free", cost: 0 },
+    estimatedDelivery: "4-6 business days"
+  },
+  {
+    id: "wc-011",
+    title: "Velvet Shawl Wrap – Embroidered",
+    brand: "Orient Textiles",
+    category: "Women's Clothing",
+    categorySlug: "womens-clothing",
+    price: 7200,
+    originalPrice: 9000,
+    discount: 20,
+    images: [
+      "https://images.unsplash.com/photo-1733470381591-c5dfb9df3c3d?w=800&q=80",
+      "https://images.unsplash.com/photo-1733470381571-c3d082e68457?w=800&q=80",
+      "https://images.unsplash.com/photo-1705920824583-0e783235394d?w=800&q=80"
+    ],
+    colors: ["Black", "Crimson", "Royal Blue"],
+    sizes: ["S","M","L","XL"],
+    rating: 4.7,
+    reviewCount: 99,
+    soldCount: 180,
+    stock: 8,
+    tags: ["velvet","winter","embroidered"],
+    isTrending: false,
+    isDeal: false,
+    isLimited: false,
+    description: "Plush velvet shawl with intricate embroidery. A statement piece for winter formal events.",
+    shipping: { type: "Free", cost: 0 },
+    estimatedDelivery: "3-5 business days"
+  },
+  {
+    id: "wc-012",
+    title: "Casual Cambric Suit – Tie-Dye",
+    brand: "Nishat Linen",
+    category: "Women's Clothing",
+    categorySlug: "womens-clothing",
+    price: 2200,
+    originalPrice: 2800,
+    discount: 21,
+    images: [
+      "https://images.unsplash.com/photo-1733209484732-6b094322a89f?w=800&q=80",
+      "https://images.unsplash.com/photo-1733470324488-d0e10d014d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1707576618343-26a1b377ca7a?w=800&q=80"
+    ],
+    colors: ["Lavender Tie-Dye", "Pink Splash", "Orange Bloom"],
+    sizes: ["XS","S","M","L","XL"],
+    rating: 4.3,
+    reviewCount: 321,
+    soldCount: 980,
+    stock: 55,
+    tags: ["cambric","casual","tie-dye","new"],
+    isNew: true,
+    isTrending: false,
+    isDeal: false,
+    isLimited: false,
+    description: "Trendy tie-dye cambric suit for casual everyday wear. Young, vibrant, and very Pakistani.",
+    shipping: { type: "Standard", cost: 150 },
+    estimatedDelivery: "4-6 business days"
   },
 
   // WOMEN'S SHOES
@@ -273,9 +355,11 @@ export const products: Product[] = [
     discount: 31,
     images: [
       'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000&auto=format&fit=crop'
     ],
     category: "Women's Shoes",
+    categorySlug: "womens-shoes",
     brand: 'Step Luxe',
     rating: 4.5,
     reviewCount: 88,
@@ -299,9 +383,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1000&auto=format&fit=crop'
     ],
     category: "Women's Shoes",
+    categorySlug: "womens-shoes",
     brand: 'EcoStep',
     rating: 4.8,
     reviewCount: 245,
@@ -325,9 +411,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1542280756-74b2f55e73ab?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1603487742131-4160ec999306?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1603487742131-4160ec999306?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1542280756-74b2f55e73ab?q=80&w=1000&auto=format&fit=crop'
     ],
     category: "Women's Shoes",
+    categorySlug: "womens-shoes",
     brand: 'Walkway',
     rating: 4.6,
     reviewCount: 112,
@@ -351,9 +439,11 @@ export const products: Product[] = [
     discount: 32,
     images: [
       'https://images.unsplash.com/photo-1562273103-91b743752c3c?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1562273103-91b743752c3c?q=80&w=1000&auto=format&fit=crop'
     ],
     category: "Women's Shoes",
+    categorySlug: "womens-shoes",
     brand: 'Solstice',
     rating: 4.4,
     reviewCount: 56,
@@ -377,9 +467,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1614252329473-486d0620bad8?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1614252329473-486d0620bad8?q=80&w=1000&auto=format&fit=crop'
     ],
     category: "Women's Shoes",
+    categorySlug: "womens-shoes",
     brand: 'Oxford & Co',
     rating: 4.7,
     reviewCount: 134,
@@ -403,9 +495,11 @@ export const products: Product[] = [
     discount: 20,
     images: [
       'https://images.unsplash.com/photo-1608256246200-53e635b5b65f?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1605812860427-4024433a70fd?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1605812860427-4024433a70fd?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1608256246200-53e635b5b65f?q=80&w=1000&auto=format&fit=crop'
     ],
     category: "Women's Shoes",
+    categorySlug: "womens-shoes",
     brand: 'Tough Step',
     rating: 4.9,
     reviewCount: 280,
@@ -429,9 +523,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1515347619252-60a4bdad8886?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1515347619252-60a4bdad8886?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1000&auto=format&fit=crop'
     ],
     category: "Women's Shoes",
+    categorySlug: "womens-shoes",
     brand: 'Graceful',
     rating: 4.3,
     reviewCount: 145,
@@ -455,9 +551,11 @@ export const products: Product[] = [
     discount: 25,
     images: [
       'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1616406432451-424372932247?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1616406432451-424372932247?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?q=80&w=1000&auto=format&fit=crop'
     ],
     category: "Women's Shoes",
+    categorySlug: "womens-shoes",
     brand: 'Everglade',
     rating: 4.8,
     reviewCount: 45,
@@ -481,9 +579,11 @@ export const products: Product[] = [
     discount: 25,
     images: [
       'https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1560343090-f0409e92791a?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1560343090-f0409e92791a?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=1000&auto=format&fit=crop'
     ],
     category: "Women's Shoes",
+    categorySlug: "womens-shoes",
     brand: 'Night Luxe',
     rating: 4.5,
     reviewCount: 32,
@@ -507,9 +607,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1519415943484-9fa1873496d4?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1519415943484-9fa1873496d4?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1000&auto=format&fit=crop'
     ],
     category: "Women's Shoes",
+    categorySlug: "womens-shoes",
     brand: 'Coastline',
     rating: 4.2,
     reviewCount: 210,
@@ -535,9 +637,11 @@ export const products: Product[] = [
     discount: 20,
     images: [
       'https://images.unsplash.com/photo-1570172619380-dc3079979b0c?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1570172619380-dc3079979b0c?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
+    categorySlug: 'beauty-products',
     brand: 'Dewy Skin',
     rating: 4.9,
     reviewCount: 450,
@@ -559,9 +663,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1586776977607-310e9c725c37?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1591360236480-9c6a4cb3a6de?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1591360236480-9c6a4cb3a6de?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1586776977607-310e9c725c37?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
+    categorySlug: 'beauty-products',
     brand: 'Velvet Kiss',
     rating: 4.7,
     reviewCount: 320,
@@ -578,15 +684,17 @@ export const products: Product[] = [
   {
     id: 'bp-3',
     title: 'Volumizing Mascara',
-    description: 'Instant volume and length with a clump-free formula. Ophthalmologist-tested.',
+    description: 'Instant volume and length with a split-free formula. Ophthalmologist-tested.',
     price: 18,
     originalPrice: 22,
     discount: 18,
     images: [
       'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
+    categorySlug: 'beauty-products',
     brand: 'Lash Lift',
     rating: 4.6,
     reviewCount: 185,
@@ -608,9 +716,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
+    categorySlug: 'beauty-products',
     brand: 'Solar Guard',
     rating: 4.8,
     reviewCount: 215,
@@ -632,9 +742,11 @@ export const products: Product[] = [
     discount: 20,
     images: [
       'https://images.unsplash.com/photo-1596755389378-7d0d22150521?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1596755389378-7d0d22150521?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
+    categorySlug: 'beauty-products',
     brand: 'Pure Earth',
     rating: 4.5,
     reviewCount: 110,
@@ -656,9 +768,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
+    categorySlug: 'beauty-products',
     brand: 'Dewy Skin',
     rating: 4.9,
     reviewCount: 380,
@@ -680,9 +794,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
+    categorySlug: 'beauty-products',
     brand: 'Ink Art',
     rating: 4.4,
     reviewCount: 92,
@@ -705,9 +821,11 @@ export const products: Product[] = [
     discount: 19,
     images: [
       'https://images.unsplash.com/photo-1503236123135-083b87a08f32?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590156221170-ce35d474fd8a?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1590156221170-ce35d474fd8a?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1503236123135-083b87a08f32?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
+    categorySlug: 'beauty-products',
     brand: 'Lumiere',
     rating: 4.7,
     reviewCount: 78,
@@ -729,9 +847,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1601049541289-9b1b7abc74a4?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1601049541289-9b1b7abc74a4?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
+    categorySlug: 'beauty-products',
     brand: 'Botanica',
     rating: 4.8,
     reviewCount: 156,
@@ -753,9 +873,11 @@ export const products: Product[] = [
     discount: 18,
     images: [
       'https://images.unsplash.com/photo-1598440947614-46c59d9f8e40?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1598440947614-46c59d9f8e40?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
+    categorySlug: 'beauty-products',
     brand: 'Glow Lab',
     rating: 4.6,
     reviewCount: 134,
@@ -779,9 +901,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
+    categorySlug: 'bags',
     brand: 'Hides & Co',
     rating: 4.9,
     reviewCount: 128,
@@ -804,9 +928,11 @@ export const products: Product[] = [
     discount: 27,
     images: [
       'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1566150905458-1bf1fd113f0d?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1566150905458-1bf1fd113f0d?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
+    categorySlug: 'bags',
     brand: 'Petite Mode',
     rating: 4.7,
     reviewCount: 85,
@@ -829,9 +955,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1566150893593-132958444f24?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1532635241-17e820acc59f?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1532635241-17e820acc59f?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1566150893593-132958444f24?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
+    categorySlug: 'bags',
     brand: 'Gala Ready',
     rating: 4.6,
     reviewCount: 42,
@@ -854,9 +982,11 @@ export const products: Product[] = [
     discount: 23,
     images: [
       'https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
+    categorySlug: 'bags',
     brand: 'Lux & Chain',
     rating: 4.8,
     reviewCount: 156,
@@ -879,9 +1009,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
+    categorySlug: 'bags',
     brand: 'Metro Gear',
     rating: 4.5,
     reviewCount: 68,
@@ -904,9 +1036,11 @@ export const products: Product[] = [
     discount: 21,
     images: [
       'https://images.unsplash.com/photo-1611010343136-771439419f5b?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1614179662397-83527a944615?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1614179662397-83527a944615?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1611010343136-771439419f5b?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
+    categorySlug: 'bags',
     brand: 'Rustic Charm',
     rating: 4.6,
     reviewCount: 54,
@@ -929,9 +1063,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1547949003-9792a18a2601?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1610332885440-272e6178a3f8?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1610332885440-272e6178a3f8?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1547949003-9792a18a2601?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
+    categorySlug: 'bags',
     brand: 'Free Spirit',
     rating: 4.4,
     reviewCount: 92,
@@ -954,9 +1090,11 @@ export const products: Product[] = [
     discount: 24,
     images: [
       'https://images.unsplash.com/photo-1590739225287-bd2ba5193952?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1583623025817-d180a2221d0a?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1583623025817-d180a2221d0a?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1590739225287-bd2ba5193952?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
+    categorySlug: 'bags',
     brand: 'Vintage Soul',
     rating: 4.7,
     reviewCount: 38,
@@ -979,9 +1117,11 @@ export const products: Product[] = [
     discount: 0,
     images: [
       'https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1591133111033-fb93040683b6?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1591133111033-fb93040683b6?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
+    categorySlug: 'bags',
     brand: 'Coastal Bloom',
     rating: 4.3,
     reviewCount: 110,
@@ -1003,9 +1143,11 @@ export const products: Product[] = [
     discount: 22,
     images: [
       'https://images.unsplash.com/photo-1520190282173-6e27515332f6?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1553531384-cc64ac80f931?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1553531384-cc64ac80f931?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1520190282173-6e27515332f6?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
+    categorySlug: 'bags',
     brand: 'Nomad Luxe',
     rating: 4.9,
     reviewCount: 45,

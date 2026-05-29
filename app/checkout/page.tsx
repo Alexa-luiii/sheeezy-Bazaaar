@@ -38,7 +38,12 @@ type CheckoutStep = "cart" | "shipping" | "payment" | "confirmation"
 export default function CheckoutPage() {
   const router = useRouter()
   const { items, removeItem, updateQuantity, clearCart } = useCartStore()
+  const [isHydrated, setIsHydrated] = useState(false)
   const [step, setStep] = useState<CheckoutStep>("cart")
+
+  useEffect(() => {
+    setIsHydrated(true)
+  }, [])
   const [couponCode, setCouponCode] = useState("")
   const [appliedCoupon, setAppliedCoupon] = useState<Coupon | null>(null)
   const [couponError, setCouponError] = useState("")
@@ -47,14 +52,14 @@ export default function CheckoutPage() {
 
   // Redirect if cart is empty and not in confirmation step
   useEffect(() => {
-    if (items.length === 0 && step !== "confirmation") {
+    if (isHydrated && items.length === 0 && step !== "confirmation") {
       // Small delay to allow state to settle
       const timer = setTimeout(() => {
         if (items.length === 0) router.push("/")
       }, 100)
       return () => clearTimeout(timer)
     }
-  }, [items.length, step, router])
+  }, [items.length, step, router, isHydrated])
 
   const totals = calculateTotal(items, appliedCoupon)
 
