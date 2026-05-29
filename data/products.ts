@@ -13,8 +13,8 @@ export const products: Product[] = [
     discount: 29,
     images: [
       "https://images.unsplash.com/photo-1733470381571-c3d082e68457?w=800&q=80",
-      "https://images.unsplash.com/photo-1705920824583-0e783235394d?w=800&q=80",
-      "https://images.unsplash.com/photo-1733731402869-57e0cce24aea?w=800&q=80"
+      "https://images.unsplash.com/photo-1707576618343-26a1b377ca7a?w=800&q=80",
+      "https://images.unsplash.com/photo-1705920824583-0e783235394d?w=800&q=80"
     ],
     colors: ["Crimson Red", "Purple", "Navy"],
     sizes: ["XS","S","M","L","XL"],
@@ -40,9 +40,9 @@ export const products: Product[] = [
     originalPrice: 6200,
     discount: 23,
     images: [
-      "https://images.unsplash.com/photo-1707576618343-26a1b377ca7a?w=800&q=80",
       "https://images.unsplash.com/photo-1733470324488-d0e10d014d80?w=800&q=80",
-      "https://images.unsplash.com/photo-1733209590486-4ed0bfcbc52a?w=800&q=80"
+      "https://images.unsplash.com/photo-1704119142483-1269733bcedb?w=800&q=80",
+      "https://images.unsplash.com/photo-1733731402869-57e0cce24aea?w=800&q=80"
     ],
     colors: ["Red", "Floral Pink", "Cream"],
     sizes: ["S","M","L","XL","XXL"],
@@ -71,7 +71,7 @@ export const products: Product[] = [
     images: [
       "https://images.unsplash.com/photo-1733470381436-bb5a2a441708?w=800&q=80",
       "https://images.unsplash.com/photo-1733209484732-6b094322a89f?w=800&q=80",
-      "https://images.unsplash.com/photo-1733209589578-97136bee7d7a?w=800&q=80"
+      "https://images.unsplash.com/photo-1733470381591-c5dfb9df3c3d?w=800&q=80"
     ],
     colors: ["Pink Floral", "Ivory", "Sage Green"],
     sizes: ["XS","S","M","L"],
@@ -97,9 +97,9 @@ export const products: Product[] = [
     originalPrice: 2400,
     discount: 23,
     images: [
-      "https://images.unsplash.com/photo-1704119142483-1269733bcedb?w=800&q=80",
-      "https://images.unsplash.com/photo-1733209587923-77ff33202f7c?w=800&q=80",
-      "https://images.unsplash.com/photo-1701252072712-e939599623f2?w=800&q=80"
+      "https://images.unsplash.com/photo-1701252072712-e939599623f2?w=800&q=80",
+      "https://images.unsplash.com/photo-1733209590486-4ed0bfcbc52a?w=800&q=80",
+      "https://images.unsplash.com/photo-1733209589578-97136bee7d7a?w=800&q=80"
     ],
     colors: ["Black", "White", "Yellow"],
     sizes: ["S","M","L","XL"],
@@ -127,7 +127,7 @@ export const products: Product[] = [
     originalPrice: 15000,
     discount: 17,
     images: [
-      "https://images.unsplash.com/photo-1733470381591-c5dfb9df3c3d?w=800&q=80",
+      "https://images.unsplash.com/photo-1733209587923-77ff33202f7c?w=800&q=80",
       "https://images.unsplash.com/photo-1733209589780-ece842d0dcf8?w=800&q=80",
       "https://images.unsplash.com/photo-1747847471517-952a3eb93a89?w=800&q=80"
     ],
@@ -211,9 +211,9 @@ export const products: Product[] = [
     originalPrice: 4800,
     discount: 21,
     images: [
-      "https://images.unsplash.com/photo-1707576618343-26a1b377ca7a?w=800&q=80",
       "https://images.unsplash.com/photo-1704119142483-1269733bcedb?w=800&q=80",
-      "https://images.unsplash.com/photo-1733209590486-4ed0bfcbc52a?w=800&q=80"
+      "https://images.unsplash.com/photo-1704119142483-1269733bcedb?w=800&q=80",
+      "https://images.unsplash.com/photo-1733731402869-57e0cce24aea?w=800&q=80"
     ],
     colors: ["Maroon", "Black", "Forest Green"],
     sizes: ["S","M","L","XL","XXL"],
@@ -241,7 +241,7 @@ export const products: Product[] = [
     images: [
       "https://images.unsplash.com/photo-1733470381436-bb5a2a441708?w=800&q=80",
       "https://images.unsplash.com/photo-1733209589578-97136bee7d7a?w=800&q=80",
-      "https://images.unsplash.com/photo-1747847471517-952a3eb93a89?w=800&q=80"
+      "https://images.unsplash.com/photo-1733470381591-c5dfb9df3c3d?w=800&q=80"
     ],
     colors: ["Floral Ivory", "Pink Garden", "Blue Bloom"],
     sizes: ["XS","S","M","L"],
@@ -270,7 +270,7 @@ export const products: Product[] = [
     images: [
       "https://images.unsplash.com/photo-1733209587923-77ff33202f7c?w=800&q=80",
       "https://images.unsplash.com/photo-1701252072712-e939599623f2?w=800&q=80",
-      "https://images.unsplash.com/photo-1733209589780-ece842d0dcf8?w=800&q=80"
+      "https://images.unsplash.com/photo-1733209589578-97136bee7d7a?w=800&q=80"
     ],
     colors: ["Peach", "Yellow White", "Sky Blue"],
     sizes: ["S","M","L","XL"],
@@ -1096,9 +1096,9 @@ export const products: Product[] = [
     originalPrice: 170,
     discount: 21,
     images: [
-      'https://images.unsplash.com/photo-1611010343136-771439419f5b?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1611010343136?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1614179662397-83527a944615?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1611010343136-771439419f5b?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1611010343136?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
     categorySlug: 'bags',
@@ -1165,7 +1165,7 @@ export const products: Product[] = [
     colors: ['Black', 'Dark Green'],
     shipping: { type: 'Standard', cost: 5 },
     estimatedDelivery: '5-7 business days',
-    isTrending: true,
+    isTrending: false,
     isDeal: false,
     isLimited: true
   },
