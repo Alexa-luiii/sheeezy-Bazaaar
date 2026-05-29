@@ -22,6 +22,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.charleskeith.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.rarebeauty.com',
+      },
     ],
   },
 };

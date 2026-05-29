@@ -14,7 +14,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Women', href: '/category/womens-clothing' },
   { name: 'Shoes', href: '/category/womens-shoes' },
-  { name: 'Beauty', href: '/category/beauty-products' },
+  { name: 'Beauty', href: '/category/beauty' },
   { name: 'Bags', href: '/category/bags' },
 ];
 
