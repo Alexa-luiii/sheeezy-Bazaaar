@@ -1,7 +1,7 @@
 import { Product } from '../types';
 
 export const products: Product[] = [
-  // WOMEN'S CLOTHING
+  // WOMEN'S CLOTHING (12 Items - Pakistani Brands)
   {
     id: "wc-001",
     title: "Zara-Cut Lawn Suit – Embroidered",
@@ -183,9 +183,9 @@ export const products: Product[] = [
     originalPrice: 22000,
     discount: 18,
     images: [
-      "https://images.unsplash.com/photo-1733470324488-d0e10d014d80?w=800&q=80",
-      "https://images.unsplash.com/photo-1733731402869-57e0cce24aea?w=800&q=80",
-      "https://images.unsplash.com/photo-1733470381571-c3d082e68457?w=800&q=80"
+      "https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?q=80&w=800",
+      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=800",
+      "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=800"
     ],
     colors: ["Gold Ivory", "Blush Pink", "Mint"],
     sizes: ["XS","S","M","L"],
@@ -211,9 +211,9 @@ export const products: Product[] = [
     originalPrice: 4800,
     discount: 21,
     images: [
-      "https://images.unsplash.com/photo-1704119142483-1269733bcedb?w=800&q=80",
-      "https://images.unsplash.com/photo-1704119142483-1269733bcedb?w=800&q=80",
-      "https://images.unsplash.com/photo-1733731402869-57e0cce24aea?w=800&q=80"
+      "https://images.unsplash.com/photo-1520006403909-838d6b92c22e?q=80&w=800",
+      "https://images.unsplash.com/photo-1520975954732-45dd2118a39b?q=80&w=800",
+      "https://images.unsplash.com/photo-1518349619163-dc0320a32062?q=80&w=800"
     ],
     colors: ["Maroon", "Black", "Forest Green"],
     sizes: ["S","M","L","XL","XXL"],
@@ -239,9 +239,9 @@ export const products: Product[] = [
     originalPrice: 8500,
     discount: 20,
     images: [
-      "https://images.unsplash.com/photo-1733470381436-bb5a2a441708?w=800&q=80",
-      "https://images.unsplash.com/photo-1733209589578-97136bee7d7a?w=800&q=80",
-      "https://images.unsplash.com/photo-1733470381591-c5dfb9df3c3d?w=800&q=80"
+      "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=800",
+      "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=800",
+      "https://images.unsplash.com/photo-1495385794356-15371f348c31?q=80&w=800"
     ],
     colors: ["Floral Ivory", "Pink Garden", "Blue Bloom"],
     sizes: ["XS","S","M","L"],
@@ -268,9 +268,9 @@ export const products: Product[] = [
     originalPrice: 3200,
     discount: 19,
     images: [
-      "https://images.unsplash.com/photo-1733209587923-77ff33202f7c?w=800&q=80",
-      "https://images.unsplash.com/photo-1701252072712-e939599623f2?w=800&q=80",
-      "https://images.unsplash.com/photo-1733209589578-97136bee7d7a?w=800&q=80"
+      "https://images.unsplash.com/photo-151433093834a-148c778f245a?q=80&w=800",
+      "https://images.unsplash.com/photo-1537832816519-689ad163238b?q=80&w=800",
+      "https://images.unsplash.com/photo-1512353087810-25dfcd100962?q=80&w=800"
     ],
     colors: ["Peach", "Yellow White", "Sky Blue"],
     sizes: ["S","M","L","XL"],
@@ -297,9 +297,9 @@ export const products: Product[] = [
     originalPrice: 9000,
     discount: 20,
     images: [
-      "https://images.unsplash.com/photo-1733470381591-c5dfb9df3c3d?w=800&q=80",
-      "https://images.unsplash.com/photo-1733470381571-c3d082e68457?w=800&q=80",
-      "https://images.unsplash.com/photo-1705920824583-0e783235394d?w=800&q=80"
+      "https://images.unsplash.com/photo-1445205170230-053b830c6050?q=80&w=800",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800",
+      "https://images.unsplash.com/photo-1479064566235-aa2742b96a46?q=80&w=800"
     ],
     colors: ["Black", "Crimson", "Royal Blue"],
     sizes: ["S","M","L","XL"],
@@ -325,9 +325,9 @@ export const products: Product[] = [
     originalPrice: 2800,
     discount: 21,
     images: [
-      "https://images.unsplash.com/photo-1733209484732-6b094322a89f?w=800&q=80",
-      "https://images.unsplash.com/photo-1733470324488-d0e10d014d80?w=800&q=80",
-      "https://images.unsplash.com/photo-1707576618343-26a1b377ca7a?w=800&q=80"
+      "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?q=80&w=800",
+      "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=800",
+      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800"
     ],
     colors: ["Lavender Tie-Dye", "Pink Splash", "Orange Bloom"],
     sizes: ["XS","S","M","L","XL"],
@@ -345,350 +345,123 @@ export const products: Product[] = [
     estimatedDelivery: "4-6 business days"
   },
 
-  // WOMEN'S SHOES
+  // WOMEN'S SHOES (6 Items - Stylo & Insignia)
   {
     id: "ws-001",
-    title: "Block Heel Mules – Nude",
+    title: "Formal Sandal FR5484 – Stylo",
     brand: "Stylo",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 4500,
-    originalPrice: 5800,
-    discount: 22,
+    category: "Women's Shoes", categorySlug: "womens-shoes",
+    price: 2760, originalPrice: 4000,
+    discount: 31,
     images: [
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80",
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
-      "https://images.unsplash.com/photo-1515347619252-60a4bdad8886?w=800&q=80"
+      "https://stylo.pk/cdn/shop/files/FR548462_3fc04d9b-2a89-43bb-a673-bc246ae4bdee.png?v=1769154750&width=800",
+      "https://stylo.pk/cdn/shop/files/FR548448_cbddca8c-2d7f-4c73-bf18-c75569eb067d.png?v=1769154748&width=800",
+      "https://stylo.pk/cdn/shop/files/FR551518_352bc11f-a0f5-4048-8b1c-16ec2d86a9ce.png?v=1769525957&width=800"
     ],
-    colors: ["Nude", "Black", "Dusty Rose"],
+    colors: ["Beige", "Navy", "Pink"],
     sizes: ["36","37","38","39","40","41"],
-    rating: 4.7,
-    reviewCount: 234,
-    soldCount: 780,
-    stock: 15,
-    tags: ["heels","mules","trending"],
-    isTrending: true,
-    isDeal: false,
-    isLimited: false,
-    description: "Elegant block heel mules with cushioned footbed. Perfect for office and casual wear.",
-    shipping: { type: "Free", cost: 0 },
-    estimatedDelivery: "3-5 business days"
+    rating: 4.7, reviewCount: 312, soldCount: 890, stock: 18,
+    tags: ["formal","sandal","trending"], isTrending: true, isDeal: true, isLimited: false,
+    description: "Elegant formal mid-heel sandal with structural strap overlays. Perfect for professional or evening wear.",
+    shipping: { type: "Standard", cost: 0 }, estimatedDelivery: "3-5 business days"
   },
   {
     id: "ws-002",
-    title: "Classic White Sneakers",
-    brand: "Bata",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 3200,
-    originalPrice: 4000,
-    discount: 20,
+    title: "Fancy Sandal FN6294 – Stylo",
+    brand: "Stylo",
+    category: "Women's Shoes", categorySlug: "womens-shoes",
+    price: 3110, originalPrice: 4500,
+    discount: 31,
     images: [
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80",
-      "https://images.unsplash.com/photo-1515347619252-60a4bdad8886?w=800&q=80"
+      "https://stylo.pk/cdn/shop/files/FN6294-18_45x.png?v=1765787568&width=800",
+      "https://stylo.pk/cdn/shop/files/FN6294-07.png?v=1765787547&width=800",
+      "https://stylo.pk/cdn/shop/files/FN6161-15.png?v=1765789434&width=800"
     ],
-    colors: ["White", "White Pink", "White Grey"],
-    sizes: ["36","37","38","39","40"],
-    rating: 4.5,
-    reviewCount: 890,
-    soldCount: 3200,
-    stock: 60,
-    tags: ["sneakers","casual","bestseller"],
-    isBestSeller: true,
-    isTrending: false,
-    isDeal: false,
-    isLimited: false,
-    description: "Timeless white sneakers with comfort sole. Pakistan's most loved everyday shoe.",
-    shipping: { type: "Standard", cost: 0 },
-    estimatedDelivery: "3-5 business days"
+    colors: ["Pink", "Grey", "Golden"],
+    sizes: ["36","37","38","39","40","41"],
+    rating: 4.8, reviewCount: 198, soldCount: 540, stock: 12,
+    tags: ["fancy","party","heels"], isDeal: true, isTrending: false, isLimited: false,
+    description: "Eye-catching party wear heels adorned with delicate embellishments and supportive ankle-strap.",
+    shipping: { type: "Standard", cost: 0 }, estimatedDelivery: "3-5 business days"
   },
   {
     id: "ws-003",
-    title: "Strappy Kitten Heels – Bridal",
+    title: "Party Wear Sandal IP2068 – Insignia",
     brand: "Insignia",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 6800,
-    originalPrice: 8500,
-    discount: 20,
+    category: "Women's Shoes", categorySlug: "womens-shoes",
+    price: 4005, originalPrice: 4450,
+    discount: 10,
     images: [
-      "https://images.unsplash.com/photo-1515347619252-60a4bdad8886?w=800&q=80",
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80",
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80"
+      "https://insignia.com.pk/cdn/shop/files/1_84166f1d-b359-42e6-8e81-f2635c2a57db.jpg?v=1773260655&width=800",
+      "https://insignia.com.pk/cdn/shop/files/1_1619d931-eadc-46f0-bfed-00516de22de8.jpg?v=1773260690&width=800",
+      "https://insignia.com.pk/cdn/shop/files/2_7926c590-65dc-490e-b3d4-511fd3184f7a.jpg?v=1773260654&width=800"
     ],
-    colors: ["Gold", "Silver", "Blush Pink"],
+    colors: ["Gold", "Pink", "Silver"],
     sizes: ["36","37","38","39","40","41"],
-    rating: 4.9,
-    reviewCount: 156,
-    soldCount: 420,
-    stock: 7,
-    tags: ["heels","bridal","limited"],
-    isLimited: true,
-    isDeal: true,
-    isTrending: false,
-    description: "Delicate strappy kitten heels with embellished ankle strap. Your perfect bridal companion.",
-    shipping: { type: "Free", cost: 0 },
-    estimatedDelivery: "2-4 business days"
+    rating: 4.9, reviewCount: 156, soldCount: 420, stock: 7,
+    tags: ["party","heels","limited"], isLimited: true, isTrending: false, isDeal: false,
+    description: "Striking open-toe party heel with sleek minimalistic straps and fine metallic accenting.",
+    shipping: { type: "Standard", cost: 0 }, estimatedDelivery: "2-4 business days"
   },
   {
     id: "ws-004",
-    title: "Flat Kolhapuri Sandals",
-    brand: "Servis",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 1800,
-    originalPrice: 2400,
-    discount: 25,
+    title: "Party Wear Sandal IP2078 – Insignia",
+    brand: "Insignia",
+    category: "Women's Shoes", categorySlug: "womens-shoes",
+    price: 8955, originalPrice: 9950,
+    discount: 10,
     images: [
-      "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&q=80",
-      "https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?w=800&q=80",
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80"
+      "https://insignia.com.pk/cdn/shop/files/IP2078Gold_d61affad-0d94-4b0d-b2a2-8a29429fcf00.png?v=1779710192&width=800",
+      "https://insignia.com.pk/cdn/shop/files/IP2078Silver.png?v=1779710220&width=800",
+      "https://insignia.com.pk/cdn/shop/files/1_ba94ba52-b084-4b7d-8193-bd9f11456a52.jpg?v=1774875624&width=800"
     ],
-    colors: ["Tan Brown", "Black", "Oxblood"],
+    colors: ["Gold", "Silver", "Champagne"],
     sizes: ["36","37","38","39","40","41"],
-    rating: 4.3,
-    reviewCount: 445,
-    soldCount: 1900,
-    stock: 80,
-    tags: ["sandals","flat","casual"],
-    isBestSeller: true,
-    isTrending: false,
-    isDeal: false,
-    isLimited: false,
-    description: "Traditional Kolhapuri-inspired flat sandals. Handcrafted comfort for all-day wear.",
-    shipping: { type: "Standard", cost: 150 },
-    estimatedDelivery: "4-6 business days"
+    rating: 4.9, reviewCount: 89, soldCount: 210, stock: 5,
+    tags: ["luxury","party","heels","limited"], isLimited: true, isTrending: true, isDeal: false,
+    description: "Luxury party sandal with thin intertwined crystalline straps. Wrapped elegantly around the upper instep.",
+    shipping: { type: "Standard", cost: 0 }, estimatedDelivery: "2-3 business days"
   },
   {
     id: "ws-005",
-    title: "Platform Heels – Party Wear",
-    brand: "Stylo",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 7500,
-    originalPrice: 9200,
-    discount: 18,
+    title: "Party Wear Slip On IP0125 – Insignia",
+    brand: "Insignia",
+    category: "Women's Shoes", categorySlug: "womens-shoes",
+    price: 8505, originalPrice: 9450,
+    discount: 10,
     images: [
-      "https://images.unsplash.com/photo-1561861422-a549073e547a?w=800&q=80",
-      "https://images.unsplash.com/photo-1515347619252-60a4bdad8886?w=800&q=80",
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80"
+      "https://insignia.com.pk/cdn/shop/files/IP0125GOLD.png?v=1779710236&width=800",
+      "https://insignia.com.pk/cdn/shop/files/IP0125Black.png?v=1779710254&width=800",
+      "https://insignia.com.pk/cdn/shop/files/1_d875e16e-92b6-4ad8-b926-a6af59f84a4c.jpg?v=1776923449&width=800"
     ],
-    colors: ["Black", "Red", "Nude"],
-    sizes: ["36","37","38","39","40"],
-    rating: 4.8,
-    reviewCount: 178,
-    soldCount: 540,
-    stock: 10,
-    tags: ["platform","party","heels","trending"],
-    isTrending: true,
-    isDeal: false,
-    isLimited: false,
-    description: "Bold platform heels that add 4 inches of confidence. Go from dinner to dance floor seamlessly.",
-    shipping: { type: "Free", cost: 0 },
-    estimatedDelivery: "3-5 business days"
+    colors: ["Gold", "Black", "Silver"],
+    sizes: ["36","37","38","39","40","41"],
+    rating: 4.8, reviewCount: 134, soldCount: 310, stock: 9,
+    tags: ["slip-on","mule","party"], isBestSeller: true, isTrending: false, isDeal: false, isLimited: false,
+    description: "Chic mule-style kitten heel slip-on with sharp sparkling modern strap structure. Effortless glam.",
+    shipping: { type: "Standard", cost: 0 }, estimatedDelivery: "2-4 business days"
   },
   {
     id: "ws-006",
-    title: "Loafers – Leather Finish",
-    brand: "Hush Puppies",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 5200,
-    originalPrice: 6500,
-    discount: 20,
-    images: [
-      "https://images.unsplash.com/photo-1582897085656-c636d006a246?w=800&q=80",
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80",
-      "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&q=80"
-    ],
-    colors: ["Black", "Brown", "Tan"],
-    sizes: ["36","37","38","39","40","41"],
-    rating: 4.6,
-    reviewCount: 267,
-    soldCount: 890,
-    stock: 28,
-    tags: ["loafers","leather","office"],
-    isTrending: false,
-    isDeal: false,
-    isLimited: false,
-    description: "Premium leather-finish loafers for office and casual wear. Smart, sleek, comfortable.",
-    shipping: { type: "Free", cost: 0 },
-    estimatedDelivery: "3-5 business days"
-  },
-  {
-    id: "ws-007",
-    title: "Ankle Strap Heels – Stiletto",
-    brand: "Insignia",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 8200,
-    originalPrice: 10000,
-    discount: 18,
-    images: [
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80",
-      "https://images.unsplash.com/photo-1561861422-a549073e547a?w=800&q=80",
-      "https://images.unsplash.com/photo-1515347619252-60a4bdad8886?w=800&q=80"
-    ],
-    colors: ["Black", "Nude", "Red"],
-    sizes: ["36","37","38","39","40"],
-    rating: 4.7,
-    reviewCount: 122,
-    soldCount: 310,
-    stock: 5,
-    tags: ["stiletto","heels","party","limited"],
-    isLimited: true,
-    isTrending: false,
-    isDeal: false,
-    description: "Classic stiletto with ankle strap. The ultimate power heel for any formal event.",
-    shipping: { type: "Free", cost: 0 },
-    estimatedDelivery: "2-4 business days"
-  },
-  {
-    id: "ws-008",
-    title: "Ballet Flats – Bow Detail",
-    brand: "Bata",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 2800,
-    originalPrice: 3500,
-    discount: 20,
-    images: [
-      "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&q=80",
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
-      "https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?w=800&q=80"
-    ],
-    colors: ["Blush Pink", "Black", "Ivory"],
-    sizes: ["36","37","38","39","40","41"],
-    rating: 4.4,
-    reviewCount: 389,
-    soldCount: 1340,
-    stock: 42,
-    tags: ["flats","ballet","cute","new"],
-    isNew: true,
-    isTrending: false,
-    isDeal: false,
-    isLimited: false,
-    description: "Sweet bow-detail ballet flats. Light, comfortable, and irresistibly cute.",
-    shipping: { type: "Standard", cost: 0 },
-    estimatedDelivery: "4-6 business days"
-  },
-  {
-    id: "ws-009",
-    title: "Wedge Espadrilles – Summer",
-    brand: "Servis",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 3600,
-    originalPrice: 4500,
-    discount: 20,
-    images: [
-      "https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?w=800&q=80",
-      "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&q=80",
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80"
-    ],
-    colors: ["Natural", "White", "Tan"],
-    sizes: ["36","37","38","39","40"],
-    rating: 4.5,
-    reviewCount: 201,
-    soldCount: 670,
-    stock: 25,
-    tags: ["wedge","summer","espadrilles"],
-    isDeal: true,
-    isTrending: false,
-    isLimited: false,
-    description: "Rope-wedge espadrilles for Pakistan's hot summers. Stylish and easy on your feet.",
-    shipping: { type: "Standard", cost: 0 },
-    estimatedDelivery: "4-6 business days"
-  },
-  {
-    id: "ws-010",
-    title: "Chunky Sole Trainers",
-    brand: "Nike (Local Rep)",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 5800,
-    originalPrice: 7200,
-    discount: 19,
-    images: [
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80",
-      "https://images.unsplash.com/photo-1561861422-a549073e547a?w=800&q=80"
-    ],
-    colors: ["White", "Black", "Grey Pink"],
-    sizes: ["36","37","38","39","40","41"],
-    rating: 4.8,
-    reviewCount: 312,
-    soldCount: 1100,
-    stock: 20,
-    tags: ["trainers","chunky","trending"],
-    isTrending: true,
-    isBestSeller: true,
-    isDeal: false,
-    isLimited: false,
-    description: "Thick-soled chunky trainers. The ultimate streetwear shoe currently dominating Pakistan.",
-    shipping: { type: "Free", cost: 0 },
-    estimatedDelivery: "3-5 business days"
-  },
-  {
-    id: "ws-011",
-    title: "Embroidered Khussa – Festive",
-    brand: "Leather Craft",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 3400,
-    originalPrice: 4200,
-    discount: 19,
-    images: [
-      "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&q=80",
-      "https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?w=800&q=80",
-      "https://images.unsplash.com/photo-1515347619252-60a4bdad8886?w=800&q=80"
-    ],
-    colors: ["Gold Red", "Green Gold", "Pink Silver"],
-    sizes: ["36","37","38","39","40"],
-    rating: 4.9,
-    reviewCount: 178,
-    soldCount: 560,
-    stock: 12,
-    tags: ["khussa","festive","embroidered","new"],
-    isNew: true,
-    isTrending: false,
-    isDeal: false,
-    isLimited: false,
-    description: "Hand-embroidered traditional khussa for Eid and wedding season. Authentically Pakistani.",
-    shipping: { type: "Free", cost: 0 },
-    estimatedDelivery: "3-5 business days"
-  },
-  {
-    id: "ws-012",
-    title: "Open Toe Mule Heels – Pointed",
+    title: "Formal Sandal FR5495 – Stylo",
     brand: "Stylo",
-    category: "Women's Shoes",
-    categorySlug: "womens-shoes",
-    price: 5500,
-    originalPrice: 7000,
-    discount: 21,
+    category: "Women's Shoes", categorySlug: "womens-shoes",
+    price: 2500, originalPrice: 3200,
+    discount: 22,
     images: [
-      "https://images.unsplash.com/photo-1515347619252-60a4bdad8886?w=800&q=80",
-      "https://images.unsplash.com/photo-1561861422-a549073e547a?w=800&q=80",
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80"
+      "https://stylo.pk/cdn/shop/files/FR549514_2_32986044-cd5b-4628-9bb8-9dd418d69c81.png?v=1769074515&width=800",
+      "https://stylo.pk/cdn/shop/files/FR549506_2_38548d8f-6e2e-442f-972d-57ba204b2009.png?v=1769074511&width=800",
+      "https://stylo.pk/cdn/shop/files/PU062962_169368d2-9db2-4edd-be31-4478931eac33.png?v=1768809599&width=800"
     ],
-    colors: ["Nude", "Black", "Blush"],
-    sizes: ["36","37","38","39","40","41"],
-    rating: 4.6,
-    reviewCount: 145,
-    soldCount: 390,
-    stock: 18,
-    tags: ["mules","pointed","office","trending"],
-    isTrending: true,
-    isDeal: true,
-    isLimited: false,
-    description: "Pointed toe open mule with slim heel. Effortlessly chic from work to dinner.",
-    shipping: { type: "Free", cost: 0 },
-    estimatedDelivery: "3-5 business days"
+    colors: ["Fawn", "Mustard", "Beige"],
+    sizes: ["36","37","38","39","40","41","42"],
+    rating: 4.5, reviewCount: 267, soldCount: 760, stock: 30,
+    tags: ["formal","sandal","new"], isNew: true, isTrending: false, isDeal: false, isLimited: false,
+    description: "Fashion-forward square-toe block sandal with smooth cross-over instep panels. Office to evening ready.",
+    shipping: { type: "Standard", cost: 0 }, estimatedDelivery: "3-5 business days"
   },
 
-  // BEAUTY PRODUCTS
+  // BEAUTY PRODUCTS (10 Items)
   {
     id: 'bp-1',
     title: 'Hydrating Face Serum',
@@ -699,7 +472,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1570172619380-dc3079979b0c?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1570172619380-dc3079979b0c?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1596755389378-7d0d22150521?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
     categorySlug: 'beauty-products',
@@ -725,7 +498,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1586776977607-310e9c725c37?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1591360236480-9c6a4cb3a6de?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1586776977607-310e9c725c37?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
     categorySlug: 'beauty-products',
@@ -752,7 +525,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
     categorySlug: 'beauty-products',
@@ -778,7 +551,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
     categorySlug: 'beauty-products',
@@ -804,7 +577,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1596755389378-7d0d22150521?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1596755389378-7d0d22150521?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
     categorySlug: 'beauty-products',
@@ -830,7 +603,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
     categorySlug: 'beauty-products',
@@ -856,7 +629,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1503236123135-083b87a08f32?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
     categorySlug: 'beauty-products',
@@ -883,7 +656,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1503236123135-083b87a08f32?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1590156221170-ce35d474fd8a?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1503236123135-083b87a08f32?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
     categorySlug: 'beauty-products',
@@ -909,7 +682,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1601049541289-9b1b7abc74a4?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1598440947614-46c59d9f8e40?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
     categorySlug: 'beauty-products',
@@ -935,7 +708,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1598440947614-46c59d9f8e40?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1598440947614-46c59d9f8e40?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Beauty Products',
     categorySlug: 'beauty-products',
@@ -952,7 +725,7 @@ export const products: Product[] = [
     isLimited: false
   },
 
-  // BAGS
+  // BAGS (10 Items)
   {
     id: 'bg-1',
     title: 'Classic Leather Tote',
@@ -963,7 +736,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
     categorySlug: 'bags',
@@ -990,7 +763,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1566150905458-1bf1fd113f0d?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1566150893593-132958444f24?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
     categorySlug: 'bags',
@@ -1017,7 +790,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1566150893593-132958444f24?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1532635241-17e820acc59f?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1566150893593-132958444f24?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
     categorySlug: 'bags',
@@ -1044,7 +817,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
     categorySlug: 'bags',
@@ -1071,7 +844,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1611010343136?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
     categorySlug: 'bags',
@@ -1098,7 +871,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1611010343136?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1614179662397-83527a944615?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1611010343136?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1547949003-9792a18a2601?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
     categorySlug: 'bags',
@@ -1125,7 +898,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1547949003-9792a18a2601?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1610332885440-272e6178a3f8?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1547949003-9792a18a2601?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1590739225287-bd2ba5193952?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
     categorySlug: 'bags',
@@ -1152,7 +925,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1590739225287-bd2ba5193952?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1583623025817-d180a2221d0a?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590739225287-bd2ba5193952?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
     categorySlug: 'bags',
@@ -1179,7 +952,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1591133111033-fb93040683b6?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1520190282173-6e27515332f6?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
     categorySlug: 'bags',
@@ -1205,7 +978,7 @@ export const products: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1520190282173-6e27515332f6?q=80&w=1000&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1553531384-cc64ac80f931?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1520190282173-6e27515332f6?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop'
     ],
     category: 'Bags',
     categorySlug: 'bags',

@@ -6,6 +6,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'stylo.pk',
+      },
+      {
+        protocol: 'https',
+        hostname: 'insignia.com.pk',
+      },
     ],
   },
 };
