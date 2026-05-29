@@ -156,8 +156,8 @@ export const products: Product[] = [
     discount: 20,
     images: [
       "https://images.unsplash.com/photo-1733209484732-6b094322a89f?w=800&q=80",
-      "https://images.unsplash.com/photo-1733470381571-c3d082e68457?w=800&q=80",
-      "https://images.unsplash.com/photo-1705920824583-0e783235394d?w=800&q=80"
+      "https://images.unsplash.com/photo-1733209589578-97136bee7d7a?w=800&q=80",
+      "https://images.unsplash.com/photo-1733470324488-d0e10d014d80?w=800&q=80"
     ],
     colors: ["Dusty Rose", "Sage", "Cream"],
     sizes: ["S","M","L","XL"],

@@ -46,7 +46,7 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
       </div>
 
       {/* Main Image */}
-      <div className="relative flex-1 aspect-[3/4] bg-surface-light overflow-hidden group cursor-zoom-in">
+      <div className="relative flex-1 aspect-[3/4] bg-primary overflow-hidden group cursor-zoom-in">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeImage}
